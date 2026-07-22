@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachit Kaura — Delivery Leader × Agentic AI Builder</title>
+<meta name="description" content="Senior IT Project Leader delivering national-scale programs and building multi-agent AI systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F6;
+  --grid:rgba(24,64,132,0.06);
+  --ink:#101820;
+  --blue:#1E4FCC;
+  --blue-soft:rgba(30,79,204,0.10);
+  --slate:#5A6676;
+  --amber:#DD9418;
+  --line:#D4DAE2;
+  --panel:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',sans-serif;
+  color:var(--ink);
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:32px 32px;
+  line-height:1.6;
+  font-size:16px;
+}
+a{color:var(--blue)}
+a:focus-visible, button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+
+/* ---------- header ---------- */
+header{
+  border-bottom:1px solid var(--line);
+  background:rgba(242,244,246,0.92);
+  backdrop-filter:blur(6px);
+  position:sticky;top:0;z-index:10;
+}
+.hd{display:flex;align-items:center;justify-content:space-between;height:60px}
+.hd .id{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;color:var(--ink);text-decoration:none}
+.hd .id b{color:var(--blue)}
+nav{display:flex;gap:26px}
+nav a{font-size:14px;color:var(--slate);text-decoration:none}
+nav a:hover{color:var(--blue)}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 64px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:18px}
+h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(34px,4.6vw,52px);
+  line-height:1.08;font-weight:700;letter-spacing:-.015em;
+  margin-bottom:20px;
+}
+h1 .u{box-shadow:inset 0 -0.22em 0 var(--blue-soft)}
+.hero p.lede{font-size:17px;color:var(--slate);max-width:46ch;margin-bottom:28px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:13px;
+  padding:12px 20px;text-decoration:none;border:1px solid var(--blue);
+  letter-spacing:.04em;
+}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover{background:#1A44B0}
+.btn.ghost{color:var(--blue);background:transparent}
+.btn.ghost:hover{background:var(--blue-soft)}
+
+/* schematic */
+.schematic{
+  background:var(--panel);border:1px solid var(--line);
+  padding:18px 18px 10px;position:relative;
+}
+.schematic .cap{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);
+  letter-spacing:.1em;display:flex;justify-content:space-between;
+  border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:6px;
+}
+.schematic svg{width:100%;height:auto;display:block}
+.node-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:var(--ink)}
+.node-sub{font-family:'IBM Plex Mono',monospace;font-size:8.5px;fill:var(--slate)}
+.route{stroke:var(--blue);stroke-width:1.2;stroke-dasharray:4 4;fill:none;opacity:.55}
+.nodebox{fill:#fff;stroke:var(--ink);stroke-width:1.2}
+.nodebox.orch{stroke:var(--blue);stroke-width:1.6}
+.pulse{fill:var(--amber)}
+@keyframes travel1{0%{offset-distance:0%}100%{offset-distance:100%}}
+.pulse.p1{offset-path:path('M 210 92 L 90 178');animation:travel1 2.6s linear infinite}
+.pulse.p2{offset-path:path('M 210 92 L 210 178');animation:travel1 2.6s linear infinite .9s}
+.pulse.p3{offset-path:path('M 210 92 L 330 178');animation:travel1 2.6s linear infinite 1.8s}
+@media (prefers-reduced-motion: reduce){
+  .pulse{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- sections ---------- */
+section{padding:56px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:32px}
+.sec-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--blue)}
+h2{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;letter-spacing:-.01em}
+
+/* currently */
+.spec-row{
+  display:grid;grid-template-columns:170px 1fr;gap:20px;
+  background:var(--panel);border:1px solid var(--line);
+  padding:22px 24px;margin-bottom:14px;
+}
+.spec-row .k{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);letter-spacing:.06em;padding-top:3px}
+.spec-row .k .badge{display:inline-block;margin-top:8px;font-size:10.5px;color:var(--amber);border:1px solid var(--amber);padding:2px 7px;letter-spacing:.08em}
+.spec-row h3{font-family:'Space Grotesk',sans-serif;font-size:18px;margin-bottom:6px}
+.spec-row p{font-size:15px;color:var(--slate)}
+
+/* case study */
+.case{background:var(--panel);border:1px solid var(--line)}
+.case-head{padding:26px 28px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.case-head h3{font-family:'Space Grotesk',sans-serif;font-size:22px}
+.case-head .mono{font-size:12px;color:var(--slate);letter-spacing:.08em}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;}
+.case-cell{padding:24px 28px;border-top:1px solid var(--line)}
+.case-cell:nth-child(odd){border-right:1px solid var(--line)}
+.case-cell:nth-child(-n+2){border-top:none}
+.case-cell h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+.case-cell p, .case-cell li{font-size:15px;color:#333c46}
+.case-cell ul{padding-left:18px}
+.case-cell li{margin-bottom:6px}
+.case-foot{padding:20px 28px;border-top:1px solid var(--line);display:flex;gap:14px;flex-wrap:wrap}
+
+/* pipeline */
+.pipe{list-style:none}
+.pipe li{
+  display:grid;grid-template-columns:110px 1fr;gap:18px;
+  padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.pipe li:last-child{border-bottom:none}
+.status{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;padding:3px 8px;border:1px solid;justify-self:start}
+.status.live{color:#1B7A4A;border-color:#1B7A4A}
+.status.build{color:var(--amber);border-color:var(--amber)}
+.status.planned{color:var(--slate);border-color:var(--line)}
+.pipe b{font-family:'Space Grotesk',sans-serif;font-weight:500}
+.pipe span{color:var(--slate);font-size:15px}
+
+/* experience */
+.xp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.xp-card{background:var(--panel);border:1px solid var(--line);padding:22px}
+.xp-card .mono{font-size:11px;color:var(--slate);letter-spacing:.08em}
+.xp-card h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin:8px 0 6px}
+.xp-card p{font-size:14px;color:var(--slate)}
+
+/* footer / contact */
+footer{border-top:1px solid var(--line);padding:56px 0 72px}
+footer h2{margin-bottom:14px}
+footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:13px}
+.colophon{margin-top:44px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--slate);letter-spacing:.04em}
+.colophon b{color:var(--blue);font-weight:500}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding:48px 0}
+  .xp{grid-template-columns:1fr}
+  .case-grid{grid-template-columns:1fr}
+  .case-cell:nth-child(odd){border-right:none}
+  .case-cell:nth-child(2){border-top:1px solid var(--line)}
+  .spec-row{grid-template-columns:1fr;gap:8px}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="id" href="#top">RK<b>/</b>DELIVERY×AGENTS</a>
+    <nav>
+      <a href="#now">Now</a>
+      <a href="#case">Case study</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Rachit Kaura — Toronto, Canada</p>
+      <h1>I deliver national-scale programs.<br>I <span class="u">build the agents</span> too.</h1>
+      <p class="lede">Senior IT Project Leader at the Canada Revenue Agency — currently on the IT delivery of Canada's Automatic Tax Filing service. Outside work, I design and ship multi-agent AI systems, end to end.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#case">Read the case study</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <figure class="schematic" aria-label="Schematic of a multi-agent system: a Chief of Staff orchestrator routing to three specialized sub-agents">
+      <figcaption class="cap"><span>FIG. 01 — MULTI-AGENT SYSTEM</span><span>CLAUDE CODE / 2025</span></figcaption>
+      <svg viewBox="0 0 420 250" role="img">
+        <!-- routes -->
+        <path class="route" d="M 210 92 L 90 178"/>
+        <path class="route" d="M 210 92 L 210 178"/>
+        <path class="route" d="M 210 92 L 330 178"/>
+        <!-- orchestrator -->
+        <rect class="nodebox orch" x="140" y="48" width="140" height="44"/>
+        <text class="node-label" x="210" y="67" text-anchor="middle">CHIEF OF STAFF</text>
+        <text class="node-sub" x="210" y="81" text-anchor="middle">orchestrator · routing · guardrails</text>
+        <!-- sub-agents -->
+        <rect class="nodebox" x="34" y="178" width="112" height="44"/>
+        <text class="node-label" x="90" y="197" text-anchor="middle">TRAINER</text>
+        <text class="node-sub" x="90" y="211" text-anchor="middle">fitness programs</text>
+        <rect class="nodebox" x="154" y="178" width="112" height="44"/>
+        <text class="node-label" x="210" y="197" text-anchor="middle">NUTRITION</text>
+        <text class="node-sub" x="210" y="211" text-anchor="middle">meal engineering</text>
+        <rect class="nodebox" x="274" y="178" width="112" height="44"/>
+        <text class="node-label" x="330" y="197" text-anchor="middle">MONEY COACH</text>
+        <text class="node-sub" x="330" y="211" text-anchor="middle">personal finance</text>
+        <!-- input -->
+        <text class="node-sub" x="210" y="26" text-anchor="middle">USER REQUEST ↓</text>
+        <!-- hand-off pulses -->
+        <circle class="pulse p1" r="3.2"/>
+        <circle class="pulse p2" r="3.2"/>
+        <circle class="pulse p3" r="3.2"/>
+      </svg>
+    </figure>
+  </div>
+
+  <section id="now">
+    <div class="sec-head"><span class="sec-num">1.0</span><h2>Current delivery</h2></div>
+    <div class="spec-row">
+      <div class="k">CRA · IT LEAD<span class="badge">IN DELIVERY</span></div>
+      <div>
+        <h3>Automatic Tax Filing service</h3>
+        <p>IT delivery lead on a $71M federal initiative (Budget 2025) bringing pre-filled, automatically filed returns to ~1.1M lower-income Canadians starting the 2026 tax year, scaling toward 5.5M by 2029. Delivery planning and cross-directorate coordination on one of the Agency's highest-visibility programs.</p>
+      </div>
+    </div>
+    <div class="spec-row">
+      <div class="k">CRA · IT LEAD</div>
+      <div>
+        <h3>T1 Adjustments Modernization</h3>
+        <p>End-to-end Agile delivery of a mission-critical system processing individual tax adjustments nationally — 20+ cross-functional SMEs, 200+ stories, phase-gate approvals presented to Directors and VPs. Promoted three times along the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="sec-head"><span class="sec-num">2.0</span><h2>Case study — Multi-agent personal AI system</h2></div>
+    <div class="case">
+      <div class="case-head">
+        <h3>A Chief-of-Staff orchestrator with specialized sub-agents</h3>
+        <span class="mono">STACK: CLAUDE CODE · MARKDOWN SPECS · STRUCTURED HAND-OFFS</span>
+      </div>
+      <div class="case-grid">
+        <div class="case-cell">
+          <h4>Problem</h4>
+          <p>One generalist assistant does everything adequately and nothing consistently. I wanted domain expertise that persists: a trainer that knows my movement constraints, a nutrition coach that knows my macros and pantry, a money coach that knows my accounts — coordinated, not siloed.</p>
+        </div>
+        <div class="case-cell">
+          <h4>Architecture</h4>
+          <p>A Chief-of-Staff orchestrator receives every request, decides which sub-agent owns it, and manages hand-offs when a task spans domains (a training plan that changes calorie targets touches two agents). Each agent is defined by a spec: scope, tone, tools, and what it must escalate rather than decide.</p>
+        </div>
+        <div class="case-cell">
+          <h4>Guardrails</h4>
+          <ul>
+            <li>Every agent spec declares explicit out-of-scope actions and escalation paths.</li>
+            <li>Cross-domain changes route through the orchestrator — no agent silently rewrites another's outputs.</li>
+            <li>Same human-in-the-loop pattern regulated enterprises need: authority is designed, not assumed.</li>
+          </ul>
+        </div>
+        <div class="case-cell">
+          <h4>What broke, and what it taught me</h4>
+          <ul>
+            <li>Vague scope boundaries caused agents to answer outside their lane — fixed by rewriting specs with explicit refusal criteria.</li>
+            <li>Hand-offs lost context until I standardized a structured brief each agent passes forward.</li>
+            <li>Lesson: agent systems fail at the seams. Design the seams first.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-foot">
+        <a class="btn primary" href="https://github.com/rachitkaura" rel="noopener">View the specs on GitHub</a>
+        <a class="btn ghost" href="#contact">Ask me about it</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <div class="sec-head"><span class="sec-num">3.0</span><h2>Build pipeline</h2></div>
+    <ul class="pipe">
+      <li><span class="status live">SHIPPED</span><div><b>Multi-agent system</b> — <span>orchestrator + three sub-agents, running daily. Case study above.</span></div></li>
+      <li><span class="status live">SHIPPED</span><div><b>This site</b> — <span>designed and deployed through my own Claude-based workflow.</span></div></li>
+      <li><span class="status build">IN BUILD</span><div><b>Eval harness</b> — <span>test cases and scoring for each sub-agent, because "it seems to work" isn't evidence.</span></div></li>
+      <li><span class="status planned">PLANNED</span><div><b>Human-in-the-loop email triage agent</b> — <span>drafts categorized replies; nothing sends without approval.</span></div></li>
+      <li><span class="status planned">PLANNED</span><div><b>Custom MCP server</b> — <span>a small tool server on the protocol enterprises are standardizing on.</span></div></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><span class="sec-num">4.0</span><h2>Experience</h2></div>
+    <div class="xp">
+      <div class="xp-card">
+        <span class="mono">2021 — PRESENT</span>
+        <h3>Canada Revenue Agency</h3>
+        <p>Senior IT Project Leader / Developer. National-scale Agile delivery, CI/CD engineering (Jenkins, Groovy, SonarQube), executive governance. Promoted three times.</p>
+      </div>
+      <div class="xp-card">
+        <span class="mono">2021</span>
+        <h3>Bell Mobility</h3>
+        <p>Business Analyst, PMO. Requirements, stakeholder workshops, executive funding approvals, weekly delivery dashboards.</p>
+      </div>
+      <div class="xp-card">
+        <span class="mono">2019 — 2021</span>
+        <h3>Canon Canada</h3>
+        <p>Associate Business Systems Analyst. SOX-compliant data work, audit evidence, UAT and end-to-end rollouts.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact</h2>
+    <p>Open to senior delivery and technical program roles where AI transformation is real work, not a slide deck. Toronto or remote.</p>
+    <div class="foot-links">
+      <a href="mailto:rkaura94@gmail.com">rkaura94@gmail.com</a>
+      <a href="https://linkedin.com/in/rachit-kaura" rel="noopener">linkedin.com/in/rachit-kaura</a>
+      <a href="https://github.com/rachitkaura" rel="noopener">github.com/rachitkaura</a>
+    </div>
+    <p class="colophon">SPEC RK-2026 · Designed and deployed via an agentic workflow built on <b>Claude Code</b> · Type: Space Grotesk / IBM Plex</p>
+  </footer>
+
+</main>
+</body>
+</html>
