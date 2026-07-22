@@ -10,6 +10,11 @@
 <meta property="og:description" content="Senior IT Project Leader on Canada's Automatic Tax Filing service. Builds multi-agent AI systems on Claude Code — specs public, architecture live.">
 <meta property="og:url" content="https://rachitkaura.github.io">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://rachitkaura.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rachitkaura.github.io/og-image.png">
 <meta name="theme-color" content="#1E4FCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,7 +124,7 @@ g.node:hover .nodebox,.nodebox.active{fill:var(--blue-soft);stroke:var(--blue)}
 .metric .l{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
 
 /* ---------- sections ---------- */
-section{padding:64px 0;border-top:1px solid var(--line)}
+section{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
 .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
 .sec-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--blue)}
 h2{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;letter-spacing:-.01em}
@@ -127,8 +132,8 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;letter-
 /* currently */
 .spec-row{display:grid;grid-template-columns:180px 1fr;gap:20px;background:var(--panel);border:1px solid var(--line);padding:24px 26px;margin-bottom:14px;transition:box-shadow .2s ease,transform .2s ease}
 .spec-row:hover{box-shadow:6px 6px 0 rgba(30,79,204,.10);transform:translateY(-2px)}
-.spec-row .k{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);letter-spacing:.06em;padding-top:3px}
-.spec-row .k .badge{display:inline-block;margin-top:8px;font-size:10.5px;color:var(--amber);border:1px solid var(--amber);padding:2px 7px;letter-spacing:.08em}
+.spec-row .k{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);letter-spacing:.06em;padding-top:3px;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.spec-row .k .badge{font-size:10.5px;color:var(--amber);border:1px solid var(--amber);padding:3px 8px;letter-spacing:.1em;white-space:nowrap}
 .spec-row h3{font-family:'Space Grotesk',sans-serif;font-size:18px;margin-bottom:6px}
 .spec-row p{font-size:15px;color:var(--slate)}
 
@@ -173,7 +178,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;letter-
 .xp-card p{font-size:14px;color:var(--slate)}
 
 /* footer */
-footer{border-top:1px solid var(--line);padding:64px 0 80px}
+footer{border-top:1px solid var(--line);padding:64px 0 80px;scroll-margin-top:72px}
 footer h2{margin-bottom:14px}
 footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:13px}
@@ -190,6 +195,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
   .case-cell:nth-child(odd){border-right:none}
   .case-cell:nth-child(2){border-top:1px solid var(--line)}
   .spec-row{grid-template-columns:1fr;gap:8px}
+  .spec-row .k{flex-direction:row;align-items:center;justify-content:space-between;width:100%}
   .logbox{font-size:10.5px}
   nav{display:none;position:absolute;top:60px;right:0;left:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 24px}
   nav.open{display:flex}
@@ -204,7 +210,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 "url":"https://rachitkaura.github.io","email":"mailto:rkaura94@gmail.com",
 "sameAs":["https://linkedin.com/in/rachit-kaura","https://github.com/rachitkaura"],
 "knowsAbout":["Agile Project Management","Multi-agent AI systems","CI/CD","Program Governance"],
-"address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"}}
+"address":{"@type":"PostalAddress","addressLocality":"Greater Toronto Area","addressRegion":"ON","addressCountry":"CA"}}
 </script>
 </head>
 <body>
@@ -228,7 +234,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 
   <div class="hero">
     <div class="rv in">
-      <p class="eyebrow">Rachit Kaura — Toronto, Canada</p>
+      <p class="eyebrow">Rachit Kaura — Greater Toronto Area</p>
       <h1>I deliver national-scale programs.<br>I <span class="u">build the agents</span> too.</h1>
       <p class="lede">Senior IT Project Leader at the Canada Revenue Agency — currently on IT delivery of Canada's Automatic Tax Filing service. Outside work, I design and ship multi-agent AI systems, end to end.</p>
       <div class="cta-row">
@@ -245,7 +251,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 
     <figure class="schematic rv in" aria-label="Interactive schematic of a multi-agent system. Click a node to view its spec.">
       <figcaption class="cap"><span>FIG. 01 — MULTI-AGENT SYSTEM</span><span>CLAUDE CODE / 2025</span></figcaption>
-      <p class="hint">▸ CLICK A NODE TO READ ITS SPEC</p>
+      <p class="hint">▸ TAP A NODE TO READ ITS SPEC</p>
       <svg viewBox="0 0 420 240" role="img">
         <path class="route" d="M 210 92 L 90 178"/>
         <path class="route" d="M 210 92 L 210 178"/>
@@ -406,7 +412,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 
   <footer id="contact">
     <h2>Contact</h2>
-    <p>Open to senior delivery and technical program roles where AI transformation is real work, not a slide deck. Toronto or remote.</p>
+    <p>Open to senior delivery and technical program roles where AI transformation is real work, not a slide deck. Greater Toronto Area or remote.</p>
     <div class="foot-links">
       <a href="mailto:rkaura94@gmail.com">rkaura94@gmail.com</a>
       <a href="https://linkedin.com/in/rachit-kaura" rel="noopener">linkedin.com/in/rachit-kaura</a>
