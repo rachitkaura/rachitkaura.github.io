@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rachit Kaura — Delivery Leader × Agentic AI Builder</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23F2F4F6"/><rect x="6" y="6" width="52" height="52" fill="none" stroke="%231E4FCC" stroke-width="4"/><text x="32" y="42" font-family="monospace" font-size="26" font-weight="bold" fill="%231E4FCC" text-anchor="middle">RK</text></svg>'>
 <meta name="description" content="Senior IT Project Leader delivering national-scale programs and building multi-agent AI systems.">
+<meta property="og:title" content="Rachit Kaura — Delivery Leader × Agentic AI Builder">
+<meta property="og:description" content="Senior IT Project Leader on Canada's Automatic Tax Filing service. Builds multi-agent AI systems on Claude Code — specs public, architecture live.">
+<meta property="og:url" content="https://rachitkaura.github.io">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1E4FCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -88,6 +94,7 @@ g.node:hover .nodebox,.nodebox.active{fill:var(--blue-soft);stroke:var(--blue)}
 .pulse.p2{offset-path:path('M 210 92 L 210 178');animation:travel 2.6s linear infinite .9s}
 .pulse.p3{offset-path:path('M 210 92 L 330 178');animation:travel 2.6s linear infinite 1.8s}
 @media (prefers-reduced-motion:reduce){.pulse{display:none}}
+@supports not (offset-path: path("M 0 0")){.pulse{display:none}}
 
 /* spec card revealed by clicking nodes */
 .speccard{border-top:1px solid var(--line);padding:16px 18px;min-height:132px}
@@ -105,15 +112,14 @@ g.node:hover .nodebox,.nodebox.active{fill:var(--blue-soft);stroke:var(--blue)}
 .logline .ok{color:#5BC48E}
 
 /* metrics strip */
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--panel);margin:56px 0 0}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--panel);margin:40px 0 64px}
 .metric{padding:22px 20px;border-right:1px solid var(--line)}
 .metric:last-child{border-right:none}
 .metric .n{font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:700;color:var(--blue);letter-spacing:-.01em}
 .metric .l{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
 
 /* ---------- sections ---------- */
-section{padding:64px 0;border-top:1px solid var(--line);margin-top:64px}
-section:first-of-type{margin-top:0}
+section{padding:64px 0;border-top:1px solid var(--line)}
 .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px}
 .sec-num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--blue)}
 h2{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;letter-spacing:-.01em}
@@ -167,7 +173,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;letter-
 .xp-card p{font-size:14px;color:var(--slate)}
 
 /* footer */
-footer{border-top:1px solid var(--line);padding:64px 0 80px;margin-top:64px}
+footer{border-top:1px solid var(--line);padding:64px 0 80px}
 footer h2{margin-bottom:14px}
 footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:13px}
@@ -184,6 +190,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
   .case-cell:nth-child(odd){border-right:none}
   .case-cell:nth-child(2){border-top:1px solid var(--line)}
   .spec-row{grid-template-columns:1fr;gap:8px}
+  .logbox{font-size:10.5px}
   nav{display:none;position:absolute;top:60px;right:0;left:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 24px}
   nav.open{display:flex}
   nav a{padding:12px 0;border-bottom:1px solid var(--line)}
@@ -191,9 +198,17 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
   .menu-btn{display:block}
 }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Rachit Kaura",
+"jobTitle":"Senior IT Project Leader","worksFor":{"@type":"Organization","name":"Canada Revenue Agency"},
+"url":"https://rachitkaura.github.io","email":"mailto:rkaura94@gmail.com",
+"sameAs":["https://linkedin.com/in/rachit-kaura","https://github.com/rachitkaura"],
+"knowsAbout":["Agile Project Management","Multi-agent AI systems","CI/CD","Program Governance"],
+"address":{"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"}}
+</script>
 </head>
 <body>
-
+<a href="#top" style="position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;z-index:30;font-family:'IBM Plex Mono',monospace;font-size:13px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
 <header>
   <div class="wrap hd">
     <a class="id" href="#top">RK<b>/</b>DELIVERY×AGENTS</a>
@@ -236,7 +251,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
         <path class="route" d="M 210 92 L 210 178"/>
         <path class="route" d="M 210 92 L 330 178"/>
         <g class="node" data-agent="orch" tabindex="0" role="button" aria-label="Chief of Staff orchestrator spec">
-          <rect class="nodebox orch" x="140" y="48" width="140" height="44"/>
+          <rect class="nodebox orch" x="118" y="48" width="184" height="44"/>
           <text class="node-label" x="210" y="67" text-anchor="middle">CHIEF OF STAFF</text>
           <text class="node-sub" x="210" y="81" text-anchor="middle">orchestrator · routing · guardrails</text>
         </g>
