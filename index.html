@@ -109,10 +109,10 @@ g.node:hover .nodebox,.nodebox.active{fill:var(--blue-soft);stroke:var(--blue)}
 .speccard dd{color:#333c46}
 
 /* routing log */
-.logbox{margin-top:16px;background:#0F1720;border:1px solid #0F1720;color:#C9D4E3;font-family:'IBM Plex Mono',monospace;font-size:12px;padding:14px 16px;min-height:96px;box-shadow:6px 6px 0 rgba(16,24,32,.05)}
-.logbox .lg-cap{color:#6B7A90;font-size:10.5px;letter-spacing:.12em;margin-bottom:8px;display:flex;justify-content:space-between}
+.logbox{margin-top:16px;background:#0F1720;border:1px solid #0F1720;color:#C9D4E3;font-family:'IBM Plex Mono',monospace;font-size:12px;padding:14px 16px;height:106px;box-sizing:border-box;overflow:hidden;box-shadow:6px 6px 0 rgba(16,24,32,.05)}
+.logbox .lg-cap{color:#6B7A90;font-size:10.5px;letter-spacing:.12em;height:18px;line-height:18px;margin-bottom:6px;display:flex;justify-content:space-between}
 .logbox .dot{color:var(--amber)}
-.logline{white-space:nowrap;overflow:hidden}
+.logline{white-space:nowrap;overflow:hidden;height:20px;line-height:20px}
 .logline b{color:#7EA6FF;font-weight:500}
 .logline .ok{color:#5BC48E}
 
@@ -196,7 +196,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
   .case-cell:nth-child(2){border-top:1px solid var(--line)}
   .spec-row{grid-template-columns:1fr;gap:8px}
   .spec-row .k{flex-direction:row;align-items:center;justify-content:space-between;width:100%}
-  .logbox{font-size:10.5px}
+  .logbox{font-size:10.5px;height:100px}
   nav{display:none;position:absolute;top:60px;right:0;left:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 24px}
   nav.open{display:flex}
   nav a{padding:12px 0;border-bottom:1px solid var(--line)}
@@ -494,11 +494,17 @@ function typeLine(el,html,done){
 }
 function runLog(){
   const els=LINES.map(l=>document.getElementById(l[0]));
-  els.forEach(e=>e.innerHTML='');
-  typeLine(els[0],LINES[0][1],()=>setTimeout(()=>
-    typeLine(els[1],LINES[1][1],()=>setTimeout(()=>
-      typeLine(els[2],LINES[2][1],()=>setTimeout(runLog,6000)),500)),500));
+  typeLine(els[0],LINES[0][1],function(){
+    setTimeout(function(){
+      typeLine(els[1],LINES[1][1],function(){
+        setTimeout(function(){
+          typeLine(els[2],LINES[2][1]);
+        },450);
+      });
+    },450);
+  });
 }
+// type once on load, then hold — no looping, no motion competing with the headline
 runLog();
 </script>
 </body>
