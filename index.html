@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rachit Kaura — Delivery Leader × Agentic AI Builder</title>
+<title>Rachit Kaura — Technical Program Leader &amp; Product Builder</title>
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23F2F4F6"/><rect x="6" y="6" width="52" height="52" fill="none" stroke="%231E4FCC" stroke-width="4"/><text x="32" y="42" font-family="monospace" font-size="26" font-weight="bold" fill="%231E4FCC" text-anchor="middle">RK</text></svg>'>
-<meta name="description" content="Senior IT Project Leader delivering national-scale programs and building multi-agent AI systems.">
-<meta property="og:title" content="Rachit Kaura — Delivery Leader × Agentic AI Builder">
-<meta property="og:description" content="Senior IT Project Leader on Canada's Automatic Tax Filing service. Builds multi-agent AI systems on Claude Code — specs public, architecture live.">
+<meta name="description" content="Technical program leadership, product development and applied AI. Explore Rachit Kaura’s delivery experience, Align hiring platform and multi-agent workflows.">
+<meta property="og:title" content="Rachit Kaura — Technical Program Leader &amp; Product Builder">
+<meta property="og:description" content="National technology delivery at the Canada Revenue Agency, with independent projects in software products and applied AI.">
 <meta property="og:url" content="https://rachitkaura.github.io">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://rachitkaura.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rachit Kaura — Technical Program Leader and Product Builder. Program delivery, product development and applied AI.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://rachitkaura.github.io/og-image.png">
+<meta name="twitter:title" content="Rachit Kaura — Technical Program Leader &amp; Product Builder">
+<meta name="twitter:description" content="Program delivery, product development and applied AI. Explore Align and my multi-agent personal AI project.">
+<meta name="twitter:image:alt" content="Rachit Kaura — Technical Program Leader and Product Builder">
 <meta name="theme-color" content="#1E4FCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,13 +51,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .mono{font-family:'IBM Plex Mono',monospace}
 ::selection{background:var(--blue);color:#fff}
 
-/* reveal on scroll */
-.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  .rv{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
-}
+/* Keep page content readable with or without JavaScript. */
+.rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* ---------- header ---------- */
 header{border-bottom:1px solid var(--line);background:rgba(242,244,246,.93);backdrop-filter:blur(6px);position:sticky;top:0;z-index:20}
@@ -68,10 +68,10 @@ nav a:hover::after{right:0}
 .menu-btn{display:none;background:none;border:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:12px;padding:8px 12px;cursor:pointer;color:var(--ink)}
 
 /* ---------- hero ---------- */
-.hero{padding:76px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.hero{padding:76px 0 30px;display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:center}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--blue)}
-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(34px,4.4vw,50px);line-height:1.08;font-weight:700;letter-spacing:-.015em;margin-bottom:20px}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(34px,4vw,48px);line-height:1.08;font-weight:700;letter-spacing:-.015em;margin-bottom:20px}
 h1 .u{box-shadow:inset 0 -0.22em 0 var(--blue-soft)}
 .hero p.lede{font-size:17px;color:var(--slate);max-width:46ch;margin-bottom:26px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
@@ -87,17 +87,17 @@ h1 .u{box-shadow:inset 0 -0.22em 0 var(--blue-soft)}
 .schematic .cap{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);letter-spacing:.1em;display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:14px 18px}
 .schematic .hint{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--amber);padding:0 18px 8px;letter-spacing:.06em}
 .schematic svg{width:100%;height:auto;display:block;padding:6px 12px 0}
-.node-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:var(--ink);pointer-events:none}
-.node-sub{font-family:'IBM Plex Mono',monospace;font-size:8.5px;fill:var(--slate);pointer-events:none}
+.node-label{font-family:'IBM Plex Mono',monospace;font-size:14px;fill:var(--ink);pointer-events:none}
+.node-sub{font-family:'IBM Plex Mono',monospace;font-size:9.5px;fill:var(--slate);pointer-events:none}
 .route{stroke:var(--blue);stroke-width:1.2;stroke-dasharray:4 4;fill:none;opacity:.5}
 .nodebox{fill:#fff;stroke:var(--ink);stroke-width:1.2;cursor:pointer;transition:stroke .2s,fill .2s}
 .nodebox.orch{stroke:var(--blue);stroke-width:1.6}
 g.node:hover .nodebox,.nodebox.active{fill:var(--blue-soft);stroke:var(--blue)}
 .pulse{fill:var(--amber)}
 @keyframes travel{0%{offset-distance:0%}100%{offset-distance:100%}}
-.pulse.p1{offset-path:path('M 210 92 L 90 178');animation:travel 2.6s linear infinite}
-.pulse.p2{offset-path:path('M 210 92 L 210 178');animation:travel 2.6s linear infinite .9s}
-.pulse.p3{offset-path:path('M 210 92 L 330 178');animation:travel 2.6s linear infinite 1.8s}
+.pulse.p1{offset-path:path('M 210 112 L 90 178');animation:travel 2.6s linear infinite}
+.pulse.p2{offset-path:path('M 210 112 L 210 178');animation:travel 2.6s linear infinite .9s}
+.pulse.p3{offset-path:path('M 210 112 L 330 178');animation:travel 2.6s linear infinite 1.8s}
 @media (prefers-reduced-motion:reduce){.pulse{display:none}}
 @supports not (offset-path: path("M 0 0")){.pulse{display:none}}
 
@@ -203,13 +203,69 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
   nav a:last-child{border-bottom:none}
   .menu-btn{display:block}
 }
+
+/* Portfolio overview and project hierarchy */
+.overview{background:var(--panel);border:1px solid var(--line);box-shadow:6px 6px 0 rgba(16,24,32,.05)}
+.overview-head{padding:16px 22px;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--slate)}
+.overview-link{display:block;padding:23px 22px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);transition:background .2s}
+.overview-link:hover{background:var(--blue-soft)}
+.overview-label{display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--blue);margin-bottom:8px}
+.overview-link h3{font-family:'Space Grotesk',sans-serif;font-size:20px;line-height:1.25;margin-bottom:7px}
+.overview-link p{font-size:14px;color:var(--slate);line-height:1.55}
+.overview-foot{padding:15px 22px;font-size:13px;color:var(--slate);background:rgba(30,79,204,.04)}
+.section-intro{max-width:75ch;color:var(--slate);font-size:16px;margin:-18px 0 30px}
+.project-case{scroll-margin-top:84px}
+.project-case+.project-case{margin-top:34px}
+.project-kicker{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--blue);margin-bottom:7px}
+.project-status{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--blue);border:1px solid var(--line);padding:5px 9px;white-space:nowrap}
+.project-role{display:block;margin-top:7px;font-size:13px;color:var(--slate)}
+.project-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;border-bottom:1px solid var(--line);background:rgba(30,79,204,.025)}
+.project-facts>div{padding:18px 22px;border-right:1px solid var(--line)}
+.project-facts>div:last-child{border-right:none}
+.project-facts dt{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;line-height:1.2;color:var(--blue);margin-bottom:7px}
+.project-facts dd{margin:0;font-size:12px;line-height:1.5;color:var(--slate)}
+.project-summary{padding:22px 28px;border-bottom:1px solid var(--line);font-size:16px;color:#333c46;max-width:none}
+.project-note{border-top:1px solid var(--line);padding:18px 28px;font-size:13px;color:var(--slate);background:rgba(30,79,204,.025)}
+.project-note b{color:var(--ink);font-weight:600}
+.ai-demo{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:28px;align-items:start}
+.ai-demo .schematic{box-shadow:none}
+.demo-copy h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--blue);margin:0 0 8px;text-transform:uppercase}
+.demo-copy p{font-size:15px;color:#333c46;margin:0 0 20px}
+.demo-copy .logbox{margin:22px 0 14px;box-shadow:none;height:auto;min-height:106px}
+.demo-copy .demo-note{font-size:13px;color:var(--slate);margin-bottom:0}
+.logline{white-space:normal;height:auto;min-height:20px;overflow:visible;line-height:1.6;overflow-wrap:anywhere}
+.metrics .metric .n{font-size:29px}
+.metric .l{line-height:1.5}
+@media (max-width:880px){
+  .ai-demo{grid-template-columns:1fr;gap:24px;padding:22px}
+  .case-head,.case-cell,.case-foot,.project-summary,.project-note{padding-left:22px;padding-right:22px}
+  .hero{gap:30px}
+  .overview-link{padding:20px}
+  .case-head{align-items:flex-start}
+  .project-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-facts>div:nth-child(2){border-right:none}
+  .project-facts>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width:520px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .hd .id{font-size:11px;letter-spacing:.035em}
+  .sec-head{gap:10px;align-items:flex-start}
+  h2{font-size:25px;line-height:1.2}
+  .sec-num{padding-top:3px}
+  .metric{padding:18px 15px}
+  .metric .l{font-size:10px;letter-spacing:.04em}
+  .metrics .metric .n{font-size:27px}
+  .btn{padding:11px 15px;font-size:12px}
+  .project-status{font-size:10px}
+}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Rachit Kaura",
-"jobTitle":"Senior IT Project Leader","worksFor":{"@type":"Organization","name":"Canada Revenue Agency"},
+"jobTitle":"Project Leader (Acting)","worksFor":{"@type":"Organization","name":"Canada Revenue Agency"},
 "url":"https://rachitkaura.github.io","email":"mailto:rkaura94@gmail.com",
 "sameAs":["https://linkedin.com/in/rachit-kaura","https://github.com/rachitkaura"],
-"knowsAbout":["Agile Project Management","Multi-agent AI systems","CI/CD","Program Governance"],
+"knowsAbout":["Technical Program Management","Software Delivery","Product Development","Multi-agent AI Workflows","CI/CD","Program Governance"],
 "address":{"@type":"PostalAddress","addressLocality":"Greater Toronto Area","addressRegion":"ON","addressCountry":"CA"}}
 </script>
 </head>
@@ -217,14 +273,12 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 <a href="#top" style="position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;z-index:30;font-family:'IBM Plex Mono',monospace;font-size:13px" onfocus="this.style.left='12px'" onblur="this.style.left='-9999px'">Skip to content</a>
 <header>
   <div class="wrap hd">
-    <a class="id" href="#top">RK<b>/</b>DELIVERY×AGENTS</a>
+    <a class="id" href="#top">RK<b>/</b>PROGRAMS×PRODUCTS</a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteNav">MENU</button>
-    <nav id="siteNav">
-      <a href="#now">Now</a>
-      <a href="#case">Case study</a>
-      <a href="#align">Align</a>
+    <nav id="siteNav" aria-label="Main navigation">
+      <a href="#now">Program delivery</a>
+      <a href="#projects">Projects</a>
       <a href="#how">How I work</a>
-      <a href="#pipeline">Pipeline</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -232,50 +286,136 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 </header>
 
 <main id="top" class="wrap">
-
   <div class="hero">
-    <div class="rv in">
+    <div>
       <p class="eyebrow">Rachit Kaura — Greater Toronto Area</p>
-      <h1>I deliver national-scale programs.<br>I <span class="u">build the agents</span> too.</h1>
-      <p class="lede">Senior IT Project Leader at the Canada Revenue Agency — currently on IT delivery of Canada's Automatic Tax Filing service. Outside work, I design and ship multi-agent AI systems, end to end.</p>
+      <h1>I lead complex technology programs.<br>I build products from idea to <span class="u">working software.</span></h1>
+      <p class="lede">I lead technology delivery at the Canada Revenue Agency, coordinating engineering and business teams on national programs. Outside work, I’m developing Align, a hiring platform, and building multi-agent AI workflows.</p>
       <div class="cta-row">
-        <a class="btn primary" href="#case">Read the case study</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
-      </div>
-      <div class="logbox" aria-hidden="true">
-        <div class="lg-cap"><span>ROUTING LOG</span><span class="dot">● LIVE</span></div>
-        <div class="logline" id="log1"></div>
-        <div class="logline" id="log2"></div>
-        <div class="logline" id="log3"></div>
+        <a class="btn primary" href="#projects">Explore my projects</a>
+        <a class="btn ghost" href="#now">View delivery experience</a>
       </div>
     </div>
+    <aside class="overview" aria-label="Programs and independent projects">
+      <div class="overview-head">PROGRAMS, PRODUCTS AND APPLIED AI</div>
+      <a class="overview-link" href="#now">
+        <span class="overview-label"><span>PROFESSIONAL DELIVERY</span><span aria-hidden="true">↘</span></span>
+        <h3>National technology programs</h3>
+        <p>Planning and delivery across engineering, architecture, testing and business teams.</p>
+      </a>
+      <a class="overview-link" href="#align">
+        <span class="overview-label"><span>PRODUCT DEVELOPMENT · WORKING PILOT</span><span aria-hidden="true">↘</span></span>
+        <h3>Align hiring platform</h3>
+        <p>Candidate and employer workflows, from discovery and mutual interest to interviews.</p>
+      </a>
+      <a class="overview-link" href="#case">
+        <span class="overview-label"><span>APPLIED AI · PERSONAL PROJECT</span><span aria-hidden="true">↘</span></span>
+        <h3>Multi-agent personal AI</h3>
+        <p>Coordinated specialists with explicit scope, authority and hand-off rules.</p>
+      </a>
+      <p class="overview-foot">Professional delivery experience, supported by independent software projects you can explore.</p>
+    </aside>
+  </div>
 
-    <figure class="schematic rv in" aria-label="Interactive schematic of a multi-agent system. Click a node to view its spec.">
-      <figcaption class="cap"><span>FIG. 01 — MULTI-AGENT SYSTEM</span><span>CLAUDE CODE / 2025</span></figcaption>
+  <div class="metrics" aria-label="Professional delivery highlights">
+    <div class="metric"><div class="n">7+ years</div><div class="l">Enterprise systems and delivery</div></div>
+    <div class="metric"><div class="n">14+</div><div class="l">Applications in T1 modernization</div></div>
+    <div class="metric"><div class="n">50+</div><div class="l">Contributors in T1 modernization</div></div>
+    <div class="metric"><div class="n">2</div><div class="l">Major releases delivered on schedule</div></div>
+  </div>
+
+  <section id="now">
+    <div class="sec-head"><span class="sec-num">1.0</span><h2>Program delivery</h2></div>
+    <div class="spec-row">
+      <div class="k">CRA · PROJECT LEADER (ACTING)<span class="badge">2025 — PRESENT</span></div>
+      <div>
+        <h3>Automatic Tax Filing</h3>
+        <p>Lead planning for a national program comprising approximately eight sub-projects and an approved roadmap through 2029. Align nearly 30 engineering, architecture, testing, security, privacy and business teams; chair API interface sessions and report delivery risks, decisions and trade-offs to executives up to the CTO.</p>
+      </div>
+    </div>
+    <div class="spec-row">
+      <div class="k">CRA · PROJECT LEADER (ACTING)<span class="badge">2023 — 2025</span></div>
+      <div>
+        <h3>T1 Adjustments Modernization</h3>
+        <p>Took over an eight-figure modernization mid-delivery across 14+ Java and mainframe applications and 50+ contributors. Delivered two major releases on schedule and under planned IT cost, with zero post-go-live defects. Led integration testing and release gates that resolved 170+ defects before UAT, and managed budget reporting and 12+ formal change requests.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><span class="sec-num">2.0</span><h2>Selected projects</h2></div>
+    <p class="section-intro">Independent work in product development and applied AI, with source files and implementation details available to explore.</p>
+
+    <article id="align" class="case project-case" aria-labelledby="align-title">
+      <div class="case-head">
+        <div><span class="project-kicker">01 · PRODUCT DEVELOPMENT</span><h3 id="align-title">Align hiring platform</h3><span class="project-role">Independent developer · October 2026 — present</span></div>
+        <span class="project-status">WORKING PILOT · IN DEVELOPMENT</span>
+      </div>
+      <p class="project-summary">I’m developing a two-sided hiring platform that connects candidates and employers through mutual interest. I translated the product concept into working candidate and employer journeys, connecting discovery, screening, application tracking and interview coordination with privacy and verification controls.</p>
+      <dl class="project-facts" aria-label="Implemented Align pilot capabilities">
+        <div><dt>2</dt><dd>Core workspaces: candidate and employer</dd></div>
+        <div><dt>30 days</dt><dd>Job reconfirmation window before expiry</dd></div>
+        <div><dt>7 days</dt><dd>Pending profile ID review expiry</dd></div>
+        <div><dt>4</dt><dd>Automated check suites in the source</dd></div>
+      </dl>
+      <div class="case-grid">
+        <div class="case-cell">
+          <h4>Product scope and decisions</h4>
+          <p>Defined separate candidate and employer journeys across discovery, work preferences, screening and application tracking. Made candidate publication opt-in and kept the fictional sample workspace separate from live records, so the product can be explored without publishing a real profile.</p>
+        </div>
+        <div class="case-cell">
+          <h4>Technical delivery</h4>
+          <p>Built and connected the React/TypeScript interface, API routes, Cloudflare Workers, D1/SQLite database and private R2 file storage. The pilot uses versioned schema migrations, server-side ownership checks and interview-slot conflict protection across the hiring workflow.</p>
+        </div>
+        <div class="case-cell">
+          <h4>Recruiting and candidate experience</h4>
+          <p>Employers manage screening questions, shortlists, team notes, application stages and interview availability. Candidates control profile visibility and contact sharing. Live messages and booking require mutual interest; downloadable interview calendar files include a 15-minute reminder.</p>
+        </div>
+        <div class="case-cell">
+          <h4>Trust and validation</h4>
+          <p>Job posting requires two checks: company-domain proof and admin approval. Profile photos use manual ID review with private image access. Four automated suites exercise API isolation, career tools, live hiring and verification using synthetic identities, image fixtures and SQLite migrations.</p>
+        </div>
+      </div>
+      <p class="project-note"><b>Current stage:</b> a working pilot in active development. Plus career tools use rules and templates for editable documents and guided practice. Scheduling includes downloadable calendar events.</p>
+      <div class="case-foot">
+        <a class="btn primary" href="https://align-career-match-rk.whiteboot69.chatgpt.site" rel="noopener">Try the live pilot</a>
+        <a class="btn ghost" href="https://github.com/rachitkaura/rachitkaura.github.io/tree/main/projects/align" rel="noopener">View source and setup</a>
+      </div>
+    </article>
+
+    <article id="case" class="case project-case" aria-labelledby="agent-title">
+      <div class="case-head">
+        <div><span class="project-kicker">02 · APPLIED AI</span><h3 id="agent-title">Multi-agent personal AI system</h3></div>
+        <span class="project-status">PERSONAL PROJECT · PUBLIC SPECS</span>
+      </div>
+      <p class="project-summary">I designed and deployed a multi-agent AI system with an orchestrator and three specialist agents, implementing task routing, scoped tool access and traceable decisions, tool calls and outputs. The project also includes a 30-case evaluation harness covering task completion, routing accuracy and failure modes.</p>
+      <div class="ai-demo">
+    <figure class="schematic" aria-label="Illustrative architecture of the personal AI project. Select a node to read its scope and authority limits.">
+      <figcaption class="cap"><span>ILLUSTRATIVE ARCHITECTURE</span><span>CLAUDE CODE</span></figcaption>
       <p class="hint">▸ TAP A NODE TO READ ITS SPEC</p>
-      <svg viewBox="0 0 420 240" role="img">
-        <path class="route" d="M 210 92 L 90 178"/>
-        <path class="route" d="M 210 92 L 210 178"/>
-        <path class="route" d="M 210 92 L 330 178"/>
+      <svg viewBox="0 0 420 270" role="group" aria-label="Agent routing diagram">
+        <path class="route" d="M 210 112 L 90 178"/>
+        <path class="route" d="M 210 112 L 210 178"/>
+        <path class="route" d="M 210 112 L 330 178"/>
         <g class="node" data-agent="orch" tabindex="0" role="button" aria-label="Chief of Staff orchestrator spec">
-          <rect class="nodebox orch" x="118" y="48" width="184" height="44"/>
-          <text class="node-label" x="210" y="67" text-anchor="middle">CHIEF OF STAFF</text>
-          <text class="node-sub" x="210" y="81" text-anchor="middle">orchestrator · routing · guardrails</text>
+          <rect class="nodebox orch" x="118" y="48" width="184" height="64"/>
+          <text class="node-label" x="210" y="74" text-anchor="middle">CHIEF OF STAFF</text>
+          <text class="node-sub" x="210" y="94" text-anchor="middle">orchestrator · routing · guardrails</text>
         </g>
         <g class="node" data-agent="trainer" tabindex="0" role="button" aria-label="Trainer agent spec">
-          <rect class="nodebox" x="34" y="178" width="112" height="44"/>
-          <text class="node-label" x="90" y="197" text-anchor="middle">TRAINER</text>
-          <text class="node-sub" x="90" y="211" text-anchor="middle">fitness programs</text>
+          <rect class="nodebox" x="34" y="178" width="112" height="64"/>
+          <text class="node-label" x="90" y="205" text-anchor="middle">TRAINER</text>
+          <text class="node-sub" x="90" y="225" text-anchor="middle">fitness programs</text>
         </g>
         <g class="node" data-agent="nutrition" tabindex="0" role="button" aria-label="Nutrition agent spec">
-          <rect class="nodebox" x="154" y="178" width="112" height="44"/>
-          <text class="node-label" x="210" y="197" text-anchor="middle">NUTRITION</text>
-          <text class="node-sub" x="210" y="211" text-anchor="middle">meal engineering</text>
+          <rect class="nodebox" x="154" y="178" width="112" height="64"/>
+          <text class="node-label" x="210" y="205" text-anchor="middle">NUTRITION</text>
+          <text class="node-sub" x="210" y="225" text-anchor="middle">meal engineering</text>
         </g>
         <g class="node" data-agent="money" tabindex="0" role="button" aria-label="Money coach agent spec">
-          <rect class="nodebox" x="274" y="178" width="112" height="44"/>
-          <text class="node-label" x="330" y="197" text-anchor="middle">MONEY COACH</text>
-          <text class="node-sub" x="330" y="211" text-anchor="middle">personal finance</text>
+          <rect class="nodebox" x="274" y="178" width="112" height="64"/>
+          <text class="node-label" x="330" y="205" text-anchor="middle">MONEY COACH</text>
+          <text class="node-sub" x="330" y="225" text-anchor="middle">personal finance</text>
         </g>
         <text class="node-sub" x="210" y="26" text-anchor="middle">USER REQUEST ↓</text>
         <circle class="pulse p1" r="3.2"/>
@@ -291,173 +431,86 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
         </dl>
       </div>
     </figure>
-  </div>
-
-  <div class="metrics rv">
-    <div class="metric"><div class="n">7 yrs</div><div class="l">Delivery experience</div></div>
-    <div class="metric"><div class="n">3×</div><div class="l">Promoted at CRA</div></div>
-    <div class="metric"><div class="n">$71M</div><div class="l">Current program (Budget 2025)</div></div>
-    <div class="metric"><div class="n">5.5M</div><div class="l">Canadians served by 2029</div></div>
-  </div>
-
-  <section id="now">
-    <div class="sec-head rv"><span class="sec-num">1.0</span><h2>Current delivery</h2></div>
-    <div class="spec-row rv">
-      <div class="k">CRA · IT LEAD<span class="badge">IN DELIVERY</span></div>
-      <div>
-        <h3>Automatic Tax Filing service</h3>
-        <p>IT delivery lead on a $71M federal initiative (Budget 2025) bringing pre-filled, automatically filed returns to ~1.1M lower-income Canadians starting the 2026 tax year, scaling toward 5.5M by 2029. Delivery planning and cross-directorate coordination on one of the Agency's highest-visibility programs.</p>
-      </div>
-    </div>
-    <div class="spec-row rv">
-      <div class="k">CRA · IT LEAD</div>
-      <div>
-        <h3>T1 Adjustments Modernization</h3>
-        <p>End-to-end Agile delivery of an eight-figure, mission-critical modernization processing individual tax adjustments nationally — multiple teams of 50+ people, phase-gate approvals presented to Directors and VPs. Promoted three times along the way.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="case">
-    <div class="sec-head rv"><span class="sec-num">2.0</span><h2>Case study — Multi-agent personal AI system</h2></div>
-    <div class="case rv">
-      <div class="case-head">
-        <h3>A Chief-of-Staff orchestrator with specialized sub-agents</h3>
-        <span class="mono">STACK: CLAUDE CODE · MARKDOWN SPECS · STRUCTURED HAND-OFFS</span>
-      </div>
-      <div class="case-grid">
-        <div class="case-cell">
-          <h4>Problem</h4>
-          <p>One generalist assistant does everything adequately and nothing consistently. I wanted domain expertise that persists: a trainer that knows my movement constraints, a nutrition coach that knows my macros and pantry, a money coach that knows my accounts — coordinated, not siloed.</p>
-        </div>
-        <div class="case-cell">
-          <h4>Architecture</h4>
-          <p>A Chief-of-Staff orchestrator receives every request, decides which sub-agent owns it, and manages hand-offs when a task spans domains — a training plan that changes calorie targets touches two agents. Each agent is defined by a spec: scope, tone, tools, and what it must escalate rather than decide.</p>
-        </div>
-        <div class="case-cell">
-          <h4>Guardrails</h4>
-          <ul>
-            <li>Every agent spec declares explicit out-of-scope actions and escalation paths.</li>
-            <li>Cross-domain changes route through the orchestrator — no agent silently rewrites another's outputs.</li>
-            <li>The same human-in-the-loop pattern regulated enterprises need: authority is designed, not assumed.</li>
-          </ul>
-        </div>
-        <div class="case-cell">
-          <h4>What broke, and what it taught me</h4>
-          <ul>
-            <li>Vague scope boundaries caused agents to answer outside their lane — fixed by rewriting specs with explicit refusal criteria.</li>
-            <li>Hand-offs lost context until I standardized a structured brief each agent passes forward.</li>
-            <li>Lesson: agent systems fail at the seams. Design the seams first.</li>
-          </ul>
+        <div class="demo-copy">
+          <h4>Architecture and boundaries</h4>
+          <p>Requests enter through the orchestrator. Each specialist has a Markdown specification defining its scope, tools, authority and escalation rules. Cross-domain work returns through the orchestrator rather than relying on direct agent-to-agent coordination.</p>
+          <h4>What changed through iteration</h4>
+          <p>Vague boundaries led to overlapping answers, while free-form hand-offs lost context. I tightened the refusal criteria and introduced a standard hand-off brief to preserve constraints and open questions.</p>
+          <h4>Evaluation</h4>
+          <p>I built a 30-case harness to evaluate task completion, routing accuracy and failure modes, using the results as a release gate and documenting the architecture and known limitations. The linked public repository shares the sanitized agent specifications and design decisions.</p>
+          <div class="logbox" aria-label="Illustrative routing example">
+            <div class="lg-cap"><span>ILLUSTRATIVE ROUTING</span><span class="dot">EXAMPLE</span></div>
+            <div class="logline">&gt; request → <b>CHIEF OF STAFF</b></div>
+            <div class="logline">&gt; scope and ownership → <b>SPECIALIST</b></div>
+            <div class="logline">&gt; authority limit → <b>HUMAN REVIEW</b></div>
+          </div>
+          <p class="demo-note">The diagram and routing example illustrate the design. The public repository contains sanitized Markdown agent specifications that can be adapted to other personal workflows.</p>
         </div>
       </div>
+      <p class="project-note"><b>Implementation:</b> Claude Code, Markdown agent specifications and structured hand-off briefs. Explore the public specifications below.</p>
       <div class="case-foot">
-        <a class="btn primary" href="https://github.com/rachitkaura/multi-agent-system" rel="noopener">View the specs on GitHub</a>
-        <a class="btn ghost" href="#contact">Ask me about it</a>
+        <a class="btn primary" href="https://github.com/rachitkaura/multi-agent-system" rel="noopener">Read the agent specs</a>
+        <a class="btn ghost" href="#contact">Discuss the project</a>
       </div>
-    </div>
-  </section>
-
-  <section id="align">
-    <div class="sec-head rv"><span class="sec-num">2.1</span><h2>Align — mutual interest, better conversations</h2></div>
-    <div class="case rv">
-      <div class="case-head">
-        <h3>A hiring platform I am building from concept to working pilot</h3>
-        <span class="mono">LIVE PILOT · IN ACTIVE DEVELOPMENT</span>
-      </div>
-      <div class="case-grid">
-        <div class="case-cell">
-          <h4>The product</h4>
-          <p>Align gives candidates and employers a shared path from discovery to a conversation. Both sides express interest before live messaging and interview booking open. A separate fictional workspace lets visitors explore the experience.</p>
-        </div>
-        <div class="case-cell">
-          <h4>The workflows</h4>
-          <p>Candidate profiles, work preferences and private résumé uploads connect to company roles, screening, shortlists and team notes. Mutual matches move through application stages, messages and interview slots, with downloadable calendar events.</p>
-        </div>
-        <div class="case-cell">
-          <h4>Trust by design</h4>
-          <p>Profiles are opt-in. Contact-sharing preferences and company blocks are checked on the server. Publishing jobs requires domain control and admin approval; profile photos use manual ID review with private image access and deletion handling.</p>
-        </div>
-        <div class="case-cell">
-          <h4>Implementation and status</h4>
-          <p>TypeScript and React on Vinext, with Cloudflare Workers, D1/SQLite and R2. The source includes migrations and automated workflow checks. Career tools currently use rules and templates; payments, AI model calls and external calendar sync are not connected.</p>
-        </div>
-      </div>
-      <div class="case-foot">
-        <a class="btn primary" href="https://align-career-match-rk.whiteboot69.chatgpt.site" rel="noopener">Try Align</a>
-        <a class="btn ghost" href="https://github.com/rachitkaura/rachitkaura.github.io/tree/main/projects/align" rel="noopener">View source and setup</a>
-      </div>
-    </div>
+    </article>
   </section>
 
   <section id="how">
-    <div class="sec-head rv"><span class="sec-num">3.0</span><h2>How I work</h2></div>
+    <div class="sec-head"><span class="sec-num">3.0</span><h2>How I work</h2></div>
     <div class="prin">
-      <div class="prin-card rv">
-        <span class="mono">PRINCIPLE 01</span>
-        <h3>Design the seams first</h3>
-        <p>Systems — and teams — fail at hand-off points, not inside well-run lanes. I spec interfaces, ownership, and escalation before anything else, whether it's two agents or twenty SMEs.</p>
+      <div class="prin-card">
+        <span class="mono">OWNERSHIP</span>
+        <h3>Set responsibilities early</h3>
+        <p>I clarify who decides, which team owns each interface and how issues escalate. Clear ownership helps teams make progress while dependencies are still being resolved.</p>
       </div>
-      <div class="prin-card rv">
-        <span class="mono">PRINCIPLE 02</span>
-        <h3>Automate what repeats</h3>
-        <p>A 60-minute manual cycle became 8 minutes because I scripted it myself. If a task happens weekly, it's a candidate for automation — and the person closest to it should build the first version.</p>
+      <div class="prin-card">
+        <span class="mono">VALIDATION</span>
+        <h3>Work through the whole flow</h3>
+        <p>I test the path from an initial requirement to a completed task. In Align, that includes matching, privacy rules and booking conflicts. In the AI project, it includes context and authority at each hand-off.</p>
       </div>
-      <div class="prin-card rv">
-        <span class="mono">PRINCIPLE 03</span>
-        <h3>Authority is designed, not assumed</h3>
-        <p>Years in government delivery taught me why guardrails exist. The AI systems that make it into production in banks and agencies are the ones where a human holds the pen at the right moments.</p>
+      <div class="prin-card">
+        <span class="mono">AUTOMATION</span>
+        <h3>Improve the recurring work</h3>
+        <p>I built five Excel VBA reporting automations using Jira data, reducing manual preparation per report from days to approximately five minutes. The automations refresh dashboards and draft follow-up messages.</p>
       </div>
     </div>
   </section>
 
-  <section id="pipeline">
-    <div class="sec-head rv"><span class="sec-num">4.0</span><h2>Build pipeline</h2></div>
-    <ul class="pipe rv">
-      <li><span class="status build">LIVE PILOT</span><div><b><a href="#align">Align hiring platform</a></b> — <span>candidate and employer workspaces, mutual matching, verification and interview coordination. Source and setup published on GitHub.</span></div></li>
-      <li><span class="status live">SHIPPED</span><div><b>Multi-agent system</b> — <span>orchestrator + three sub-agents, running daily. Case study above.</span></div></li>
-      <li><span class="status live">SHIPPED</span><div><b>This site</b> — <span>designed and deployed through my own Claude-based workflow.</span></div></li>
-      <li><span class="status build">IN BUILD</span><div><b>Eval harness</b> — <span>test cases and scoring for each sub-agent, because "it seems to work" isn't evidence.</span></div></li>
-      <li><span class="status planned">PLANNED</span><div><b>Human-in-the-loop email triage agent</b> — <span>drafts categorized replies; nothing sends without approval.</span></div></li>
-      <li><span class="status planned">PLANNED</span><div><b>Custom MCP server</b> — <span>a small tool server on the protocol enterprises are standardizing on.</span></div></li>
-    </ul>
-  </section>
-
   <section id="experience">
-    <div class="sec-head rv"><span class="sec-num">5.0</span><h2>Experience</h2></div>
+    <div class="sec-head"><span class="sec-num">4.0</span><h2>Experience</h2></div>
     <div class="xp">
-      <div class="xp-card rv">
-        <span class="mono">2021 — PRESENT</span>
+      <div class="xp-card">
+        <span class="mono">AUG 2021 — PRESENT</span>
         <h3>Canada Revenue Agency</h3>
-        <p>Senior IT Project Leader / Developer. National-scale Agile delivery, CI/CD engineering (Jenkins, Groovy, SonarQube), executive governance. Promoted three times.</p>
+        <p>Project Leader (Acting) since September 2023. Previously Senior Information Technology Analyst and Information Technology Analyst, with hands-on work in code migrations, CI/CD pipelines and national release readiness.</p>
       </div>
-      <div class="xp-card rv">
-        <span class="mono">2021</span>
+      <div class="xp-card">
+        <span class="mono">MAY — AUG 2021</span>
         <h3>Bell Mobility</h3>
-        <p>Business Analyst, PMO. Requirements, stakeholder workshops, executive funding approvals, weekly delivery dashboards.</p>
+        <p>Business Analyst, PMO (Contract). Tracked delivery milestones, prepared executive reporting and translated business requirements into process and data-flow diagrams.</p>
       </div>
-      <div class="xp-card rv">
-        <span class="mono">2019 — 2021</span>
+      <div class="xp-card">
+        <span class="mono">JUN 2019 — APR 2021</span>
         <h3>Canon Canada</h3>
-        <p>Associate Business Systems Analyst. SOX-compliant data work, audit evidence, UAT and end-to-end rollouts.</p>
+        <p>Associate Business Systems Analyst. Coordinated enterprise system changes from requirements through rollout and used SQL to support SOX compliance audits.</p>
       </div>
     </div>
   </section>
 
   <footer id="contact">
     <h2>Contact</h2>
-    <p>Open to senior delivery and technical program roles where AI transformation is real work, not a slide deck. Greater Toronto Area or remote.</p>
+    <p>Based in the Greater Toronto Area. Interested in remote technical program management roles spanning software delivery, product development and applied AI.</p>
     <div class="foot-links">
       <a href="mailto:rkaura94@gmail.com">rkaura94@gmail.com</a>
       <a href="https://linkedin.com/in/rachit-kaura" rel="noopener">linkedin.com/in/rachit-kaura</a>
       <a href="https://github.com/rachitkaura" rel="noopener">github.com/rachitkaura</a>
     </div>
-    <p class="colophon">SPEC RK-2026 · Designed and deployed via an agentic workflow built on <b>Claude Code</b> · Type: Space Grotesk / IBM Plex</p>
+    <p class="colophon">Rachit Kaura · Updated October 2026 · Built and maintained with an AI-assisted development workflow.</p>
   </footer>
-
 </main>
 
 <script>
+
 // mobile nav
 const menuBtn=document.getElementById('menuBtn');
 const nav=document.getElementById('siteNav');
@@ -468,12 +521,6 @@ menuBtn.addEventListener('click',()=>{
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');
 }));
-
-// scroll reveal
-const io=new IntersectionObserver(es=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-},{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
 // interactive spec cards
 const SPECS={
@@ -508,39 +555,6 @@ boxes.forEach(g=>{
   g.addEventListener('click',()=>setSpec(g.dataset.agent,g));
   g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setSpec(g.dataset.agent,g)}});
 });
-
-// routing log typewriter
-const LINES=[
-  ['log1','09:12 req("adjust cut for squat day") \u2192 <b>NUTRITION</b> <span class="ok">\u2713 routed</span>'],
-  ['log2','09:12 handoff(NUTRITION \u2192 TRAINER) context: kcal \u0394\u2013200 <span class="ok">\u2713 ack</span>'],
-  ['log3','09:13 guardrail: transaction request \u2192 <b>HUMAN</b> approval required \u23f8'],
-];
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-function typeLine(el,html,done){
-  if(reduced){el.innerHTML=html;done&&done();return}
-  let i=0;const plainLen=html.length;
-  // type by revealing progressively parsed html safely: build char-by-char on text, then swap to full html
-  const txt=html.replace(/<[^>]+>/g,'');
-  const t=setInterval(()=>{
-    el.textContent='> '+txt.slice(0,i++);
-    if(i>txt.length){clearInterval(t);el.innerHTML='> '+html;done&&done()}
-  },18);
-}
-function runLog(){
-  const els=LINES.map(l=>document.getElementById(l[0]));
-  typeLine(els[0],LINES[0][1],function(){
-    setTimeout(function(){
-      typeLine(els[1],LINES[1][1],function(){
-        setTimeout(function(){
-          typeLine(els[2],LINES[2][1]);
-        },450);
-      });
-    },450);
-  });
-}
-// type once on load, then hold — no looping, no motion competing with the headline
-runLog();
 </script>
 </body>
 </html>
-
