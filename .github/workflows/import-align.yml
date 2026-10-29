@@ -1,0 +1,52 @@
+name: Import Align source
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+concurrency: align-source-import
+
+jobs:
+  import:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: main
+
+      - name: Extract the verified Align source archive
+        shell: python
+        run: |
+          import hashlib
+          from pathlib import Path, PurePosixPath
+          from zipfile import ZipFile
+
+          archive = Path("Align_GitHub_Project.zip")
+          expected = "032f1f371db1b208e3394025206cf96daf0c5f3ed5bd47235c9c81900ad3b31d"
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == expected, "Archive differs from the prepared Align package"
+
+          with ZipFile(archive) as z:
+              files = [f for f in z.infolist() if not f.is_dir() and f.filename.startswith("projects/align/")]
+              assert len(files) == 150, "Expected 150 Align source files"
+              for f in files:
+                  path = PurePosixPath(f.filename)
+                  assert not path.is_absolute() and ".." not in path.parts
+                  target = Path(z.extract(f))
+                  target.chmod(0o755 if (f.external_attr >> 16) & 0o111 else 0o644)
+
+          print("Imported 150 Align source files.")
+
+      - name: Commit the source to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- projects/align
+          if git diff --cached --quiet; then
+            echo "Align source is already imported."
+            exit 0
+          fi
+          git commit -m "Add Align application source and documentation"
+          git push origin HEAD:main
