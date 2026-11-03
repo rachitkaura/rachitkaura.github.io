@@ -17,36 +17,71 @@ jobs:
         with:
           ref: main
 
-      - name: Extract the verified Align source archive
+      - name: Sync the validated Align version 46 source
         shell: python
         run: |
-          import hashlib
+          import hashlib, json, os, stat, subprocess, tempfile
           from pathlib import Path, PurePosixPath
           from zipfile import ZipFile
-
-          archive = Path("Align_GitHub_Project.zip")
-          expected = "032f1f371db1b208e3394025206cf96daf0c5f3ed5bd47235c9c81900ad3b31d"
-          assert hashlib.sha256(archive.read_bytes()).hexdigest() == expected, "Archive differs from the prepared Align package"
-
+          
+          archive=Path('Align_GitHub_Project.zip')
+          expected='2253cb506156b73f57f67262221668d59f243f463b2f4aeeac12ee92d390f0be'
+          assert hashlib.sha256(archive.read_bytes()).hexdigest()==expected, 'Archive does not match the validated source package'
+          expected_project_tree='9eda8d5ae726664bd8dc214dcbd484066e6c0adf'
+          expected_roots={'index.html':'2391b99a702a0157d3c70e65e92ad2a3eac6f4f2','README.md':'ff464684f239ba3b9bdfa28abb7b39299eca0c24'}
+          contents={}
+          modes={}
           with ZipFile(archive) as z:
-              files = [f for f in z.infolist() if not f.is_dir() and f.filename.startswith("projects/align/")]
-              assert len(files) == 150, "Expected 150 Align source files"
-              for f in files:
-                  path = PurePosixPath(f.filename)
-                  assert not path.is_absolute() and ".." not in path.parts
-                  target = Path(z.extract(f))
-                  target.chmod(0o755 if (f.external_attr >> 16) & 0o111 else 0o644)
-
-          print("Imported 150 Align source files.")
+              entries=z.infolist()
+              assert len(entries)==284, 'Unexpected archive file count'
+              assert sum(x.file_size for x in entries)<20_000_000, 'Source package exceeds its size bound'
+              for info in entries:
+                  name=info.filename
+                  path=PurePosixPath(name)
+                  assert not info.is_dir() and not path.is_absolute() and '..' not in path.parts and '\\' not in name, 'Unsafe archive path'
+                  assert str(path)==name and name not in contents, 'Non-canonical or repeated archive path'
+                  assert name in expected_roots or name.startswith('projects/align/'), 'Out-of-scope archive path'
+                  assert not any(p in {'.git','node_modules','.wrangler','.sites-runtime','dist','.next'} for p in path.parts), 'Local runtime files are excluded'
+                  assert not any(p.startswith(('.env','.dev.vars')) or p.endswith('.pem') for p in path.parts), 'Local credentials are excluded'
+                  mode=info.external_attr>>16
+                  assert stat.S_IFMT(mode)==stat.S_IFREG and info.file_size<5_000_000, 'Unsupported archive entry'
+                  contents[name]=z.read(info)
+                  modes[name]=0o755 if mode&0o111 else 0o644
+          
+          assert 'project_id' not in json.loads(contents['projects/align/.openai/hosting.json']), 'Hosted identity must not be exported'
+          provenance=json.loads(contents['projects/align/SOURCE_SNAPSHOT.json'])
+          assert provenance['source_commit']=='a4fa28777847c9aa30ebfe0e78a8739e679936dc' and provenance['hosted_version']==46
+          tracked=set(subprocess.check_output(['git','ls-files','-z','--','projects/align']).decode().split('\0'))-{''}
+          incoming={n for n in contents if n.startswith('projects/align/')}
+          stale=tracked-incoming
+          identical=not stale and all(Path(n).is_file() and not Path(n).is_symlink() and Path(n).read_bytes()==b for n,b in contents.items())
+          if identical:
+              print('Align version 46 source is already synchronized.')
+          else:
+              actual_tree=subprocess.check_output(['git','rev-parse','HEAD:projects/align'],text=True).strip()
+              assert actual_tree==expected_project_tree, 'Align source changed since preparation; review before replacing it'
+              for name,base_sha in expected_roots.items():
+                  actual=subprocess.check_output(['git','rev-parse','HEAD:'+name],text=True).strip()
+                  blob=hashlib.sha1(b'blob '+str(len(contents[name])).encode()+b'\0'+contents[name]).hexdigest()
+                  assert actual in {base_sha,blob}, 'Portfolio content changed since preparation; review before replacing it'
+              with tempfile.TemporaryDirectory() as temp:
+                  staging=Path(temp)
+                  for name,data in contents.items():
+                      p=staging/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data);p.chmod(modes[name])
+                  for name in sorted(stale):
+                      Path(name).unlink()
+                  for name in contents:
+                      dest=Path(name);dest.parent.mkdir(parents=True,exist_ok=True);os.replace(staging/name,dest)
+              print(f'Synchronized {len(incoming)} Align source files and 2 portfolio files; removed {len(stale)} obsolete tracked source files.')
 
       - name: Commit the source to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- projects/align
+          git add -- projects/align index.html README.md
           if git diff --cached --quiet; then
-            echo "Align source is already imported."
+            echo "Align source is already synchronized."
             exit 0
           fi
-          git commit -m "Add Align application source and documentation"
+          git commit -m "Sync Align v46 application source and validation"
           git push origin HEAD:main
