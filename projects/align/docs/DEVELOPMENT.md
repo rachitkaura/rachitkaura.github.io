@@ -45,7 +45,7 @@ For hot reload, run `pnpm dev` and use the local URL it prints, normally `http:/
 
 GitHub Pages serves the portfolio page only. Align's full application needs a Worker runtime, D1 binding `DB`, R2 binding `BUCKET`, trusted authentication and server-only `ALIGN_ADMIN_EMAILS` configuration for reviewers.
 
-The committed `.openai/hosting.json` contains the storage binding names but omits the original Site's project identifier. The live pilot remains at [the Align website](https://align-career-match-rk.whiteboot69.chatgpt.site). Publishing this source to GitHub does not redeploy that pilot or copy its data.
+The committed `.openai/hosting.json` contains the storage binding names but omits the original Site's project identifier. [Open the current interactive demo](https://align-career-match-rk.rkaura94.chatgpt.site/demo). This public source is the October 29, 2026 snapshot; the hosted demo includes later updates. Publishing this source to GitHub does not redeploy that pilot or copy its data.
 
 For a new Sites deployment, register the clone as its own Site and configure its own identity and bindings with the Sites workflow. For another Cloudflare deployment, supply your own resources and trusted identity gateway; the current source is not a standalone GitHub Pages app.
 
