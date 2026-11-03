@@ -225,6 +225,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 .project-facts dt{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;line-height:1.2;color:var(--blue);margin-bottom:7px}
 .project-facts dd{margin:0;font-size:12px;line-height:1.5;color:var(--slate)}
 .project-summary{padding:22px 28px;border-bottom:1px solid var(--line);font-size:16px;color:#333c46;max-width:none}
+.project-actions{border-top:0;border-bottom:1px solid var(--line)}
 .project-note{border-top:1px solid var(--line);padding:18px 28px;font-size:13px;color:var(--slate);background:rgba(30,79,204,.025)}
 .project-note b{color:var(--ink);font-weight:600}
 .ai-demo{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:28px;align-items:start}
@@ -306,7 +307,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
       <a class="overview-link" href="#align">
         <span class="overview-label"><span>PRODUCT DEVELOPMENT · WORKING PILOT</span><span aria-hidden="true">↘</span></span>
         <h3>Align hiring platform</h3>
-        <p>Candidate and employer workflows, from discovery and mutual interest to interviews.</p>
+        <p>See your fit, show your work and connect when interest is mutual. Explore both sides of the hiring journey.</p>
       </a>
       <a class="overview-link" href="#case">
         <span class="overview-label"><span>APPLIED AI · PERSONAL PROJECT</span><span aria-hidden="true">↘</span></span>
@@ -344,43 +345,43 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
 
   <section id="projects">
     <div class="sec-head"><span class="sec-num">2.0</span><h2>Selected projects</h2></div>
-    <p class="section-intro">Independent work in product development and applied AI, with source files and implementation details available to explore.</p>
+    <p class="section-intro">Independent work in product development and applied AI. Explore the Align demo, source snapshots and implementation decisions.</p>
 
     <article id="align" class="case project-case" aria-labelledby="align-title">
       <div class="case-head">
         <div><span class="project-kicker">01 · PRODUCT DEVELOPMENT</span><h3 id="align-title">Align hiring platform</h3><span class="project-role">Independent developer · October 2026 — present</span></div>
         <span class="project-status">WORKING PILOT · IN DEVELOPMENT</span>
       </div>
-      <p class="project-summary">I’m developing a two-sided hiring platform that connects candidates and employers through mutual interest. I translated the product concept into working candidate and employer journeys, connecting discovery, screening, application tracking and interview coordination with privacy and verification controls.</p>
-      <dl class="project-facts" aria-label="Implemented Align pilot capabilities">
-        <div><dt>2</dt><dd>Core workspaces: candidate and employer</dd></div>
-        <div><dt>30 days</dt><dd>Job reconfirmation window before expiry</dd></div>
-        <div><dt>7 days</dt><dd>Pending profile ID review expiry</dd></div>
-        <div><dt>4</dt><dd>Automated check suites in the source</dd></div>
+      <p class="project-summary">Your next move, mutual. I’m building Align to make hiring a clearer exchange between candidates and hiring teams. The working pilot connects swipe discovery and explainable fit with candidate-controlled work evidence, review deadlines and a shared path from mutual interest to interview.</p>
+      <div class="case-foot project-actions">
+        <a class="btn primary" href="https://align-career-match-rk.rkaura94.chatgpt.site/demo" rel="noopener">Try the interactive demo</a>
+        <a class="btn ghost" href="https://github.com/rachitkaura/rachitkaura.github.io/tree/main/projects/align" rel="noopener">View source snapshot</a>
+      </div>
+      <dl class="project-facts" aria-label="Explore the Align demo">
+        <div><dt>2</dt><dd>Connected workspaces: candidate and hiring team</dd></div>
+        <div><dt>Fit</dt><dd>Visible on cards, with a score breakdown</dd></div>
+        <div><dt>Proof</dt><dd>Work examples shared by candidate choice</dd></div>
+        <div><dt>Dates</dt><dd>Review places with written outcome deadlines</dd></div>
       </dl>
       <div class="case-grid">
         <div class="case-cell">
-          <h4>Product scope and decisions</h4>
-          <p>Defined separate candidate and employer journeys across discovery, work preferences, screening and application tracking. Made candidate publication opt-in and kept the fictional sample workspace separate from live records, so the product can be explored without publishing a real profile.</p>
+          <h4>A clearer candidate journey</h4>
+          <p>Swipe through roles with fit shown on the card, inspect matches and gaps, then prepare an editable résumé and cover letter for the role. Link GitHub and application documents to a profile, review what accompanies each swipe, and make selected materials available after a mutual match.</p>
         </div>
         <div class="case-cell">
-          <h4>Technical delivery</h4>
-          <p>Built and connected the React/TypeScript interface, API routes, Cloudflare Workers, D1/SQLite database and private R2 file storage. The pilot uses versioned schema migrations, server-side ownership checks and interview-slot conflict protection across the hiring workflow.</p>
+          <h4>Review with shared expectations</h4>
+          <p>Hiring teams calibrate essential evidence, trainable gaps and transferable experience. Candidates can reserve a review place with a written outcome deadline. Teams compare profiles, review capped batches and record outcomes, while shared messaging and interview booking open after mutual interest.</p>
         </div>
         <div class="case-cell">
-          <h4>Recruiting and candidate experience</h4>
-          <p>Employers manage screening questions, shortlists, team notes, application stages and interview availability. Candidates control profile visibility and contact sharing. Live messages and booking require mutual interest; downloadable interview calendar files include a 15-minute reminder.</p>
+          <h4>Evidence with clear boundaries</h4>
+          <p>Structured work examples explain the problem, personal contribution and outcome, with supporting links and employer-specific evidence checks. Claims remain self-reported; a recorded check has a limited scope. Profile fit uses required skills, relevant experience and start date. Working preferences and evidence checks do not change the score.</p>
         </div>
         <div class="case-cell">
-          <h4>Trust and validation</h4>
-          <p>Job posting requires two checks: company-domain proof and admin approval. Profile photos use manual ID review with private image access. Four automated suites exercise API isolation, career tools, live hiring and verification using synthetic identities, image fixtures and SQLite migrations.</p>
+          <h4>Product and technical delivery</h4>
+          <p>I translated the concept into connected candidate and hiring-team workflows, iterating on mobile layouts, sharing controls and explainable scoring. The public source snapshot documents the React/TypeScript interface, API routes, Cloudflare Workers, D1/SQLite, private R2 storage and four automated check suites.</p>
         </div>
       </div>
-      <p class="project-note"><b>Current stage:</b> a working pilot in active development. Plus career tools use rules and templates for editable documents and guided practice. Scheduling includes downloadable calendar events.</p>
-      <div class="case-foot">
-        <a class="btn primary" href="https://align-career-match-rk.whiteboot69.chatgpt.site" rel="noopener">Try the live pilot</a>
-        <a class="btn ghost" href="https://github.com/rachitkaura/rachitkaura.github.io/tree/main/projects/align" rel="noopener">View source and setup</a>
-      </div>
+      <p class="project-note"><b>Current stage:</b> an independent working pilot in active development. Try the interactive demo with fictional data and no signup. Document drafts use rules and templates. The linked source is the October 29, 2026 snapshot; the hosted demo includes later updates.</p>
     </article>
 
     <article id="case" class="case project-case" aria-labelledby="agent-title">
@@ -505,7 +506,7 @@ footer p{color:var(--slate);max-width:52ch;margin-bottom:24px}
       <a href="https://linkedin.com/in/rachit-kaura" rel="noopener">linkedin.com/in/rachit-kaura</a>
       <a href="https://github.com/rachitkaura" rel="noopener">github.com/rachitkaura</a>
     </div>
-    <p class="colophon">Rachit Kaura · Updated October 2026 · Built and maintained with an AI-assisted development workflow.</p>
+    <p class="colophon">Rachit Kaura · Updated November 2026 · Built and maintained with an AI-assisted development workflow.</p>
   </footer>
 </main>
 
