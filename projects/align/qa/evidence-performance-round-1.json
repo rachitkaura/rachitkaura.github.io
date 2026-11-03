@@ -1,0 +1,104 @@
+{
+  "round": 1,
+  "generatedAt": "2026-10-31T23:40:02.907Z",
+  "engine": "Node v24.22.1",
+  "fixture": {
+    "roles": 20,
+    "profiles": 24
+  },
+  "metrics": [
+    {
+      "name": "Fresh fixture creation",
+      "median_ms": 0.948,
+      "p95_ms": 1.357,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Saved-session load",
+      "median_ms": 1.45,
+      "p95_ms": 2.196,
+      "budget_ms": 75,
+      "pass": true
+    },
+    {
+      "name": "Candidate workspace",
+      "median_ms": 2.2,
+      "p95_ms": 2.89,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Review workflows",
+      "median_ms": 0.408,
+      "p95_ms": 0.625,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "AI hiring workspace",
+      "median_ms": 1.701,
+      "p95_ms": 1.95,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Rank 24 profiles",
+      "median_ms": 1.228,
+      "p95_ms": 1.629,
+      "budget_ms": 75,
+      "pass": true
+    },
+    {
+      "name": "Record a scoped evidence check",
+      "median_ms": 0.738,
+      "p95_ms": 0.962,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Persist a chat reply",
+      "median_ms": 0.662,
+      "p95_ms": 0.785,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Saved demo",
+      "bytes": 154978,
+      "budget_bytes": 500000,
+      "pass": true
+    },
+    {
+      "name": "Workspace JSON",
+      "bytes": 155100,
+      "budget_bytes": 250000,
+      "pass": true
+    },
+    {
+      "name": "All client JS (gzip)",
+      "bytes": 224108,
+      "budget_bytes": 350000,
+      "pass": true
+    },
+    {
+      "name": "Largest JS chunk (gzip)",
+      "bytes": 76466,
+      "budget_bytes": 200000,
+      "pass": true
+    },
+    {
+      "name": "All CSS (gzip)",
+      "bytes": 53725,
+      "budget_bytes": 70000,
+      "pass": true
+    },
+    {
+      "name": "Local variable fonts",
+      "bytes": 61768,
+      "budget_bytes": 100000,
+      "pass": true
+    }
+  ],
+  "failures": []
+}

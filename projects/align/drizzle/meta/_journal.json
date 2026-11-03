@@ -29,6 +29,34 @@
       "when": 1793123427615,
       "tag": "0003_sad_the_anarchist",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1793315558133,
+      "tag": "0004_flashy_wolfpack",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1793418512737,
+      "tag": "0005_clumsy_surge",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1793488744301,
+      "tag": "0006_project_evidence",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1793494409567,
+      "tag": "0007_pipeline_evidence",
+      "breakpoints": true
     }
   ]
 }

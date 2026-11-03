@@ -1,0 +1,1 @@
+CREATE INDEX `proof_share_application` ON `proof_shares` (`application_id`);

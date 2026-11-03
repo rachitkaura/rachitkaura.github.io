@@ -1,0 +1,1 @@
+ALTER TABLE `proof_shares` ADD `checks` text DEFAULT '[]' NOT NULL;

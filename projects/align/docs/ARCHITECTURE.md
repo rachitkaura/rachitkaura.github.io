@@ -1,49 +1,44 @@
 # Align architecture
 
-Align has a public live hiring area and a separate fictional sample workspace. A candidate and an employer must both express interest before live messaging and interview booking become available.
+This source matches hosted Align version 46 at commit `a4fa28777847c9aa30ebfe0e78a8739e679936dc`, exported November 2, 2026. See [SOURCE_SNAPSHOT.json](../SOURCE_SNAPSHOT.json) for the exact export adaptations.
 
-```mermaid
-flowchart TD
-    UI["Candidate employer and admin interfaces"] --> API["Vinext route handlers"]
-    Identity["Trusted Sites identity headers"] --> API
-    API --> DB["D1 relational records"]
-    API --> Files["Private R2 files"]
-    API --> DNS["Company DNS TXT proof"]
-```
+Align has candidate and hiring-team workspaces, with an isolated fictional demo at `/demo`. Candidate discovery stays swipe-only. Mutual interest opens participant-authorized messages and interview booking.
 
 ## Source map
 
-| Area | Files | Responsibility |
+| Area | Source | Responsibility |
 | --- | --- | --- |
-| Main experience | `app/page.tsx`, `app/data.ts`, `app/globals.css`, `app/live.css` | Sample discovery, navigation, profiles and shared styling |
-| Live hiring | `app/components/live-hiring.tsx`, `app/lib/live-server.ts`, `app/lib/live.ts` | Candidates, company teams, preferences, applications, messages, slots and interviews |
-| Identity review | `app/components/verification.tsx`, `app/lib/verification.ts` | Admin review, profile photos, private ID images and mandatory company approval |
-| Career tools | `app/components/premium-career.tsx`, `app/components/career-coach.tsx`, `app/lib/career.ts`, `app/lib/docx.ts` | Listed-skill coverage, editable drafts, DOCX export and guided practice |
-| HTTP API | `app/api/` | Live hiring, verification, private workspace and resume storage endpoints |
-| Data model | `db/schema.ts`, `drizzle/` | Drizzle schema and four ordered SQL migrations with schema snapshots |
-| Runtime | `worker/index.ts`, `vite.config.ts`, `app/chatgpt-auth.ts` | Cloudflare Worker routing, local bindings and platform sign-in integration |
-| Checks | `scripts/check-*.cjs` | API isolation, career logic, SQLite-backed live workflows and verification lifecycle |
+| Workspace and discovery | `app/components/align-app.tsx`, `workspace-nav.tsx`, `swipe-deck.tsx` | Responsive navigation, role/candidate cards, fit and swipe actions |
+| Shared role criteria | `app/lib/role-criteria.ts`, `fit-evidence.ts`, `ranking.ts` | One deterministic rubric used on both sides, supported essentials, gaps, known/unknown criteria and score explanations |
+| Live hiring | `app/lib/live-server.ts`, `workflows-server.ts` | Publication, company membership, applications, calibration, capped review batches and written outcomes |
+| Durable interest | `app/lib/swipe-server.ts`, `interest-outbox.ts`, `remote-outbox.ts` | Server acceptance, exact ten-second Undo, background delivery, retries and recovery |
+| Profile materials | `app/components/profile-materials.tsx`, `app/lib/profile-materials.ts`, `document-server.ts` | GitHub, documents, per-role material choices, snapshots, authorized download and revocation |
+| Work evidence | `app/components/project-evidence.tsx`, `application-evidence.tsx`, `app/lib/project-evidence.ts` | Structured claims, supporting artifacts, scoped checks, follow-up and pipeline visibility |
+| Inbox and handoffs | `app/components/inbox.tsx`, `app/lib/inbox.ts`, `handoff-server.ts` | Conversation access, shared next steps, bookings and consent-bound JSON exports |
+| Demo | `app/lib/demo-store.ts`, `demo-seed.ts`, `demo-evidence.ts` | Browser-persisted fictional workflows with live-network calls blocked by the demo adapter |
+| Identity and notifications | `app/lib/verification.ts`, `email-notifications.ts`, `worker/index.ts` | Company approval, legacy private-ID cleanup, opt-in preferences and sender-readiness gates |
+| Data and checks | `db/`, `drizzle/`, `scripts/check-*.cjs`, `tests/` | Eight ordered SQL migrations, service regressions and fourteen test files |
 
-## State and ownership
+## State, access and privacy
 
-D1 stores companies, accepted team memberships, candidate profiles, jobs, applications, messages, availability, interviews, notifications, settings, verification records and private workspace JSON. R2 stores private resumes, staged portraits and ID images. Generated career documents are not included in live candidate responses.
+Trusted Sites identity headers supply the account identity. The Worker checks ownership, accepted company membership, consent, blocks, origin and input limits on the server. D1 holds relational records and private workspace state; R2 holds private files. Candidate discovery publication is opt-in.
 
-Every live operation checks candidate ownership, company membership or administrator authority on the server. Candidate publication is opt-in. Contact-sharing preferences and company/domain blocks apply on reads and writes; adding a block withdraws affected applications and cancels future interviews.
+One-sided interest is private. Live swipes are accepted durably before confirmation and delivered after the Undo deadline; delivery rechecks the current role, profile, company approval, privacy and optional review request. Matching, review reservations and interview slots preserve their transaction and conflict checks.
 
-Jobs expire after 30 days without reconfirmation. Posting and reopening require both domain control and separate admin approval. Verification badges express those checks, rather than guaranteeing every employer claim.
+Work summaries, per-application work sharing, optional application materials and hiring-data exports are separate consent decisions. Private drafts, unshared evidence, ID images and team notes do not become public through a score or a handoff.
 
-## Identity boundary
+## Scoring and evidence
 
-The hosted app receives trusted `oai-authenticated-user-*` headers from Sites. Its local development plugin uses an isolated loopback-only test identity and strips incoming identity headers before supplying the local identity. The application does not implement an independent public OAuth service. A deployment outside Sites needs a trusted identity gateway that strips untrusted headers and supplies verified identities.
+Both sides use the published role rubric. Required skills carry weight 70, relevant years 20 and availability 10; unavailable dimensions are excluded. Working preferences, portraits, private documents and evidence checks do not affect fit. Claims remain self-reported, lexical matching has limits, and no score automatically makes a hiring decision.
 
-`ALIGN_ADMIN_EMAILS` is server-only configuration. No production value is included in this export. Private ID images are authorized per request, expire after seven days when pending, and are deleted after review or withdrawal. Failed deletion attempts enter a retry queue. Reviews are manual; the app does not perform automated facial recognition.
+## Runtime boundaries
 
-## Matching and career tools
+The full app needs a Worker, D1 `DB`, R2 `BUCKET` and trusted identity integration. GitHub Pages serves the portfolio, not the application backend. A clean local clone uses the portable development profile and its isolated synthetic identity; that identity is not a public authentication service.
 
-Live matching is reciprocal interest. The Plus preview uses explicit skill lists, aliases, rules and templates. It does not call an AI model, infer hiring probability, parse uploaded resumes, collect payments, send email, or synchronize external calendars. Calendar support is an ICS download.
+Portrait/photo-ID intake is paused. Company domain proof and separate admin approval remain mandatory. Legacy ID access, expiry and cleanup checks remain in the source.
 
-## Export provenance
+In-app notifications work. Email delivery requires an owner-configured verified sender and provider values; a periodic trigger must also be configured for quiet-period reminders and interrupted-task recovery. Neither production activation is claimed by this export. See [notification setup](../NOTIFICATIONS_SETUP.md).
 
-The application files were exported from Align's current source on October 29, 2026. The snapshot is `d3fa38301c61ceaa0c51bf6723b51d5192c4c11d`. The GitHub copy removes the hosted Site identity, gives the package an Align-specific name, adds convenience check/local-migration scripts and adds project documentation. Production application behavior is preserved.
+## Export contents
 
-This export contains source, schema migrations and synthetic test fixtures. Runtime database contents, uploaded files, credentials and local build state are excluded. Third-party license files remain alongside their vendored assets.
+Application logic, tests, migrations, locally licensed fonts, synthetic fixtures and recorded QA are included. Production data, uploads, runtime secrets, dependencies and build output are excluded. Historical film binaries stay on the hosted Site; `public/watch.html` uses hosted media URLs. This export does not change the hosted app or its data.

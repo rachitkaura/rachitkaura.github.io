@@ -1,0 +1,3532 @@
+[
+  {
+    "screen": "candidate/swipe",
+    "width": 320,
+    "height": 640,
+    "large": false,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 320,
+      "height": 640,
+      "readyMs": 3176.39999999851,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 13.799999997019768,
+            "start": 78.60000000149012
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 16.100000001490116,
+            "start": 78.79999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 112,
+          "load": 125.5,
+          "transfer": 46997
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793482730575",
+          "duration": 20.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 20.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 20.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx?t=1793483085301",
+          "duration": 20.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-materials.tsx?t=1793482730575",
+          "duration": 20,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 18.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 18.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 18.600000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 640,
+      "card": {
+        "top": 121,
+        "bottom": 395,
+        "height": 274
+      },
+      "fit": {
+        "top": 285.765625,
+        "bottom": 346,
+        "height": 60.234375
+      },
+      "details": {
+        "top": 346,
+        "bottom": 390,
+        "height": 44
+      },
+      "actions": {
+        "top": 453,
+        "bottom": 501,
+        "height": 48
+      },
+      "undo": {
+        "top": 501,
+        "bottom": 555,
+        "height": 54
+      },
+      "nav": {
+        "top": 569,
+        "bottom": 640,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 320,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">FO</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Forma</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>58<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>2 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > .text-link"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"Fit details — see how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-swipe-logo"
+          ],
+          "text": "FO",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            234,
+            242,
+            233
+          ],
+          "ratio": 7.764,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "Forma",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Ottawa, ON · Remote",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-salary > small"
+          ],
+          "text": "/ year",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "58/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "2 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        },
+        {
+          "target": [
+            ".focus-fit-summary > .text-link"
+          ],
+          "text": "Fit details",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 550
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 320,
+    "height": 640,
+    "large": false,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 320,
+      "height": 640,
+      "readyMs": 2796.1999999955297,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 8.699999995529652,
+            "start": 68.39999999850988
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 10.200000002980232,
+            "start": 68.59999999403954
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 90.89999999850988,
+          "load": 106.69999999552965,
+          "transfer": 46994
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 20.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 20.599999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 20.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 20.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx?t=1793483085301",
+          "duration": 20.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793482730575",
+          "duration": 19.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-materials.tsx?t=1793482730575",
+          "duration": 19,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 640,
+      "card": {
+        "top": 191.046875,
+        "bottom": 447,
+        "height": 255.953125
+      },
+      "fit": {
+        "top": 337.765625,
+        "bottom": 398,
+        "height": 60.234375
+      },
+      "details": {
+        "top": 398,
+        "bottom": 442,
+        "height": 44
+      },
+      "actions": {
+        "top": 453,
+        "bottom": 501,
+        "height": 48
+      },
+      "undo": {
+        "top": 501,
+        "bottom": 555,
+        "height": 54
+      },
+      "nav": {
+        "top": 569,
+        "bottom": 640,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 320,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">OPEN TO CONNECT</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > h3"
+              ],
+              "html": "<h3>Jordan Chen</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-title"
+              ],
+              "html": "<h3 class=\"ux-swipe-title\">Senior Product Manager</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "span[aria-hidden=\"true\"]"
+          ],
+          "text": "JC",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            213,
+            224,
+            207
+          ],
+          "ratio": 6.456,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "OPEN TO CONNECT",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > h3"
+          ],
+          "text": "Jordan Chen",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-title"
+          ],
+          "text": "Senior Product Manager",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Toronto, ON",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(1) > b"
+          ],
+          "text": "4 years",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(2) > b"
+          ],
+          "text": "Nov 7",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "4 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/swipe",
+    "width": 700,
+    "height": 340,
+    "large": false,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 700,
+      "height": 340,
+      "readyMs": 2853,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 23.200000002980232,
+            "start": 56
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 23.399999998509884,
+            "start": 56.100000001490116
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 84.10000000149012,
+          "load": 105.20000000298023,
+          "transfer": 47152
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts",
+          "duration": 29.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 27.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 27.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 27.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/application-workflow.ts",
+          "duration": 24.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+          "duration": 23.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+          "duration": 23.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/role-criteria.ts",
+          "duration": 23.099999994039536,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 340,
+      "card": {
+        "top": 116,
+        "bottom": 328,
+        "height": 212
+      },
+      "fit": {
+        "top": 223.765625,
+        "bottom": 279,
+        "height": 55.234375
+      },
+      "details": {
+        "top": 279,
+        "bottom": 323,
+        "height": 44
+      },
+      "actions": {
+        "top": 230,
+        "bottom": 274,
+        "height": 44
+      },
+      "undo": {
+        "top": 274,
+        "bottom": 328,
+        "height": 54
+      },
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 700,
+      "height": 340,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">FO</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Forma</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "h3"
+              ],
+              "html": "<h3 class=\"ux-swipe-title\">Security Program Manager</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>58<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>2 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > .text-link"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"Fit details — see how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-swipe-logo"
+          ],
+          "text": "FO",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            234,
+            242,
+            233
+          ],
+          "ratio": 7.764,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "Forma",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            "h3"
+          ],
+          "text": "Security Program Manager",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Ottawa, ON · Remote",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-salary > small"
+          ],
+          "text": "/ year",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "58/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "2 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 700
+        },
+        {
+          "target": [
+            ".focus-fit-summary > .text-link"
+          ],
+          "text": "Fit details",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 550
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 700,
+    "height": 340,
+    "large": false,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 700,
+      "height": 340,
+      "readyMs": 2897.5999999940395,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 7.899999998509884,
+            "start": 62.899999998509884
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 7.700000002980232,
+            "start": 63.19999999552965
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 84.89999999850988,
+          "load": 103.59999999403954,
+          "transfer": 46996
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793482730575",
+          "duration": 29.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts",
+          "duration": 28.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 28.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793482730575",
+          "duration": 28.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 28.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793482730575",
+          "duration": 28.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 28.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 27.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 340,
+      "card": {
+        "top": 166,
+        "bottom": 328,
+        "height": 162
+      },
+      "fit": {
+        "top": 179,
+        "bottom": 279,
+        "height": 100
+      },
+      "details": {
+        "top": 279,
+        "bottom": 323,
+        "height": 44
+      },
+      "actions": {
+        "top": 230,
+        "bottom": 274,
+        "height": 44
+      },
+      "undo": {
+        "top": 274,
+        "bottom": 328,
+        "height": 54
+      },
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 700,
+      "height": 340,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".focus-fit-name"
+              ],
+              "html": "<b class=\"focus-fit-name\">Jordan Chen</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".focus-fit-name"
+          ],
+          "text": "Jordan Chen",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 700
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 20,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/swipe",
+    "width": 1280,
+    "height": 780,
+    "large": false,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 1280,
+      "height": 780,
+      "readyMs": 2902,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 19.200000002980232,
+            "start": 48
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 19.5,
+            "start": 48.100000001490116
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 72.90000000596046,
+          "load": 91,
+          "transfer": 46995
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/workspace-navigation.ts",
+          "duration": 23.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/workspace-nav.tsx",
+          "duration": 23.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 22.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 22.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts",
+          "duration": 22.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 21.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.19999999552965,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 121,
+        "bottom": 561,
+        "height": 440
+      },
+      "fit": {
+        "top": 439.765625,
+        "bottom": 508,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 508,
+        "bottom": 552,
+        "height": 44
+      },
+      "actions": {
+        "top": 619,
+        "bottom": 667,
+        "height": 48
+      },
+      "undo": {
+        "top": 667,
+        "bottom": 721,
+        "height": 54
+      },
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 1280,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">FO</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Forma</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-trust"
+              ],
+              "html": "<span class=\"ux-swipe-trust\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Security</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>Risk management</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(3)"
+              ],
+              "html": "<span>Cloud</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(4)"
+              ],
+              "html": "<span>+2 more</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>58<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>2 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > .text-link"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"Fit details — see how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-swipe-logo"
+          ],
+          "text": "FO",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            234,
+            242,
+            233
+          ],
+          "ratio": 7.764,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "Forma",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-trust"
+          ],
+          "text": "Sample company",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Ottawa, ON · Remote",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-salary > small"
+          ],
+          "text": "/ year",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(1)"
+          ],
+          "text": "Security",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(2)"
+          ],
+          "text": "Risk management",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(3)"
+          ],
+          "text": "Cloud",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(4)"
+          ],
+          "text": "+2 more",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "58/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "2 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 700
+        },
+        {
+          "target": [
+            ".focus-fit-summary > .text-link"
+          ],
+          "text": "Fit details",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 550
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 1280,
+    "height": 780,
+    "large": false,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 1280,
+      "height": 780,
+      "readyMs": 2867.10000000149,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 18.099999994039536,
+            "start": 54.900000005960464
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 18,
+            "start": 55.100000001490116
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 80.5,
+          "load": 100.5,
+          "transfer": 46994
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts",
+          "duration": 26.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 25.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 25.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 24.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 24.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 24,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 23.799999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 191.046875,
+        "bottom": 631.046875,
+        "height": 440
+      },
+      "fit": {
+        "top": 509.8125,
+        "bottom": 578.046875,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 578.046875,
+        "bottom": 622.046875,
+        "height": 44
+      },
+      "actions": {
+        "top": 637.046875,
+        "bottom": 685.046875,
+        "height": 48
+      },
+      "undo": {
+        "top": 685.046875,
+        "bottom": 739.046875,
+        "height": 54
+      },
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 1280,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">OPEN TO CONNECT</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(1)"
+              ],
+              "html": "<span><b>4 years</b>Relevant experience · self-reported</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2)"
+              ],
+              "html": "<span><b>Nov 7</b>Available from</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-card-summary"
+              ],
+              "html": "<p class=\"ux-swipe-card-summary\">I help cross-functional teams turn complex plans into useful products.</p>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Program management</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>JavaScript</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(3)"
+              ],
+              "html": "<span>SQL</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(4)"
+              ],
+              "html": "<span>+3 more</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "span[aria-hidden=\"true\"]"
+          ],
+          "text": "JC",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            213,
+            224,
+            207
+          ],
+          "ratio": 6.456,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "OPEN TO CONNECT",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Toronto, ON",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(1)"
+          ],
+          "text": "4 yearsRelevant experience · self-reported",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(1) > b"
+          ],
+          "text": "4 years",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(2)"
+          ],
+          "text": "Nov 7Available from",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(2) > b"
+          ],
+          "text": "Nov 7",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".ux-swipe-card-summary"
+          ],
+          "text": "I help cross-functional teams turn complex plans into useful products.",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(1)"
+          ],
+          "text": "Program management",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(2)"
+          ],
+          "text": "JavaScript",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(3)"
+          ],
+          "text": "SQL",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(4)"
+          ],
+          "text": "+3 more",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "4 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 700
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/swipe",
+    "width": 390,
+    "height": 640,
+    "large": true,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 640,
+      "readyMs": 2872.5,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 17.899999998509884,
+            "start": 56.399999998509884
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 19.700000002980232,
+            "start": 56.599999994039536
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 82.69999999552965,
+          "load": 105,
+          "transfer": 47150
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 26.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 26.599999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 26.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 25.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 24.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx?t=1793483085301",
+          "duration": 24.600000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 640,
+      "card": {
+        "top": 180,
+        "bottom": 332.125,
+        "height": 152.125
+      },
+      "fit": {
+        "top": 193,
+        "bottom": 283.125,
+        "height": 90.125
+      },
+      "details": {
+        "top": 283.125,
+        "bottom": 327.125,
+        "height": 44
+      },
+      "actions": {
+        "top": 405.90625,
+        "bottom": 461.40625,
+        "height": 55.5
+      },
+      "undo": {
+        "top": 461.40625,
+        "bottom": 525.40625,
+        "height": 64
+      },
+      "nav": {
+        "top": 537.40625,
+        "bottom": 640,
+        "height": 102.59375
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand > .brand"
+              ],
+              "html": "<span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>58<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-demo-brand > .brand"
+          ],
+          "text": "align.",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 13.112,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 25,
+          "weight": 800
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "58/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 40,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 390,
+    "height": 640,
+    "large": true,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 640,
+      "readyMs": 2926.9000000059605,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 9.800000004470348,
+            "start": 52.600000001490116
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 10.200000002980232,
+            "start": 52.70000000298023
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 81.60000000149012,
+          "load": 112.20000000298023,
+          "transfer": 47162
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts",
+          "duration": 22.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 22,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 21.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-documents.ts?t=1793482246925",
+          "duration": 21.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/handoff.ts",
+          "duration": 21.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/role-criteria.ts",
+          "duration": 21.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/featured-example.ts",
+          "duration": 21.600000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 640,
+      "card": {
+        "top": 246,
+        "bottom": 430.703125,
+        "height": 184.703125
+      },
+      "fit": {
+        "top": 259,
+        "bottom": 381.703125,
+        "height": 122.703125
+      },
+      "details": {
+        "top": 381.703125,
+        "bottom": 425.703125,
+        "height": 44
+      },
+      "actions": {
+        "top": 434.703125,
+        "bottom": 490.203125,
+        "height": 55.5
+      },
+      "undo": {
+        "top": 490.203125,
+        "bottom": 554.203125,
+        "height": 64
+      },
+      "nav": {
+        "top": 566.203125,
+        "bottom": 640,
+        "height": 73.796875
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand > .brand"
+              ],
+              "html": "<span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-demo-brand > .brand"
+          ],
+          "text": "align.",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 13.112,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 25,
+          "weight": 800
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 40,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/inbox",
+    "width": 320,
+    "height": 640,
+    "large": false,
+    "metrics": {
+      "screen": "candidate/inbox",
+      "width": 320,
+      "height": 640,
+      "readyMs": 2900.6999999955297,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 12.600000001490116,
+            "start": 60.899999998509884
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 13.200000002980232,
+            "start": 61.099999994039536
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 88.89999999850988,
+          "load": 112.09999999403954,
+          "transfer": 46984
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 33.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 32.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/docx.ts",
+          "duration": 32.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/career.ts",
+          "duration": 32.79999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 29.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 29.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx?t=1793483085301",
+          "duration": 29.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793482730575",
+          "duration": 29.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1433,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 569,
+        "bottom": 640,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/inbox",
+      "width": 320,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/inbox",
+    "width": 320,
+    "height": 640,
+    "large": false,
+    "metrics": {
+      "screen": "employer/inbox",
+      "width": 320,
+      "height": 640,
+      "readyMs": 2832.6999999955297,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 21.799999997019768,
+            "start": 50.29999999701977
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 26.399999998509884,
+            "start": 50.399999998509884
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 87.09999999403954,
+          "load": 106.79999999701977,
+          "transfer": 46994
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 34.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 33.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 33.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx?t=1793483085301",
+          "duration": 32.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793482730575",
+          "duration": 32.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-materials.tsx?t=1793482730575",
+          "duration": 31.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx?t=1793482730575",
+          "duration": 31.599999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793482730575",
+          "duration": 29.5,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [
+        {
+          "start": 147,
+          "duration": 74
+        }
+      ],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1851,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 569,
+        "bottom": 640,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/inbox",
+      "width": 320,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/candidates",
+    "width": 390,
+    "height": 780,
+    "large": false,
+    "metrics": {
+      "screen": "employer/candidates",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2794.3000000044703,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 26.299999997019768,
+            "start": 50.70000000298023
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 26.299999997019768,
+            "start": 50.70000000298023
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 89.60000000149012,
+          "load": 114,
+          "transfer": 46999
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 28.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/materials.css",
+          "duration": 27,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+          "duration": 26.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+          "duration": 26.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 24.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 23,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 22.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 22.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4758,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/candidates",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/candidates",
+    "width": 1024,
+    "height": 780,
+    "large": false,
+    "metrics": {
+      "screen": "employer/candidates",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2684.2000000029802,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 9.600000001490116,
+            "start": 70.10000000149012
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 10,
+            "start": 70.30000000447035
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 94.20000000298023,
+          "load": 117.70000000298023,
+          "transfer": 47167
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793482730575",
+          "duration": 23.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793482730575",
+          "duration": 23.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793482730575",
+          "duration": 23.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 23.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 22.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 22.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx?t=1793483085301",
+          "duration": 22.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-materials.tsx?t=1793482730575",
+          "duration": 22.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4363,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/candidates",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  }
+]

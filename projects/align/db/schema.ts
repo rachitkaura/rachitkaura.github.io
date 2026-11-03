@@ -55,3 +55,33 @@ export const verificationAudit=sqliteTable('verification_audit',{
 export const verificationCleanup=sqliteTable('verification_cleanup',{
   key:text('key').primaryKey(),createdAt:text('created_at').notNull(),
 });
+
+export const reviewBatches=sqliteTable('review_batches',{
+ id:text('id').primaryKey(),jobId:text('job_id').notNull().references(()=>liveJobs.id),capacity:integer('capacity').notNull(),deadline:text('deadline').notNull(),createdAt:text('created_at').notNull(),
+});
+export const reviewReservations=sqliteTable('review_reservations',{
+ id:text('id').primaryKey(),batchId:text('batch_id').notNull().references(()=>reviewBatches.id),userId:text('user_id').notNull(),status:text('status').notNull(),outcome:text('outcome').notNull().default(''),note:text('note').notNull().default(''),createdAt:text('created_at').notNull(),reviewedAt:text('reviewed_at'),
+},t=>[uniqueIndex('reservation_batch_user').on(t.batchId,t.userId),index('reservation_batch_status').on(t.batchId,t.status)]);
+export const proofCards=sqliteTable('proof_cards',{
+ id:text('id').primaryKey(),userId:text('user_id').notNull(),data:text('data').notNull(),updatedAt:text('updated_at').notNull(),
+},t=>[index('proof_owner').on(t.userId)]);
+export const proofShares=sqliteTable('proof_shares',{
+ id:text('id').primaryKey(),cardId:text('card_id').notNull().references(()=>proofCards.id),applicationId:text('application_id').notNull().references(()=>applications.id),review:text('review').notNull().default(''),question:text('question').notNull().default(''),reviewedBy:text('reviewed_by'),checks:text('checks').notNull().default('[]'),updatedAt:text('updated_at').notNull(),
+},t=>[uniqueIndex('proof_share_unique').on(t.cardId,t.applicationId),index('proof_share_application').on(t.applicationId)]);
+export const calibrations=sqliteTable('hiring_calibrations',{
+ id:text('id').primaryKey(),jobId:text('job_id').notNull().references(()=>liveJobs.id),version:integer('version').notNull(),jobData:text('job_data').notNull(),data:text('data').notNull(),status:text('status').notNull(),createdAt:text('created_at').notNull(),approvedAt:text('approved_at'),
+},t=>[uniqueIndex('calibration_job_version').on(t.jobId,t.version)]);
+export const calibrationVotes=sqliteTable('calibration_votes',{
+ id:text('id').primaryKey(),calibrationId:text('calibration_id').notNull().references(()=>calibrations.id),userId:text('user_id').notNull(),data:text('data').notNull(),createdAt:text('created_at').notNull(),
+},t=>[uniqueIndex('calibration_voter').on(t.calibrationId,t.userId)]);
+
+export const pendingSwipes=sqliteTable('pending_swipes',{
+ id:text('id').primaryKey(),userId:text('user_id').notNull(),actor:text('actor').notNull(),origin:text('origin').notNull(),payload:text('payload').notNull(),label:text('label').notNull(),companyId:text('company_id'),
+ dueAt:integer('due_at').notNull(),state:text('state').notNull(),error:text('error').notNull().default(''),createdAt:integer('created_at').notNull(),updatedAt:integer('updated_at').notNull(),
+},t=>[index('pending_swipes_due').on(t.state,t.dueAt),index('pending_swipes_user').on(t.userId,t.updatedAt)]);
+export const emailPreferences=sqliteTable('email_preferences',{
+ userId:text('user_id').primaryKey(),email:text('email').notNull(),enabled:integer('enabled').notNull().default(0),events:text('events').notNull(),enabledAt:text('enabled_at').notNull(),updatedAt:text('updated_at').notNull(),
+});
+export const emailDeliveries=sqliteTable('email_deliveries',{
+ id:text('id').primaryKey(),userId:text('user_id').notNull(),state:text('state').notNull(),attempts:integer('attempts').notNull().default(0),nextAttempt:integer('next_attempt').notNull(),updatedAt:integer('updated_at').notNull(),
+},t=>[index('email_deliveries_due').on(t.state,t.nextAttempt)]);

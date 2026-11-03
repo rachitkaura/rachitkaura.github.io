@@ -1,24 +1,26 @@
 # Align development status
 
-Snapshot date: October 29, 2026. This is an actively developed pilot.
+Source export: November 2, 2026. Hosted version: 46. Align is an independent working pilot in active development.
 
-## Present in the source
+## Included
 
-- Separate candidate and employer workspaces, discovery preferences and explicit candidate publication.
-- Independent candidate/employer interest, mutual matching, participant messages and application stages.
-- Company-domain TXT verification, same-domain team invitations, shared pipelines, screening answers and internal notes.
-- Interview availability, conflict protection, booking, withdrawal handling and downloadable calendar events.
-- Private resume uploads and workspace persistence, contact-sharing rules, company/domain blocks and dark mode.
-- Manual profile-photo/ID review, company review, review revocation, expiry and deletion retry handling.
-- Free Plus preview with listed-skill coverage, editable resume/cover-letter drafts, DOCX exports, guided interview practice and saved skill-gap checklists.
-- TypeScript checks and four automated suites covering service logic, real SQLite migrations and synthetic verification fixtures.
+- Candidate and hiring-team swipe workspaces, shared role criteria and explainable profile fit.
+- Private one-sided interest, ten-second Undo and durable live delivery/recovery.
+- Optional review places, capped batches, deadlines and written outcomes.
+- GitHub and profile documents, per-role material choices and mutual-match access controls.
+- Structured work evidence, scoped checks, discussions and pipeline visibility.
+- Mutual messaging, shared next steps, interview booking and calendar downloads.
+- Company approval, privacy, blocking, protected files and legacy ID cleanup.
+- Isolated fictional demo data, responsive layouts, local licensed fonts and recorded QA.
+- Eight SQL migrations, seven service-check suites and fourteen test files.
 
-## Not connected or not established
+## Still requires activation or validation
 
-- Payment collection and paid entitlements.
-- AI model calls, automatic resume extraction and automated identity recognition.
-- Email delivery, invitation emails and external calendar synchronization.
-- A custom domain and a complete independent hosting/authentication setup outside Sites.
-- Real customer adoption, revenue, representative user research, production load testing and independent security review.
+- A verified production email sender and real delivery checks.
+- A configured and verified periodic trigger for quiet-period reminders and interrupted-task recovery.
+- Physical-device keyboard testing, broader assistive-technology testing, representative user research and production load validation.
+- An independent trusted authentication/runtime setup for hosting outside Sites.
 
-The live pilot and this source export should be described with those boundaries when presenting the project.
+No adoption, revenue, measured hiring-time improvement or independent security-audit result is claimed. Billing, external calendar synchronization, automatic résumé parsing and connected AI-model drafting are not established by this release.
+
+The hosted app may evolve after this export. [SOURCE_SNAPSHOT.json](../SOURCE_SNAPSHOT.json) identifies the exact version and adaptations; [NOTIFICATIONS_SETUP.md](../NOTIFICATIONS_SETUP.md) lists the remaining notification activation steps.

@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFileSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {createRequire} from 'node:module';
+import ts from 'typescript';
+const out=mkdtempSync(join(tmpdir(),'align-inbox-test-'));
+try{
+ const file=join(out,'inbox.cjs');writeFileSync(file,ts.transpileModule(readFileSync('app/lib/inbox.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText);
+ const {conversationName,inboxRows,clearSentDraft,messageDay,messageDayLabel}=createRequire(import.meta.url)(file);
+ const applications=[{id:'a',side:'candidate',job:{companyName:'Forma',title:'Technical Program Manager'},updatedAt:'2026-10-29T12:00:00Z'},{id:'b',side:'candidate',job:{companyName:'Orbit',title:'Senior Product Manager'},updatedAt:'2026-10-29T12:00:00Z'},{id:'c',side:'employer',job:{companyName:'Forma',title:'AI Program Lead'},candidate:{name:'Sam Rivera'},updatedAt:'2026-10-29T12:00:00Z'}];
+ const messages={a:[{text:'An earlier message',time:'2026-10-29T12:00:00Z'},{text:'My latest reply',time:'2026-10-30T12:00:00Z',mine:true}],b:[{text:'An interview question',time:'2026-10-31T12:00:00Z',mine:false}]};
+ const before=structuredClone({applications,messages});
+ assert.deepEqual(inboxRows(applications,messages).map(row=>row.application.id),['b','a','c']);
+ assert.equal(inboxRows(applications,messages).find(row=>row.application.id==='a').preview,'You: My latest reply');
+ assert.equal(inboxRows(applications,messages).find(row=>row.application.id==='c').preview,'You matched. Start a conversation.');
+ assert.deepEqual(inboxRows(applications,messages,'  FORMA  ').map(row=>row.application.id),['a']);
+ assert.deepEqual(inboxRows(applications,messages,'ai program').map(row=>row.application.id),['c']);
+ assert.deepEqual(inboxRows(applications,messages,'sam').map(row=>row.application.id),['c']);
+ assert.equal(inboxRows(applications,messages,'no result').length,0);
+ assert.equal(conversationName(applications[2]),'Sam Rivera');
+ assert.deepEqual({applications,messages},before,'Rendering previews must not modify messages or application data.');
+ const drafts={a:'First draft',b:'Another conversation draft'};
+ assert.deepEqual(clearSentDraft(drafts,'a','First draft'),{a:'',b:'Another conversation draft'});
+ const typedWhileSending={...drafts,a:'First draft plus another thought'};
+ assert.equal(clearSentDraft(typedWhileSending,'a','First draft'),typedWhileSending,'Do not erase edits made while a send is in flight.');
+ assert.deepEqual(drafts,{a:'First draft',b:'Another conversation draft'},'Sending in one thread must leave other drafts untouched.');
+ const today=new Date(2026,9,31,12),yesterday=new Date(2026,9,30,12);
+ assert.equal(messageDayLabel(today.toISOString(),today),'Today');
+ assert.equal(messageDayLabel(yesterday.toISOString(),today),'Yesterday');
+ assert.equal(messageDay('invalid'),'');assert.equal(messageDayLabel('invalid',today),'');
+ console.log('Inbox checks passed: recent activity, role/name search, correct previews, separate drafts, edits during sending, immutable records, and date groups.');
+}finally{rmSync(out,{recursive:true,force:true})}

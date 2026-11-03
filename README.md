@@ -48,14 +48,14 @@ I am developing Align independently, beginning in October 2026. The working pilo
 
 ### Public source snapshot
 
-The code under `projects/align/` was exported on **October 29, 2026**. The hosted demo has continued to evolve; newer scoring, review-batch, work-proof and profile-material workflows are not represented by this earlier export. The source link is for implementation review and setup, not a claim of parity with the current demo.
+The code under `projects/align/` is synced to **hosted version 46**, source commit `a4fa28777847c9aa30ebfe0e78a8739e679936dc`, exported **November 2, 2026**. It includes the current scoring, review-batch, work-proof, profile-material and responsive-workspace implementation. [Source provenance and export adaptations](projects/align/SOURCE_SNAPSHOT.json) are included. Production records and credentials are excluded; film binaries remain linked to the hosted Site. The live app may evolve after this export.
 
 | Snapshot capability | Figure and meaning | Published source |
 | --- | --- | --- |
 | Core workspaces | **2**: candidate and employer | [Application interface](projects/align/app/components/live-hiring.tsx) |
 | Job freshness | **30-day** reconfirmation window before an open role expires from public discovery | [Live hiring service](projects/align/app/lib/live-server.ts) |
 | Pending profile ID review | Requests expire after **7 days** in this snapshot; not a promised review turnaround. Portrait and photo-ID submissions are paused in the current demo | [Verification service](projects/align/app/lib/verification.ts) |
-| Automated checks | **4 suites**: API isolation, career tools, live hiring and verification | [Check runner](projects/align/scripts/run-checks.mjs) |
+| Automated checks | **7 service-check suites and 14 test files**: API, career tools, live hiring, workflows, ranking, application flows, verification and focused regressions | [Check runner](projects/align/scripts/run-checks.mjs) |
 | Interview calendar reminders | Downloadable ICS events contain a **15-minute** reminder | [Calendar generation](projects/align/app/lib/live.ts) |
 | Company job-posting gates | **2 checks**: domain-control proof and separate admin approval | [Live hiring service](projects/align/app/lib/live-server.ts) |
 
@@ -71,7 +71,7 @@ These are source capabilities and configured limits, not measured hiring outcome
 | `.github/workflows/import-align.yml` | Manually triggered workflow used to import the prepared Align source archive |
 | `Align_GitHub_Project.zip` | Original archive used for the application-source import |
 
-The portfolio is a static page. Align’s full application runs separately on a Worker backend; its source is published here for review and continued development.
+The portfolio is a static page. Align’s full application runs separately on a Worker backend; its version-46 source is published here for review and continued development.
 
 ## Contact
 

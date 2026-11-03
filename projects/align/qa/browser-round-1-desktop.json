@@ -1,0 +1,3329 @@
+[
+  {
+    "screen": "candidate/swipe",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 3471.5,
+      "navigation": [
+        {
+          "dom": 89.09999999403954,
+          "load": 130.19999999552965,
+          "transfer": 44662
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/node_modules/.vite/deps/react-dom_client.js?v=23f6f373",
+          "duration": 51.70000000298023,
+          "bytes": 0
+        },
+        {
+          "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/navigation.js?v=23f6f373",
+          "duration": 47.30000000447035,
+          "bytes": 0
+        },
+        {
+          "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/server/navigation-planner.js?v=23f6f373",
+          "duration": 47.100000001490116,
+          "bytes": 0
+        },
+        {
+          "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=23f6f373",
+          "duration": 46.79999999701977,
+          "bytes": 0
+        },
+        {
+          "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/server/app-browser-state.js?v=23f6f373",
+          "duration": 46.399999998509884,
+          "bytes": 0
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vinext-app-capabilities",
+          "duration": 45.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/node_modules/.pnpm/@vitejs+plugin-rsc@0.5.26_react-dom@19.2.6_react@19.2.6__react-server-dom-webpack@19.2._e947b86850a1967ce571b3244ccf3e2c/node_modules/@vitejs/plugin-rsc/dist/browser.js?v=23f6f373",
+          "duration": 45.100000001490116,
+          "bytes": 0
+        },
+        {
+          "name": "http://terminal.local:4173/node_modules/.vite/deps/react-dom.js?v=23f6f373",
+          "duration": 45.099999994039536,
+          "bytes": 0
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 204
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 204
+        }
+      ],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 121,
+        "bottom": 561,
+        "height": 440
+      },
+      "fit": {
+        "top": 439.765625,
+        "bottom": 508,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 508,
+        "bottom": 552,
+        "height": 44
+      },
+      "actions": {
+        "top": 619,
+        "bottom": 667,
+        "height": 48
+      },
+      "undo": {
+        "top": 667,
+        "bottom": 721,
+        "height": 54
+      },
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "button[aria-label=\"See how you match\"]"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"See how you match\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-actions"
+              ],
+              "html": "<div class=\"ux-swipe-actions\" aria-label=\"Choose your next step\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">BL</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Bloom</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-trust"
+              ],
+              "html": "<span class=\"ux-swipe-trust\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Operations</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>Strategy</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(3)"
+              ],
+              "html": "<span>Analytics</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(4)"
+              ],
+              "html": "<span>+2 more</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>13<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>0 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "button[aria-label=\"See how you match\"]"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"See how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/applications",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/applications",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2687.0999999940395,
+      "navigation": [
+        {
+          "dom": 122.89999999850988,
+          "load": 142.09999999403954,
+          "transfer": 44500
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 43,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 27.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 27.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 25.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 25.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/docx.ts",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/career.ts",
+          "duration": 24.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4357,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/applications",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary[aria-label=\"Account and settings\"]"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > .reached"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".reached:nth-child(5)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(1)"
+              ],
+              "html": "<span class=\"\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > .reached"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/inbox",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/inbox",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2668.7000000029802,
+      "navigation": [
+        {
+          "dom": 126,
+          "load": 157.5,
+          "transfer": 44479
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 29.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 29,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 28.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/handoff.ts",
+          "duration": 27.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/featured-example.ts",
+          "duration": 26.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 25.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 25.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 912,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/inbox",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".is-selected"
+              ],
+              "html": "<button class=\"ux-inbox-row is-selected\" aria-label=\"Open conversation with Forma about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(2)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Northstar about Engineering Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(3)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Orbit about Senior Product Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(4)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Forma about Senior Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(5)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Lumen Labs about AI Product Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(2) > p"
+              ],
+              "html": "<p>Your delivery experience caught our attention. Would you like to connect?</p>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 44
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/interviews",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/interviews",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2767.5,
+      "navigation": [
+        {
+          "dom": 126,
+          "load": 141.19999999552965,
+          "transfer": 44499
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 45.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 45.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 45.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 43.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/live.ts",
+          "duration": 43.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/application-workflow.ts",
+          "duration": 43,
+          "bytes": 300
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 40.899999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/workspace-nav.tsx",
+          "duration": 37.20000000298023,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5477,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/interviews",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/profile",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/profile",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2623.7000000029802,
+      "navigation": [
+        {
+          "dom": 124.5,
+          "load": 141.39999999850988,
+          "transfer": 44651
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.399999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 26,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 26,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 25.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 24.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 24.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 24.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/handoff.ts",
+          "duration": 23.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1389,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/profile",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary[aria-label=\"Account and settings\"]"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/work-examples",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/work-examples",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2784.4000000059605,
+      "navigation": [
+        {
+          "dom": 154,
+          "load": 176.90000000596046,
+          "transfer": 44474
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 47.19999999552965,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 23,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 21.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 21.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/swipe-screen.css",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 21.30000000447035,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 3007,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/work-examples",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-workspace > .sr-only"
+              ],
+              "html": "<h3 class=\"sr-only\">Work proof</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary[aria-label=\"Account and settings\"]"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 44
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/preferences",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/preferences",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2727.2000000029802,
+      "navigation": [
+        {
+          "dom": 134.60000000149012,
+          "load": 157.29999999701977,
+          "transfer": 44666
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 45,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 25.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 23.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 23,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 22,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/role-criteria.ts",
+          "duration": 21.700000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1763,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/preferences",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/notifications",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/notifications",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2733.6999999955297,
+      "navigation": [
+        {
+          "dom": 146.79999999701977,
+          "load": 166.69999999552965,
+          "transfer": 44502
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 47.399999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 25.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 25.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 25.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 25.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 24.600000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 945,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/notifications",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/verification",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/verification",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2837.5,
+      "navigation": [
+        {
+          "dom": 134,
+          "load": 152.40000000596046,
+          "transfer": 44501
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.400000005960464,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 26.599999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 26.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 26.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 24.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "candidate/verification",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2849,
+      "navigation": [
+        {
+          "dom": 131,
+          "load": 154.19999999552965,
+          "transfer": 44493
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 41.399999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 24.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 23.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 22.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 21.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 20.700000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [
+        {
+          "start": 270.79999999701977,
+          "duration": 83
+        }
+      ],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 191.046875,
+        "bottom": 631.046875,
+        "height": 440
+      },
+      "fit": {
+        "top": 509.8125,
+        "bottom": 578.046875,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 578.046875,
+        "bottom": 622.046875,
+        "height": 44
+      },
+      "actions": {
+        "top": 637.046875,
+        "bottom": 685.046875,
+        "height": 48
+      },
+      "undo": {
+        "top": 685.046875,
+        "bottom": 739.046875,
+        "height": 54
+      },
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-actions"
+              ],
+              "html": "<div class=\"ux-swipe-actions\" aria-label=\"Choose your next step\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">OPEN TO CONNECT</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(1)"
+              ],
+              "html": "<span><b>4 years</b>Relevant experience · self-reported</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2)"
+              ],
+              "html": "<span><b>Nov 7</b>Available from</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-card-summary"
+              ],
+              "html": "<p class=\"ux-swipe-card-summary\">I help cross-functional teams turn complex plans into useful products.</p>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Program management</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>JavaScript</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(3)"
+              ],
+              "html": "<span>SQL</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(4)"
+              ],
+              "html": "<span>+3 more</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/jobs",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/jobs",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2809.5,
+      "navigation": [
+        {
+          "dom": 134.39999999850988,
+          "load": 154.60000000149012,
+          "transfer": 44477
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 39.79999999701977,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 22.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 22.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 20.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 19.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 19.400000005960464,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 2235,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/jobs",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(4) > .live-between > div > h3"
+              ],
+              "html": "<h3>Technical Program Manager</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/candidates",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/candidates",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2750.39999999851,
+      "navigation": [
+        {
+          "dom": 160.70000000298023,
+          "load": 177.70000000298023,
+          "transfer": 44666
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 40.20000000298023,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 23.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 21.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/swipe-screen.css",
+          "duration": 21.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 21.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 21.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 21.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4363,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/candidates",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".selected"
+              ],
+              "html": "<button class=\"ux-candidate-row selected\" aria-pressed=\"true\" aria-label=\"Review Priya Shah, 100 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(2)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Jordan Chen, 82 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(3)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Alex Morgan, 72 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(4)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Emma Wilson, 72 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(5)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Sofia Martin, 72 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(6)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Sam Rivera, 58 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(7)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Ethan Wong, 58 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(8)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Grace Mensah, 58 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(9)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Lucas Bernard, 54 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(10)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Nathan Clarke, 54 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(11)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Noah Kim, 48 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(12)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Maya Torres, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(13)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Avery Patel, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(14)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Liam Reed, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(15)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Aisha Rahman, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(16)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Arjun Desai, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(17)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Chloe Nguyen, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(18)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Isabella Silva, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(19)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Zoe Laurent, 34 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(20)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Owen Carter, 32 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(21)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Robin Lee, 20 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(22)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Marcus Bennett, 20 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(23)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Daniel Okafor, 30 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(24)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Olivia Brooks, 30 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-candidate-list"
+              ],
+              "html": "<div class=\"ux-candidate-list\" aria-label=\"Ranked candidates\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        }
+      ],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/pipeline",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/pipeline",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2615.60000000149,
+      "navigation": [
+        {
+          "dom": 138.79999999701977,
+          "load": 157,
+          "transfer": 44507
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 47.69999999552965,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 23.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 22.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 22.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 22,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 21.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 21,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4715,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/pipeline",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".reached:nth-child(5)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > .reached:nth-child(3)"
+              ],
+              "html": "<span class=\"reached\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > .reached:nth-child(1)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interest sent</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(3)"
+              ],
+              "html": "<span class=\"\"><i></i>In conversation</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/inbox",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/inbox",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2665.89999999851,
+      "navigation": [
+        {
+          "dom": 134.89999999850988,
+          "load": 150.39999999850988,
+          "transfer": 44661
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 41.100000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 21.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 19.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 19.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 19.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 18.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 18.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 18.700000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 912,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/inbox",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".is-selected"
+              ],
+              "html": "<button class=\"ux-inbox-row is-selected\" aria-label=\"Open conversation with Alex Morgan about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(2)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Sam Rivera about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(3)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Priya Shah about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(4)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Alex Morgan about Senior Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 44
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/interviews",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/interviews",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2789.39999999851,
+      "navigation": [
+        {
+          "dom": 116.69999999552965,
+          "load": 129.5,
+          "transfer": 44664
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 43.29999999701977,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 36.29999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 36.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 36.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 35.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 35,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 34.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 34.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 3951,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/interviews",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/company",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/company",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2767.5,
+      "navigation": [
+        {
+          "dom": 146.29999999701977,
+          "load": 165.60000000149012,
+          "transfer": 44495
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 44.600000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 22.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 22.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 21.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 21.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 20.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 19.200000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [
+        {
+          "start": 273,
+          "duration": 50
+        }
+      ],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1386,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/company",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-between > h3"
+              ],
+              "html": "<h3>Forma</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/notifications",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/notifications",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2818.7000000029802,
+      "navigation": [
+        {
+          "dom": 142.70000000298023,
+          "load": 158.10000000149012,
+          "transfer": 44667
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 44.100000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/docx.ts",
+          "duration": 19.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 19.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/career.ts",
+          "duration": 19.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 18.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 18.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 18.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 17.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 965,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/notifications",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/review-slots",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/review-slots",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2799.3000000044703,
+      "navigation": [
+        {
+          "dom": 139.80000000447035,
+          "load": 159.30000000447035,
+          "transfer": 44498
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 40.399999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 34.20000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 30.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 30.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 30.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 30.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 29.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 29.700000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [
+        {
+          "start": 276.80000000447035,
+          "duration": 55
+        }
+      ],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 994,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/review-slots",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-workspace > h3"
+              ],
+              "html": "<h3 class=\"sr-only\">Review batches</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/hiring-criteria",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/hiring-criteria",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2793.89999999851,
+      "navigation": [
+        {
+          "dom": 119.10000000149012,
+          "load": 148.89999999850988,
+          "transfer": 44669
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 43.80000000447035,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 26.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 26.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 20.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 20.799999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1459,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/hiring-criteria",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-workspace > .sr-only"
+              ],
+              "html": "<h3 class=\"sr-only\">Calibration room</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 43
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/verification",
+    "width": 1024,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/verification",
+      "width": 1024,
+      "height": 780,
+      "readyMs": 2777.7000000029802,
+      "navigation": [
+        {
+          "dom": 135.10000000149012,
+          "load": 153.39999999850988,
+          "transfer": 44498
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 40.600000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 19.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 19.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 19.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 19.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 19.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 18.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 17.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 0,
+        "bottom": 0,
+        "height": 0
+      }
+    },
+    "audit": {
+      "screen": "employer/verification",
+      "width": 1024,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "source_commit": "a4fa28777847c9aa30ebfe0e78a8739e679936dc",
+  "hosted_version": 46,
+  "exported_on": "2026-11-02",
+  "build": "passed",
+  "checks": [
+    {
+      "check": "typecheck",
+      "exit_code": 0,
+      "seconds": 9.454
+    },
+    {
+      "check": "tests",
+      "exit_code": 0,
+      "seconds": 11.616
+    }
+  ],
+  "service_check_suites": 7,
+  "test_files": 14,
+  "sql_migrations": 8,
+  "application_runtime_source_unchanged": true,
+  "test_harness_fix": "API loader now resolves the real route imports and mocks the Cloudflare env binding.",
+  "note": "Existing browser/UI/accessibility reports are retained; this source-sync run repeated the build, TypeScript, all service checks and all test files."
+}

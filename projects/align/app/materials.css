@@ -1,0 +1,26 @@
+/* Profile documents remain optional, with explicit selection at the swipe. */
+.ux-shell .ux-materials-editor{border:1px solid var(--line);border-radius:12px;padding:18px;margin:8px 0;min-width:0;display:grid;gap:14px}
+.ux-materials-editor>legend{padding-inline:8px;font-weight:650;font-size:1rem;color:var(--ink)}
+.ux-materials-editor>legend>svg{vertical-align:middle;margin-right:6px}
+.ux-materials-editor p{margin:0}
+.ux-material-document{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:12px;min-width:0}
+.ux-shell .ux-material-document h3{margin:0;font-size:1rem}
+.ux-material-upload>input{max-width:100%;padding:10px;font-size:.875rem!important;min-height:44px}
+.ux-material-document .live-between{gap:10px;flex-wrap:wrap;overflow-wrap:anywhere}
+.ux-materials-list{display:flex;align-items:flex-start;flex-wrap:wrap;gap:12px 22px;margin-block:12px}
+.ux-materials-list>a,.ux-material-link>a{display:inline-flex;align-items:center;gap:7px;color:var(--green);font-weight:600;min-height:44px;overflow-wrap:anywhere}
+.ux-material-link{min-width:0;max-width:100%;display:grid;gap:2px}
+.ux-material-link>small{color:var(--muted);font-size:.8125rem;overflow-wrap:anywhere}
+.ux-material-choices{display:grid;gap:12px;padding:16px;border:1px solid var(--line);border-radius:10px;margin:18px 0}
+.ux-material-choices>legend{padding-inline:6px;font-weight:600}
+.ux-material-choices .live-checkbox{display:flex;align-items:flex-start;gap:10px;min-height:44px}
+.ux-material-choices .live-checkbox input{width:20px;height:20px;flex-shrink:0;margin-top:3px}
+.ux-material-choices .live-checkbox span{min-width:0;display:grid;gap:4px}
+.ux-material-choices small{font-size:.8125rem;color:var(--muted);overflow-wrap:anywhere}
+.ux-shared-materials{border:1px solid var(--line);padding:16px;border-radius:10px;margin-block:18px;background:var(--fit-surface)}
+.ux-shared-materials>h3{display:flex;align-items:center;gap:8px}
+.ux-shared-materials>small{display:block;line-height:1.5;color:var(--muted);margin-top:6px}
+.ux-shell .ux-inbox-context:has(.ux-inbox-materials){flex-wrap:wrap}
+.ux-shell .ux-inbox-materials{min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;color:var(--green);display:flex;align-items:center;gap:7px;background:var(--white);font-size:.8125rem}
+.ux-inbox-materials>span{font-weight:700}
+@media(max-width:600px){.ux-shell .ux-materials-editor{padding:14px}.ux-materials-list{gap:8px 16px}.ux-shared-materials{padding:14px}}

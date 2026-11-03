@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import {readFileSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {createRequire} from 'node:module';
+import ts from 'typescript';
+const out=mkdtempSync(join(tmpdir(),'align-proof-test-'));
+try {
+ const file=join(out,'proof.cjs');
+ writeFileSync(file,ts.transpileModule(readFileSync('app/lib/work-proof.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText);
+ const {defaultShareApplication,findWorkShare,guideWorkCard,workReviewIssue}=createRequire(import.meta.url)(file);
+ const apps=[{id:'app-forma',jobId:'role-forma'},{id:'app-orbit',job:{id:'role-orbit'}}];
+ assert.equal(defaultShareApplication(apps,'role-forma'),'app-forma');
+ assert.equal(defaultShareApplication(apps,'role-orbit'),'app-orbit');
+ assert.equal(defaultShareApplication(apps),'','Multiple destinations require an explicit selection without a role context.');
+ assert.equal(defaultShareApplication(apps,'unknown-role'),'','An unknown scope must not silently choose another company.');
+ assert.equal(defaultShareApplication([apps[1]]),'app-orbit');
+ const cards=[{id:'proof-1'},{id:'proof-2'}],shares=[{id:'share-1',cardId:'proof-1',applicationId:'app-forma'}];
+ assert.equal(findWorkShare(shares,'proof-1','app-forma').id,'share-1');
+ assert.equal(findWorkShare(shares,'proof-1','app-orbit'),undefined,'Sharing with one company must not mark another destination as shared.');
+ assert.equal(findWorkShare(shares,'proof-2','app-forma'),undefined);
+ assert.equal(findWorkShare(shares,'proof-1',''),undefined);
+ assert.equal(findWorkShare([{id:'nested',card:{id:'proof-1'},application:{id:'app-forma'}}],'proof-1','app-forma').id,'nested');
+ assert.equal(guideWorkCard(cards,shares,'app-forma').id,'proof-2','The guide should offer work that is not already shared.');
+ assert.equal(guideWorkCard(cards,shares,'app-orbit').id,'proof-1');
+ assert.equal(guideWorkCard(cards,[...shares,{cardId:'proof-2',applicationId:'app-forma'}],'app-forma').id,'proof-1');
+ assert.equal(guideWorkCard([],shares,'app-forma'),undefined);
+ assert.equal(workReviewIssue('Reviewed — discuss in interview',''),'');
+ assert.equal(workReviewIssue('Reviewed — discuss in interview','Optional note'),'');
+ assert.equal(workReviewIssue('Follow-up requested','Explain how you measured the change.'),'');
+ assert.ok(workReviewIssue('Follow-up requested','short'));
+ assert.ok(workReviewIssue('Follow-up requested',' '.repeat(30)));
+ assert.ok(workReviewIssue('Unknown status','Explain how you measured the change.'));
+ assert.ok(workReviewIssue('Follow-up requested','x'.repeat(19)));
+ assert.equal(workReviewIssue('Follow-up requested','x'.repeat(20)),'');
+ console.log('Work-example checks passed: 14 sharing cases and 8 review-validation cases.');
+} finally {rmSync(out,{recursive:true,force:true})}

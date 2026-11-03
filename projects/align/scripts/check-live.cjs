@@ -26,10 +26,14 @@ const next=(days,hours=0)=>new Date(Date.now()+days*86400000+hours*3600000).toIS
   await post('owner',{action:'invite',companyId:company.id,email:'teammate@team.test'},400);
   await post('owner',{action:'verify',companyId:company.id});
   sqlite.prepare("UPDATE live_companies SET review_status='approved',reviewed_at=? WHERE id=?").run(new Date().toISOString(),company.id);
-  await post('owner',{action:'job',companyId:company.id,job:jobData});const job=(await get()).jobs[0];
+  await post('owner',{action:'job',companyId:company.id,job:jobData});const draft=(await get('owner')).companyJobs[0];assert.equal(draft.status,'draft');assert.equal((await get()).jobs.length,0);await require('./workflow-fixture.cjs').calibrateSolo(DB,draft.id);await post('owner',{action:'jobStatus',jobId:draft.id,status:'open'});const job=(await get()).jobs[0];
   await post('alice',{action:'profile',profile:person('Alice')});await post('bob',{action:'profile',profile:person('Bob')});
   owner=await get('owner');const alice=owner.profiles.find(p=>p.name==='Alice');assert.equal(alice.email,'');assert.equal(alice.links,'');assert.equal((await get('intruder')).profiles.length,0);
   await post('owner',{action:'interest',side:'employer',jobId:job.id,candidateId:alice.id});
+  assert.equal((await get('alice')).applications.length,0,'An employer-only swipe must stay anonymous.');
+  assert.equal((await get('alice')).notifications.length,0,'An employer-only swipe must not notify the candidate.');
+  sqlite.prepare('INSERT INTO live_notifications(id,user_id,body,created_at) VALUES(?,?,?,?)').run('legacy-interest','alice','Team is interested in your profile.',new Date().toISOString());
+  assert.equal((await get('alice')).notifications.length,0,'Legacy one-sided notifications must stay hidden.');
   await post('alice',{action:'interest',side:'candidate',jobId:job.id,answers:{}},400);
   await post('alice',{action:'interest',side:'candidate',jobId:job.id,answers:{'Why this role?':'I have relevant project experience.'}});
   let a=(await get('alice')).applications[0];assert.equal(a.stage,'matched');assert(a.candidateInterest&&a.employerInterest);
@@ -59,8 +63,12 @@ const next=(days,hours=0)=>new Date(Date.now()+days*86400000+hours*3600000).toIS
   aliceData=await get('alice');assert.equal(aliceData.applications[0].stage,'withdrawn');assert.equal(aliceData.interviews[0].status,'cancelled');
   await post('owner',{action:'message',applicationId:a.id,text:'Blocked'},403);
   // A hidden profile can still explicitly apply and be liked back.
-  await post('bob',{action:'profile',profile:person('Bob',defaultPrivacy)});
+  await post('bob',{action:'profile',profile:person('Bob',{...defaultPrivacy,contactVisibility:'interested'})});
   await post('bob',{action:'interest',side:'candidate',jobId:job.id,answers:{'Why this role?':'I can help.'}});
+  assert(!(await get('owner')).applications.some(a=>a.candidate.name==='Bob'),'A candidate-only swipe must stay anonymous.');
+  assert(!(await get('owner')).notifications.some(n=>/candidate is interested/.test(n.text)));
+  assert((await get('owner')).profiles.some(p=>p.name==='Bob'&&p.eligibleJobIds.includes(job.id)),'A privately shared profile must remain discoverable for the permitted role, without revealing the swipe.');
+  assert.equal((await get('owner')).profiles.find(p=>p.name==='Bob').email,'','Legacy contact settings must not reveal one-sided interest.');
   const bobApp=(await get('bob')).applications[0];await post('owner',{action:'interest',side:'employer',jobId:job.id,candidateId:bobApp.candidateId});assert.equal((await get('bob')).applications[0].stage,'matched');
   await post('owner',{action:'removeMember',companyId:company.id,memberId:teammate.team.find(m=>m.email==='teammate@team.test').id});assert.equal((await get('teammate')).organizations.length,0);await post('teammate',{action:'message',applicationId:bobApp.id,text:'No access'},403);
   sqlite.prepare("UPDATE live_jobs SET expires_at='2000-01-01T00:00:00.000Z' WHERE id=?").run(job.id);assert.equal((await get()).jobs.length,0);await post('alice',{action:'interest',side:'candidate',jobId:job.id},409);

@@ -1,0 +1,2 @@
+// Published summaries deliberately omit artifact links and the rest of the private library.
+export function featuredSummary(card:any){return {cardId:card.id,title:String(card.title||'').slice(0,120),skills:String(card.skills||'').slice(0,500),problem:String(card.problem||'').slice(0,1500),contribution:String(card.contribution||'').slice(0,2000),outcome:String(card.outcome||'').slice(0,1500),projectType:String(card.projectType||'unspecified'),ownership:String(card.ownership||'unspecified'),publishedAt:new Date().toISOString()};}

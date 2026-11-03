@@ -1,4 +1,12 @@
+import {emptyWorkEvidence} from './application-evidence';
+import {normalizeMaterials,selectedMaterials,activeMaterialMatch,materialPacketView} from './profile-materials';
+import {cancelReviewPlace,matchReviewStatements,readReviewBatches} from './review-queue';
+import {changedRoleFields,roleSnapshot} from './application-workflow';
+import {isOneSidedInterestNotice} from './swipe';
 import {blocked,defaultPrivacy,defaultPreferences,type Privacy} from './live';
+import {workValues} from './ranking';
+import {roleReady} from './role-criteria';
+import {featuredSummary} from './featured-example';
 import {isVerificationAdmin,verificationFields} from './verification';
 
 type Row=Record<string,any>;
@@ -14,9 +22,9 @@ function date(v:unknown){const s=text(v,50);if(!Number.isFinite(Date.parse(s)))t
 function day(v:unknown){if(v==null||v==='')return '';const s=text(v,10);if(!/^\d{4}-\d{2}-\d{2}$/.test(s)||new Date(s).toISOString().slice(0,10)!==s)throw new Problem('Enter a valid calendar date.');return s}
 function domain(v:unknown){const s=text(v,200).toLowerCase();if(!/^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/.test(s))throw new Problem('Enter a domain such as company.com, without https://.');return s}
 function identity(req:Request){const userId=req.headers.get('oai-authenticated-user-id');if(!userId)return null;let name=req.headers.get('oai-authenticated-user-full-name')||'';if(req.headers.get('oai-authenticated-user-full-name-encoding')==='percent-encoded-utf-8'){try{name=decodeURIComponent(name)}catch{name=''}}return {id:userId,email:(req.headers.get('oai-authenticated-user-email')||'').toLowerCase(),name}}
-function privacy(v:any):Privacy{if(!v||typeof v.discoverable!=='boolean'||!['never','matched','interested'].includes(v.contactVisibility))throw new Problem('Choose valid privacy options.');return {discoverable:v.discoverable,hiddenCompanies:list(v.hiddenCompanies,100,100),hiddenDomains:list(v.hiddenDomains,100,200).map(domain),contactVisibility:v.contactVisibility}}
+function privacy(v:any):Privacy{if(!v||typeof v.discoverable!=='boolean'||!['never','matched','interested'].includes(v.contactVisibility))throw new Problem('Choose valid privacy options.');return {discoverable:v.discoverable,hiddenCompanies:list(v.hiddenCompanies,100,100),hiddenDomains:list(v.hiddenDomains,100,200).map(domain),contactVisibility:v.contactVisibility,allowHandoffExport:Boolean(v.allowHandoffExport)}}
 function publicJob(row:Row){return {...parse(row.data),id:row.id,companyId:row.company_id,companyName:row.company_name,domain:row.domain,domainVerifiedAt:row.verified_at,verifiedAt:row.review_status==='approved'?row.company_reviewed_at:null,status:row.status,confirmedAt:row.confirmed_at,expiresAt:row.expires_at,active:row.status==='open'&&row.expires_at>now()&&Boolean(row.verified_at)&&row.review_status==='approved'};}
-function candidateData(row:Row,company:Row,application?:Row){const p=parse(row.privacy,defaultPrivacy) as Privacy;const d=parse(row.data);const mutual=Boolean(application?.candidate_interest&&application?.employer_interest);const contact=p.contactVisibility==='interested'?Boolean(application?.candidate_interest):p.contactVisibility==='matched'&&mutual;return {...verificationFields(row),id:row.id,name:d.name,title:d.title,location:d.location,skills:d.skills,bio:d.bio,availableFrom:d.availableFrom,email:contact?d.email:'',links:contact?d.links:'',contactShared:contact,updatedAt:row.updated_at};}
+function candidateData(row:Row,company:Row,application?:Row){const p=parse(row.privacy,defaultPrivacy) as Privacy;const d=parse(row.data);const mutual=Boolean(application?.candidate_interest&&application?.employer_interest);const contact=p.contactVisibility!=='never'&&mutual;return {...verificationFields(row),id:row.id,name:d.name,title:d.title,location:d.location,skills:d.skills,bio:d.bio,availableFrom:d.availableFrom,experienceYears:d.experienceYears??null,experienceSummary:d.experienceSummary||'',workValues:d.workValues||[],featuredExample:d.featuredExample||null,email:contact?d.email:'',links:contact?d.links:'',contactShared:contact,exportAllowed:Boolean(mutual&&p.allowHandoffExport),updatedAt:row.updated_at};}
 
 export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{adminEmails?:string}={}){
   const query=(sql:string,...args:any[])=>db.prepare(sql).bind(...args);
@@ -62,8 +70,9 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
       const p={id:a.candidate_id,data:a.profile_data,privacy:a.profile_privacy,updated_at:a.profile_updated_at,photo_key:a.profile_photo_key,identity_verified_at:a.profile_verified_at,verified_name:a.profile_verified_name};
       const c={id:a.company_id,domain:a.company_domain};
       const j={id:a.job_id,company_id:a.company_id,data:a.job_data,status:a.job_status,confirmed_at:a.job_confirmed_at,expires_at:a.job_expires_at,company_name:a.company_name,domain:a.company_domain,verified_at:a.company_verified_at,review_status:a.company_review_status,company_reviewed_at:a.company_reviewed_at};
+      if(mine?!a.candidate_interest:!a.employer_interest)continue;
       if(!mine&&(blocked(parse(p.privacy,defaultPrivacy),c as any)||a.stage==='withdrawn'))continue;
-      const data=parse(a.data);const shared={answers:data.answers||{},history:data.history||[],...(mine?{}:{shortlisted:Boolean(data.shortlisted),teamNotes:data.teamNotes||''})};
+      const data=parse(a.data);const shared={...((mine||activeMaterialMatch(a))?{swipeMaterials:materialPacketView(data.swipeMaterials,a.id)}:{}),answers:data.answers||{},history:data.history||[],submittedRole:data.submittedRole,roleChanges:data.roleChanges||[],nextStep:data.nextStep||null,nextStepHistory:data.nextStepHistory||[],...(mine?{}:{shortlisted:Boolean(data.shortlisted),teamNotes:data.teamNotes||''})};
       applications.push({id:a.id,candidateId:a.candidate_id,candidateUserId:mine?user.id:undefined,jobId:a.job_id,companyId:a.company_id,candidateInterest:Boolean(a.candidate_interest),employerInterest:Boolean(a.employer_interest),stage:a.stage,data:shared,createdAt:a.created_at,updatedAt:a.updated_at,side:mine?'candidate':'employer',job:publicJob(j),candidate:mine?{...parse(p.data),...verificationFields(p),id:p.id}:candidateData(p,c,a)});
       if(a.candidate_interest&&a.employer_interest&&!['withdrawn','closed'].includes(a.stage)){
         messages[a.id]=[];
@@ -71,14 +80,22 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
       }
     }
     const readableMatches=Object.keys(messages);
+    const workRows=await chunks(readableMatches,p=>`SELECT s.application_id,COUNT(*) count,COALESCE(SUM(json_array_length(s.checks)),0) checks,MIN(json_extract(c.data,'$.title')) first_title FROM proof_shares s JOIN proof_cards c ON c.id=s.card_id WHERE s.application_id IN (${p}) GROUP BY s.application_id`);
+    const workByApplication=new Map(workRows.map(row=>[row.application_id,{count:Number(row.count),checks:Number(row.checks),firstTitle:row.first_title||''}]));
+    for(const application of applications)application.workEvidence=workByApplication.get(application.id)||emptyWorkEvidence();
     if(readableMatches.length){const rows=await chunks(readableMatches,p=>`SELECT id,application_id,sender_id,body,created_at FROM live_messages WHERE application_id IN (${p}) ORDER BY created_at DESC,id DESC LIMIT 2000`);for(const m of rows.sort((a,b)=>a.created_at.localeCompare(b.created_at)||a.id.localeCompare(b.id))){const application=records.find(a=>a.id===m.application_id)!;messages[m.application_id].push({id:m.id,text:m.body,time:m.created_at,mine:m.sender_id===user.id,sender:m.sender_id===application.candidate_user_id?'Candidate':'Hiring team'})}}
     let profiles:Row[]=[];let team:Row[]=[];let companyJobs:Row[]=[];
     if(selected){
       const rows=await all('SELECT * FROM live_profiles WHERE user_id<>? ORDER BY updated_at DESC LIMIT 500',user.id);
-      profiles=rows.filter(p=>parse(p.privacy).discoverable&&!blocked(parse(p.privacy,defaultPrivacy),selected as any)).map(p=>candidateData(p,selected,records.find(a=>a.company_id===selected.id&&a.candidate_id===p.id&&a.stage!=='withdrawn')));
+      const permitted=rows.filter(p=>!blocked(parse(p.privacy,defaultPrivacy),selected as any));
+      profiles=permitted.flatMap(p=>{const applications=records.filter(a=>a.company_id===selected.id&&a.candidate_id===p.id&&!['withdrawn','closed'].includes(a.stage)),discoverable=Boolean(parse(p.privacy).discoverable),eligibleJobIds=discoverable?publicJobs.filter(j=>j.company_id===selected.id).map(j=>j.id):applications.filter(a=>a.candidate_interest).map(a=>a.job_id);return eligibleJobIds.length?[{...candidateData(p,selected,applications.find(a=>a.candidate_interest&&a.employer_interest)),eligibleJobIds}]:[]});
       team=await all('SELECT id,email,role,user_id FROM live_members WHERE company_id=?',selected.id);
-      companyJobs=(await all('SELECT j.*,c.name company_name,c.domain,c.verified_at,c.review_status,c.reviewed_at company_reviewed_at FROM live_jobs j JOIN live_companies c ON c.id=j.company_id WHERE j.company_id=? ORDER BY j.created_at DESC',selected.id)).map(publicJob);
+      companyJobs=(await all('SELECT j.*,EXISTS(SELECT 1 FROM hiring_calibrations k WHERE k.job_id=j.id AND k.job_data=j.data AND k.status=\'approved\' AND k.version=(SELECT MAX(version) FROM hiring_calibrations WHERE job_id=j.id)) criteria_ready,c.name company_name,c.domain,c.verified_at,c.review_status,c.reviewed_at company_reviewed_at FROM live_jobs j JOIN live_companies c ON c.id=j.company_id WHERE j.company_id=? ORDER BY j.created_at DESC',selected.id)).map(row=>({...publicJob(row),criteriaReady:roleReady(parse(row.data))}));
     }
+    const reviewBatches=await readReviewBatches(db,user.id),employerReviewBatches=selected?await readReviewBatches(db,user.id,selected.id):[];
+    for(const job of base.jobs)Object.assign(job,{reviewWindow:reviewBatches.find(b=>b.jobId===job.id&&b.open)});
+    for(const job of companyJobs)job.reviewWindow=employerReviewBatches.find(b=>b.jobId===job.id&&b.open);
+    for(const a of applications)a.reviews=(a.side==='candidate'?reviewBatches:employerReviewBatches).filter(b=>b.jobId===a.jobId&&b.reservations.length).map(b=>({...b,reservations:a.side==='candidate'?b.reservations:b.reservations.filter((r:Row)=>r.applicationId===a.id)})).filter(b=>b.reservations.length);
     const ownSlots=await all('SELECT s.* FROM live_slots s WHERE s.owner_id=? AND s.starts_at>? AND NOT EXISTS(SELECT 1 FROM live_interviews i WHERE i.slot_id=s.id) ORDER BY s.starts_at LIMIT 100',user.id,now());
     const partnerSlots=await all("SELECT s.* FROM live_slots s WHERE s.owner_id<>? AND s.starts_at>? AND NOT EXISTS(SELECT 1 FROM live_interviews i WHERE i.slot_id=s.id) AND EXISTS(SELECT 1 FROM live_applications a WHERE a.candidate_interest=1 AND a.employer_interest=1 AND a.stage NOT IN ('withdrawn','closed') AND ((a.candidate_user_id=? AND EXISTS(SELECT 1 FROM live_members m WHERE m.company_id=a.company_id AND m.user_id=s.owner_id)) OR (a.candidate_user_id=s.owner_id AND EXISTS(SELECT 1 FROM live_members m WHERE m.company_id=a.company_id AND m.user_id=?)))) ORDER BY s.starts_at LIMIT 500",user.id,now(),user.id,user.id);
     const slotResults=[...ownSlots,...partnerSlots].map(s=>({id:s.id,mine:s.owner_id===user.id,startsAt:s.starts_at,endsAt:s.ends_at,applicationIds:[] as string[]}));
@@ -87,7 +104,7 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
     const appIds=applications.map(a=>a.id);
     const interviews=(await chunks(appIds,p=>`SELECT * FROM live_interviews WHERE application_id IN (${p}) ORDER BY starts_at DESC LIMIT 200`)).sort((a,b)=>b.starts_at.localeCompare(a.starts_at));
     const alerts=await all('SELECT id,body,created_at,read_at FROM live_notifications WHERE user_id=? ORDER BY created_at DESC LIMIT 100',user.id);
-    return out({...base,organizations:organizations.map(c=>({id:c.id,name:c.name,domain:c.domain,verifiedAt:c.verified_at,reviewStatus:c.review_status,reviewedAt:c.reviewed_at,reviewReason:c.review_reason,reviewRequestedAt:c.review_requested_at,role:c.role,...(c.role==='owner'?{verificationToken:c.verification_token}:{})})),invites:invited,currentCompanyId:selected?.id,team:team.map(m=>({id:m.id,email:m.email,role:m.role,accepted:Boolean(m.user_id)})),companyJobs,profile:profile?{...parse(profile.data),...verificationFields(profile),id:profile.id,privacy:parse(profile.privacy,defaultPrivacy)}:null,profiles,applications,messages,slots:slotResults.filter(s=>s.mine||s.applicationIds.length),interviews:interviews.map(i=>({id:i.id,applicationId:i.application_id,startsAt:i.starts_at,endsAt:i.ends_at,status:i.status,notes:i.notes})),notifications:alerts.map(n=>({id:n.id,text:n.body,time:n.created_at,read:Boolean(n.read_at)})),settings:parse(setting?.data,{preferences:defaultPreferences})});
+    return out({...base,organizations:organizations.map(c=>({id:c.id,name:c.name,domain:c.domain,verifiedAt:c.verified_at,reviewStatus:c.review_status,reviewedAt:c.reviewed_at,reviewReason:c.review_reason,reviewRequestedAt:c.review_requested_at,role:c.role,...(c.role==='owner'?{verificationToken:c.verification_token}:{})})),invites:invited,currentCompanyId:selected?.id,team:team.map(m=>({id:m.id,email:m.email,role:m.role,userId:m.user_id,accepted:Boolean(m.user_id)})),companyJobs,reviewBatches,employerReviewBatches,profile:profile?{...parse(profile.data),...verificationFields(profile),id:profile.id,updatedAt:profile.updated_at,privacy:parse(profile.privacy,defaultPrivacy)}:null,profiles,applications,messages,slots:slotResults.filter(s=>s.mine||s.applicationIds.length),interviews:interviews.map(i=>({id:i.id,applicationId:i.application_id,startsAt:i.starts_at,endsAt:i.ends_at,status:i.status,notes:i.notes})),notifications:alerts.filter(n=>!isOneSidedInterestNotice(n.body)).map(n=>({id:n.id,text:n.body,time:n.created_at,read:Boolean(n.read_at)})),settings:parse(setting?.data,{preferences:defaultPreferences})});
   }catch(e){return error(e)}}
 
   async function POST(req:Request){try{
@@ -108,12 +125,30 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
       const d=b.profile;const p=privacy(d?.privacy);
       const contact=text(d.email||'',180,false);if(contact&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact))throw new Problem('Enter a valid contact email.');
       const links=text(d.links||'',300,false);if(links&&!/^https?:\/\//i.test(links))throw new Problem('Use an https:// portfolio URL.');
-      const data={name:text(d.name,70),title:text(d.title,100),location:text(d.location,100),skills:text(d.skills,1000),bio:text(d.bio||'',1000,false),email:contact,links,availableFrom:day(d.availableFrom)};
+      const data={name:text(d.name,70),title:text(d.title,100),location:text(d.location,100),skills:text(d.skills,1000),bio:text(d.bio||'',1000,false),email:contact,links,availableFrom:day(d.availableFrom),experienceYears:d.experienceYears==null||d.experienceYears===''?null:num(d.experienceYears,0,60),experienceSummary:text(d.experienceSummary||'',2000,false),workValues:list(d.workValues||[],10,50).filter(v=>workValues.includes(v))};
       const existing=await myProfile(user.id);const profileId=existing?.id||id();
+      const priorProfile=parse(existing?.data);try{Object.assign(data,{materials:normalizeMaterials(d.materials===undefined?priorProfile.materials:d.materials,user.id)})}catch(e:any){throw new Problem(e.message)}Object.assign(data,{experience:text(d.experience??priorProfile.experience??'',20000,false),education:text(d.education??priorProfile.education??'',3000,false),featuredExample:priorProfile.featuredExample||null});
       await run('INSERT INTO live_profiles(id,user_id,data,privacy,updated_at) VALUES(?,?,?,?,?) ON CONFLICT(user_id) DO UPDATE SET data=excluded.data,privacy=excluded.privacy,updated_at=excluded.updated_at',profileId,user.id,JSON.stringify(data),JSON.stringify(p),now());
       if(existing&&parse(existing.data).name?.trim().toLowerCase()!==data.name.trim().toLowerCase())await run('UPDATE live_profiles SET identity_verified_at=NULL,verified_name=NULL WHERE id=?',existing.id);
-      if(existing){const open=await all('SELECT a.*,c.domain FROM live_applications a JOIN live_companies c ON c.id=a.company_id WHERE a.candidate_user_id=?',user.id);for(const a of open){if(blocked(p,{id:a.company_id,domain:a.domain})&&a.stage!=='withdrawn'){await run("UPDATE live_applications SET stage='withdrawn',updated_at=? WHERE id=?",now(),a.id);await run("UPDATE live_interviews SET status='cancelled' WHERE application_id=? AND status='confirmed' AND starts_at>?",a.id,now());await notifyCompany(a.company_id,'A candidate withdrew their application.')}}}
+      if(existing){const open=await all('SELECT a.*,c.domain FROM live_applications a JOIN live_companies c ON c.id=a.company_id WHERE a.candidate_user_id=?',user.id);for(const a of open){if(blocked(p,{id:a.company_id,domain:a.domain})&&a.stage!=='withdrawn'){await run("UPDATE live_applications SET stage='withdrawn',data=json_remove(data,'$.nextStep'),updated_at=? WHERE id=?",now(),a.id);await run("UPDATE live_interviews SET status='cancelled' WHERE application_id=? AND status='confirmed' AND starts_at>?",a.id,now());if(a.employer_interest)await notifyCompany(a.company_id,'A candidate withdrew their application.')}}}
+      const reservations=await all("SELECT r.id,j.company_id,c.domain FROM review_reservations r JOIN review_batches b ON b.id=r.batch_id JOIN live_jobs j ON j.id=b.job_id JOIN live_companies c ON c.id=j.company_id WHERE r.user_id=? AND r.status IN ('reserved','waitlisted')",user.id);for(const r of reservations)if(blocked(p,{id:r.company_id,domain:r.domain}))await cancelReviewPlace(db,r.id,now());
       break;
+    }
+    case 'featuredExample':{
+      const profile=await myProfile(user.id);if(!profile)throw new Problem('Save your profile first.');
+      const data=parse(profile.data);
+      if(b.cardId===null)data.featuredExample=null;
+      else {if(b.consent!==true)throw new Problem('Confirm that this summary can appear on your profile.');const card=await one('SELECT * FROM proof_cards WHERE id=? AND user_id=?',text(b.cardId,100),user.id);if(!card)throw new Problem('Choose a work example you own.',403);data.featuredExample=featuredSummary({id:card.id,...parse(card.data)})}
+      await run('UPDATE live_profiles SET data=?,updated_at=? WHERE user_id=?',JSON.stringify(data),now(),user.id);break;
+    }
+    case 'nextStep':{
+      const {a,candidate}=await access(user.id,text(b.applicationId,100),true);const data=parse(a.data),step=b.step;
+      if(step!==null&&(!step||!['candidate','employer'].includes(step.owner)))throw new Problem('Choose who needs to act.');
+      const nextStep=step===null?null:{owner:step.owner,text:text(step.text,500),dueAt:date(step.dueAt),updatedBy:candidate?'Candidate':'Hiring team',updatedAt:now()};
+      if(nextStep&&(Date.parse(nextStep.dueAt)<Date.now()-60000||Date.parse(nextStep.dueAt)>Date.now()+180*86400000))throw new Problem('Choose an update date within the next six months.');
+      data.nextStep=nextStep;data.nextStepHistory=[...(data.nextStepHistory||[]),{...nextStep,action:nextStep?'set':'cleared',by:candidate?'Candidate':'Hiring team',time:now()}].slice(-30);
+      await run('UPDATE live_applications SET data=?,updated_at=? WHERE id=?',JSON.stringify(data),now(),a.id);
+      if(candidate)await notifyCompany(a.company_id,'The next step for a mutual conversation was updated.');else await notify(a.candidate_user_id,'Your hiring team updated the next step.');break;
     }
     case 'company':{
       if((await all('SELECT id FROM live_companies WHERE owner_id=?',user.id)).length>=5)throw new Problem('You can create up to five companies.');
@@ -150,17 +185,19 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
       const skills=list(d.skills,30,80);if(!skills.length)throw new Problem('Add at least one required skill.');
       if(!['Remote','Hybrid','On-site'].includes(d.mode))throw new Problem('Choose a work arrangement.');
       const questions=list(d.questions||[],3,250);
-      const data={title:text(d.title,100),location:text(d.location,100),mode:d.mode,salary:num(d.salary,1,2000),max:num(d.max,1,2000),skills,about:text(d.about,3000),travelPercent:num(d.travelPercent,0,100),startBy:day(d.startBy),questions};
+      const data={title:text(d.title,100),location:text(d.location,100),mode:d.mode,salary:num(d.salary,1,2000),max:num(d.max,1,2000),skills,about:text(d.about,3000),travelPercent:num(d.travelPercent,0,100),startBy:day(d.startBy),questions,criteria:{trainable:list(d.criteria?.trainable||[],15,80),transferable:text(d.criteria?.transferable||'',1500,false),minYears:num(d.criteria?.minYears||0,0,60)},first90Days:text(d.first90Days||'',2000,false),reportsTo:text(d.reportsTo||'',200,false),hiringContact:text(d.hiringContact||'',200,false),interviewProcess:text(d.interviewProcess||'',2000,false),timeCommitment:text(d.timeCommitment||'',300,false)};
       if(data.salary>data.max)throw new Problem('Maximum salary must be at least the minimum.');
       const timestamp=now(),expires=new Date(Date.now()+30*86400000).toISOString();
-      if(d.id){const existing=await one('SELECT * FROM live_jobs WHERE id=? AND company_id=?',text(d.id,100),c.id);if(!existing)throw new Problem('Role not found.',404);const result=await run("UPDATE live_jobs SET data=?,confirmed_at=?,expires_at=?,status=? WHERE id=? AND company_id=? AND EXISTS(SELECT 1 FROM live_companies c WHERE c.id=live_jobs.company_id AND c.verified_at IS NOT NULL AND c.review_status='approved')",JSON.stringify(data),timestamp,expires,'open',existing.id,c.id);if(!result.meta.changes)throw new Problem('Company verification changed. Refresh before publishing.',409)}
-      else {const result=await run("INSERT INTO live_jobs(id,company_id,data,status,confirmed_at,expires_at,created_at) SELECT ?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM live_companies WHERE id=? AND verified_at IS NOT NULL AND review_status='approved')",id(),c.id,JSON.stringify(data),'open',timestamp,expires,timestamp,c.id);if(!result.meta.changes)throw new Problem('Company verification changed. Refresh before publishing.',409)}
+      if(d.id){const existing=await one('SELECT * FROM live_jobs WHERE id=? AND company_id=?',text(d.id,100),c.id);if(!existing)throw new Problem('Role not found.',404);const result=await run("UPDATE live_jobs SET data=?,confirmed_at=?,expires_at=?,status=? WHERE id=? AND company_id=? AND EXISTS(SELECT 1 FROM live_companies c WHERE c.id=live_jobs.company_id AND c.verified_at IS NOT NULL AND c.review_status='approved')",JSON.stringify(data),timestamp,expires,'draft',existing.id,c.id);if(!result.meta.changes)throw new Problem('Company verification changed. Refresh before publishing.',409)}
+      else {const result=await run("INSERT INTO live_jobs(id,company_id,data,status,confirmed_at,expires_at,created_at) SELECT ?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM live_companies WHERE id=? AND verified_at IS NOT NULL AND review_status='approved')",id(),c.id,JSON.stringify(data),'draft',timestamp,expires,timestamp,c.id);if(!result.meta.changes)throw new Problem('Company verification changed. Refresh before publishing.',409)}
+      if(d.id){const apps=await all('SELECT * FROM live_applications WHERE job_id=?',d.id);for(const a of apps){const prior=parse(a.data),baseline=prior.submittedRole;const fields=baseline?changedRoleFields(baseline,data):['role details'];if(fields.length){prior.roleChanges=[...(prior.roleChanges||[]),{time:timestamp,fields}].slice(-20);await run('UPDATE live_applications SET data=?,updated_at=? WHERE id=?',JSON.stringify(prior),timestamp,a.id);if(a.candidate_interest)await notify(a.candidate_user_id,'A role you swiped on changed. Check its details in Applications.')}}}
       break;
     }
     case 'jobStatus':{
       const j=await one('SELECT * FROM live_jobs WHERE id=?',text(b.jobId,100));if(!j)throw new Problem('Role not found.',404);const company=await membership(user.id,j.company_id);
       if(b.status==='open'&&(!company.verified_at||company.review_status!=='approved'))throw new Problem('Company verification and admin approval are required to publish or reopen a role.',403);
       if(!['open','closed'].includes(b.status))throw new Problem('Invalid role status.');
+      if(b.status==='open'&&!roleReady(parse(j.data)))throw new Problem('Complete the role requirements and salary before publishing.',409);
       const result=await run('UPDATE live_jobs SET status=?,confirmed_at=?,expires_at=? WHERE id=?'+(b.status==='open'?" AND EXISTS(SELECT 1 FROM live_companies c WHERE c.id=live_jobs.company_id AND c.verified_at IS NOT NULL AND c.review_status='approved')":''),b.status,now(),new Date(Date.now()+30*86400000).toISOString(),j.id);if(!result.meta.changes)throw new Problem('Company verification changed. Refresh before publishing.',409);break;
     }
     case 'interest':{
@@ -177,15 +214,28 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
       if(side==='candidate'){const questions=parse(j.data).questions||[];for(const question of questions)answers[question]=text(b.answers?.[question],1500)}
       const existing=await one('SELECT * FROM live_applications WHERE candidate_id=? AND job_id=?',p.id,j.id);
       if(existing&&['withdrawn','closed'].includes(existing.stage))throw new Problem('This application is closed. Choose another role.');
+      if(side==='candidate'&&b.profileVersion&&b.profileVersion!==p.updated_at)throw new Problem('Your live profile changed. Review the updated profile before swiping again.',409);
+      if(b.roleVersion&&b.roleVersion!==j.confirmed_at)throw new Problem('This role changed. Refresh its details before swiping again.',409);
       const applicationId=existing?.id||id();const timestamp=now();
-      const data=existing?parse(existing.data):{answers:{},history:[{stage:'interested',time:timestamp,by:side==='candidate'?'Candidate':'Hiring team'}]};if(side==='candidate')data.answers=answers;
-      // A single upsert preserves the other side’s flag when two people like at once.
+      const data=existing?parse(existing.data):{answers:{},history:[{stage:'interested',time:timestamp,by:side==='candidate'?'Candidate':'Hiring team'}]};if(side==='candidate'){data.answers=answers;data.submittedRole??=roleSnapshot(parse(j.data));if(!existing?.candidate_interest){try{data.swipeMaterials=selectedMaterials(parse(p.data),b.materialSelection)}catch(e:any){throw new Problem(e.message)}}}
+      // One transaction reserves capacity and sends interest. A failed capacity/availability gate saves neither.
+      const statements:D1PreparedStatement[]=[];let reservationGate='',reservationArgs:any[]=[];
+      if(side==='candidate'&&b.review?.batchId&&!existing?.employer_interest){
+       if(b.review.consent!==true)throw new Problem('Confirm the review request and the profile details being shared.');
+       const batchId=text(b.review.batchId,100),batch=await one('SELECT * FROM review_batches WHERE id=? AND job_id=?',batchId,j.id);if(!batch||batch.deadline<=timestamp)throw new Problem('This review window closed. Nothing was sent; refresh the role before trying again.',409);
+       const occupied="(status='reserved' OR status='reviewed' AND outcome<>'No review place available')";
+       const prior=await one('SELECT * FROM review_reservations WHERE batch_id=? AND user_id=?',batchId,user.id);if(prior?.status==='cancelled')throw new Problem('This review request was cancelled. Send a private swipe without requesting this review again.',409);
+       statements.push(query(`INSERT INTO review_reservations(id,batch_id,user_id,status,created_at) SELECT ?,bb.id,?,CASE WHEN (SELECT COUNT(*) FROM review_reservations WHERE batch_id=bb.id AND ${occupied})<bb.capacity THEN 'reserved' ELSE 'waitlisted' END,? FROM review_batches bb JOIN live_jobs jj ON jj.id=bb.job_id JOIN live_companies cc ON cc.id=jj.company_id JOIN live_profiles pp ON pp.user_id=? WHERE bb.id=? AND bb.job_id=? AND bb.deadline>? AND jj.status='open' AND jj.expires_at>? AND cc.verified_at IS NOT NULL AND cc.review_status='approved' AND pp.privacy=? AND pp.updated_at=? AND NOT EXISTS(SELECT 1 FROM live_applications WHERE candidate_id=pp.id AND job_id=jj.id AND stage IN ('closed','withdrawn')) AND (?=1 OR (SELECT COUNT(*) FROM review_reservations WHERE batch_id=bb.id AND ${occupied})<bb.capacity) ON CONFLICT(batch_id,user_id) DO NOTHING`,id(),user.id,timestamp,user.id,batchId,j.id,timestamp,timestamp,p.privacy,p.updated_at,b.review.allowWaitlist===true?1:0));
+       reservationGate=" AND EXISTS(SELECT 1 FROM review_reservations rr JOIN review_batches bb ON bb.id=rr.batch_id WHERE rr.batch_id=? AND rr.user_id=? AND rr.status IN ('reserved','waitlisted','reviewed','matched') AND bb.deadline>?)";reservationArgs=[batchId,user.id,timestamp];
+      }
       const flag=side==='candidate'?'candidate_interest':'employer_interest';
-      await db.batch([query(`INSERT INTO live_applications(id,candidate_id,candidate_user_id,job_id,company_id,candidate_interest,employer_interest,stage,data,created_at,updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(candidate_id,job_id) DO UPDATE SET ${flag}=1,data=${side==='candidate'?'json_set(live_applications.data,\'$.answers\',json(excluded.data)->\'$.answers\')':'live_applications.data'},updated_at=excluded.updated_at`,applicationId,p.id,p.user_id,j.id,c.id,side==='candidate'?1:0,side==='employer'?1:0,'interested',JSON.stringify(data),timestamp,timestamp),query("UPDATE live_applications SET stage='matched',updated_at=? WHERE candidate_id=? AND job_id=? AND candidate_interest=1 AND employer_interest=1 AND stage='interested'",timestamp,p.id,j.id)]);
+      statements.push(query(`INSERT INTO live_applications(id,candidate_id,candidate_user_id,job_id,company_id,candidate_interest,employer_interest,stage,data,created_at,updated_at) SELECT ?,?,?,?,?,?,?,?,?,?,? WHERE EXISTS(SELECT 1 FROM live_jobs jj JOIN live_companies cc ON cc.id=jj.company_id JOIN live_profiles pp ON pp.id=? WHERE jj.id=? AND jj.status='open' AND jj.expires_at>? AND cc.verified_at IS NOT NULL AND cc.review_status='approved' AND pp.privacy=? AND pp.updated_at=?)${reservationGate} ON CONFLICT(candidate_id,job_id) DO UPDATE SET ${flag}=1,data=${side==='candidate'?"json_set(live_applications.data,'$.answers',json(excluded.data)->'$.answers','$.submittedRole',COALESCE(json_extract(live_applications.data,'$.submittedRole'),json_extract(excluded.data,'$.submittedRole')),'$.swipeMaterials',CASE WHEN live_applications.candidate_interest=1 THEN json_extract(live_applications.data,'$.swipeMaterials') ELSE json_extract(excluded.data,'$.swipeMaterials') END)":'live_applications.data'},updated_at=excluded.updated_at WHERE live_applications.stage NOT IN ('closed','withdrawn')`,applicationId,p.id,p.user_id,j.id,c.id,side==='candidate'?1:0,side==='employer'?1:0,'interested',JSON.stringify(data),timestamp,timestamp,p.id,j.id,timestamp,p.privacy,p.updated_at,...reservationArgs));
+      const submittedIndex=statements.length-1;
+      statements.push(query("UPDATE live_applications SET stage='matched',updated_at=? WHERE candidate_id=? AND job_id=? AND candidate_interest=1 AND employer_interest=1 AND stage='interested'",timestamp,p.id,j.id),...matchReviewStatements(db,j.id,p.user_id,timestamp));
+      const results=await db.batch(statements);if(!results[submittedIndex].meta.changes)throw new Problem('Availability, review capacity, or your profile changed. Nothing new was submitted. Refresh the role and confirm again; a full queue needs explicit waitlist consent.',409);
       const a=(await one('SELECT * FROM live_applications WHERE candidate_id=? AND job_id=?',p.id,j.id))!;
       if(a.candidate_interest&&a.employer_interest){await notify(p.user_id,`You matched with ${c.name} for ${parse(j.data).title}.`,a.id+':match:'+p.user_id);await notifyCompany(c.id,`Mutual match for ${parse(j.data).title}.`,a.id+':match')}
-      else if(side==='candidate')await notifyCompany(c.id,`A candidate is interested in ${parse(j.data).title}.`,a.id+':interest');
-      else await notify(p.user_id,`${c.name} is interested in your profile.`,a.id+':interest:'+p.user_id);
+      // One-sided swipes stay private; only mutual matches create interest notifications.
       break;
     }
     case 'stage':{
@@ -193,10 +243,15 @@ export function createMarket(db:D1Database,fetcher:typeof fetch=fetch,options:{a
       if(!allowed.includes(b.stage))throw new Problem('Invalid stage change.',403);
       if(!candidate&&(!a.candidate_interest||!a.employer_interest))throw new Problem('A mutual match is required first.');
       if(['withdrawn','closed'].includes(a.stage))throw new Problem('This application is already closed.',409);
-      const data=parse(a.data);data.history=[...(data.history||[]),{stage:b.stage,time:now(),by:candidate?'Candidate':'Hiring team'}].slice(-100);
+      const data=parse(a.data);if(['withdrawn','closed'].includes(b.stage))data.nextStep=null;data.history=[...(data.history||[]),{stage:b.stage,time:now(),by:candidate?'Candidate':'Hiring team'}].slice(-100);
       await run('UPDATE live_applications SET stage=?,data=?,updated_at=? WHERE id=?',b.stage,JSON.stringify(data),now(),a.id);
       if(['withdrawn','closed'].includes(b.stage))await run("UPDATE live_interviews SET status='cancelled' WHERE application_id=? AND status='confirmed' AND starts_at>?",a.id,now());
-      if(candidate)await notifyCompany(a.company_id,'A candidate withdrew their application.');else await notify(a.candidate_user_id,`Your application status changed to ${b.stage}.`);break;
+      if(['withdrawn','closed'].includes(b.stage)){const reservations=await all("SELECT r.id FROM review_reservations r JOIN review_batches b ON b.id=r.batch_id WHERE b.job_id=? AND r.user_id=? AND r.status IN ('reserved','waitlisted')",a.job_id,a.candidate_user_id);for(const r of reservations)await cancelReviewPlace(db,r.id,now())}
+      if(candidate&&a.employer_interest)await notifyCompany(a.company_id,'A candidate withdrew their application.');else if(!candidate) await notify(a.candidate_user_id,`Your application status changed to ${b.stage}.`);break;
+    }
+    case 'revokeMaterials':{
+      const {a,candidate}=await access(user.id,text(b.applicationId,100));if(!candidate)throw new Problem('Only the candidate can stop sharing these materials.',403);
+      await run("UPDATE live_applications SET data=json_remove(data,'$.swipeMaterials'),updated_at=? WHERE id=?",now(),a.id);break;
     }
     case 'teamNotes':{
       const {a,candidate}=await access(user.id,text(b.applicationId,100));if(candidate)throw new Problem('Hiring team access required.',403);

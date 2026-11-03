@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Align quality audit</title><style>body{margin:0;padding:12px;background:#e3e9e3;color:#253c2e;font:14px Arial}header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;padding:6px 0;background:#e3e9e3;z-index:5}button,select{font:inherit;padding:7px}iframe{display:block;width:1024px;height:780px;border:1px solid #a5b6a7;background:white;margin-top:8px}pre{white-space:pre-wrap;font:12px monospace;max-width:1100px}#status{font-weight:bold}</style></head><body><header><b>Align · QA</b><label>Screen <select id="screen"></select></label><label>Width <select id="width"><option>320</option><option>390</option><option>700</option><option selected>1024</option><option>1280</option></select></label><label>Height <select id="height"><option>340</option><option>640</option><option selected>780</option><option>936</option></select></label><label><input id="large" type="checkbox">200% text</label><button id="audit">Run accessibility audit</button><button id="metrics">Collect metrics</button><button id="suite">Run screen suite</button><button id="viewports">Run viewport suite</button><button id="evidence-suite">Run evidence suite</button><span id="suite-status"></span><span id="status" role="status">Loading</span></header><iframe id="app" title="Align test workspace"></iframe><pre aria-hidden="true" id="results" aria-label="Audit results"></pre><pre aria-hidden="true" id="timing" aria-label="Performance results"></pre><pre aria-hidden="true" id="viewport-results"></pre><pre aria-hidden="true" id="evidence-results"></pre><pre aria-hidden="true" id="suite-results" aria-label="Suite results"></pre><script>
+const cases=[['candidate','swipe'],['candidate','applications'],['candidate','inbox'],['candidate','interviews'],['candidate','profile'],['candidate','work-examples'],['candidate','preferences'],['candidate','notifications'],['candidate','verification'],['employer','swipe'],['employer','jobs'],['employer','candidates'],['employer','pipeline'],['employer','inbox'],['employer','interviews'],['employer','company'],['employer','notifications'],['employer','review-slots'],['employer','hiring-criteria'],['employer','verification']];
+const frame=document.getElementById('app'),screen=document.getElementById('screen'),status=document.getElementById('status'),results=document.getElementById('results');
+for(const [mode,section] of cases){const option=document.createElement('option');option.value=mode+'/'+section;option.textContent=mode+' · '+section;screen.append(option)}
+let pageMetrics=null;
+function navigate(){status.textContent='Loading';results.textContent='';const [mode,section]=screen.value.split('/');frame.src='/demo?workspace='+mode+'&section='+section;}
+screen.onchange=navigate;document.getElementById('width').onchange=event=>{frame.style.width=event.target.value+'px';results.textContent=''};document.getElementById('height').onchange=event=>frame.style.height=event.target.value+'px';document.getElementById('large').onchange=event=>frame.contentDocument.documentElement.style.fontSize=event.target.checked?'200%':'';
+frame.onload=()=>{
+ const win=frame.contentWindow,doc=frame.contentDocument;doc.documentElement.style.fontSize=document.getElementById('large').checked?'200%':'';const metrics=pageMetrics={events:[],longTasks:[],excluded:[],errors:[],readyMs:null};
+ try{new win.PerformanceObserver(list=>metrics.longTasks.push(...list.getEntries().map(entry=>({start:entry.startTime,duration:entry.duration})))).observe({type:'longtask',buffered:true})}catch{}
+ win.addEventListener('error',event=>{if(!event.filename||event.filename.startsWith(win.location.origin))metrics.errors.push(event.message)});
+ win.addEventListener('unhandledrejection',event=>metrics.errors.push(String(event.reason)));
+ doc.addEventListener('click',event=>{if(!event.target.closest('button,a,summary,select'))return;const start=win.performance.now();win.requestAnimationFrame(()=>win.requestAnimationFrame(()=>metrics.events.push({name:event.target.closest('button,a,summary,select').textContent.trim().slice(0,60),ms:win.performance.now()-start})))},true);
+ let stable=0;const started=Date.now();function ready(){if(frame.contentDocument!==doc)return;const loaded=doc.querySelector('.sync-state')?.textContent.includes('Demo saved')&&!doc.querySelector('.live-loading');stable=loaded?stable+1:0;if(stable>=3){metrics.readyMs=win.performance.now();status.textContent='Ready';return}if(Date.now()-started>15000){status.textContent='Load failed';return}win.requestAnimationFrame(ready)}ready();
+};
+document.getElementById('audit').onclick=async()=>{
+ status.textContent='Auditing';results.textContent='';const win=frame.contentWindow,doc=frame.contentDocument,begin=win.performance.now();
+ try{
+  if(!win.axe)await new Promise((resolve,reject)=>{const script=doc.createElement('script');script.src='/__qa-axe.js';script.onload=resolve;script.onerror=reject;doc.head.append(script)});
+  const report=await win.axe.run(doc,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa','best-practice']}});
+  const summary={screen:screen.value,width:frame.clientWidth,height:frame.clientHeight,axe:report.testEngine.version,violations:report.violations.map(rule=>({id:rule.id,impact:rule.impact,description:rule.description,help:rule.help,nodes:rule.nodes.map(node=>({target:node.target,html:node.html,summary:node.failureSummary}))})),incomplete:report.incomplete.map(rule=>({id:rule.id,nodes:rule.nodes.map(node=>({target:node.target,html:node.html,summary:node.failureSummary}))})),contrastReview:reviewContrast(doc,win,report.incomplete),passedRules:report.passes.length};
+  results.textContent=JSON.stringify(summary);status.textContent='Audit complete';
+ }catch(error){results.textContent=JSON.stringify({error:String(error)});status.textContent='Audit failed'}finally{pageMetrics.excluded.push([begin,win.performance.now()])}
+};
+document.getElementById('metrics').onclick=()=>{
+ const doc=frame.contentDocument,win=frame.contentWindow,rect=selector=>{const element=doc.querySelector(selector);if(!element)return null;const box=element.getBoundingClientRect();return {top:box.top,bottom:box.bottom,height:box.height}};
+ document.getElementById('timing').textContent=JSON.stringify({screen:screen.value,width:frame.clientWidth,height:frame.clientHeight,readyMs:pageMetrics.readyMs,fonts:{status:doc.fonts.status,dm:doc.fonts.check('16px "DM Sans"'),manrope:doc.fonts.check('16px Manrope'),resources:win.performance.getEntriesByType('resource').filter(entry=>/font|woff/.test(entry.name)).map(entry=>({name:entry.name,duration:entry.duration,start:entry.startTime}))},navigation:win.performance.getEntriesByType('navigation').map(entry=>({dom:entry.domContentLoadedEventEnd,load:entry.loadEventEnd,transfer:entry.transferSize})),resources:win.performance.getEntriesByType('resource').map(entry=>({name:entry.name,duration:entry.duration,bytes:entry.transferSize})).sort((a,b)=>b.duration-a.duration).slice(0,8),paint:win.performance.getEntriesByType('paint').map(entry=>({name:entry.name,ms:entry.startTime})),events:pageMetrics.events,longTasks:pageMetrics.longTasks.filter(entry=>!pageMetrics.excluded.some(([start,end])=>entry.start>=start&&entry.start<=end)),errors:pageMetrics.errors,overflowX:doc.documentElement.scrollWidth>doc.documentElement.clientWidth,pageHeight:doc.documentElement.scrollHeight,card:rect('.ux-swipe-card'),fit:rect('.focus-fit-card'),details:rect('.ux-swipe-open-details'),actions:rect('.ux-swipe-actions'),undo:rect('.ux-swipe-undo-row'),nav:rect('.ux-mobile-nav')});
+};
+
+document.getElementById('suite').onclick=async()=>{
+ const output=[],button=document.getElementById('suite'),progress=document.getElementById('suite-status'),width=frame.clientWidth,height=frame.clientHeight;button.disabled=true;
+ for(const [mode,section] of cases){
+  progress.textContent='Running '+(output.length+1)+' / '+cases.length;
+  try{
+   screen.value=mode+'/'+section;navigate();const started=Date.now();
+   while(status.textContent!=='Ready'){if(Date.now()-started>20000)throw Error('Screen did not finish loading');await new Promise(resolve=>setTimeout(resolve,50))}
+   document.getElementById('metrics').onclick();const metrics=JSON.parse(document.getElementById('timing').textContent);
+   await document.getElementById('audit').onclick();const audit=JSON.parse(results.textContent);
+   const fits=!metrics.card||(metrics.card.top>=0&&metrics.details.bottom<=metrics.card.bottom+1&&metrics.actions.bottom<=metrics.height&&metrics.undo.bottom<=(metrics.nav?.height?metrics.nav.top:metrics.height));
+   output.push({screen:mode+'/'+section,width,height,metrics,audit,ui:{overflow:metrics.overflowX,errors:metrics.errors,swipeFits:fits}});
+  }catch(error){output.push({screen:mode+'/'+section,width,height,error:String(error)})}
+  document.getElementById('suite-results').textContent=JSON.stringify(output);
+ }
+ progress.textContent='Suite complete';button.disabled=false;
+};
+
+
+document.getElementById('viewports').onclick=async()=>{
+ const output=[],button=document.getElementById('viewports'),progress=document.getElementById('suite-status');button.disabled=true;
+ const views=[['candidate/swipe',320,640,false],['employer/swipe',320,640,false],['candidate/swipe',700,340,false],['employer/swipe',700,340,false],['candidate/swipe',1280,780,false],['employer/swipe',1280,780,false],['candidate/swipe',390,640,true],['employer/swipe',390,640,true],['candidate/inbox',320,640,false],['employer/inbox',320,640,false],['employer/candidates',390,780,false],['employer/candidates',1024,780,false]];
+ for(const [route,width,height,large] of views){
+  progress.textContent='Viewport '+(output.length+1)+' / '+views.length;
+  try{
+   frame.style.width=width+'px';frame.style.height=height+'px';document.getElementById('width').value=String(width);document.getElementById('height').value=String(height);document.getElementById('large').checked=large;screen.value=route;navigate();const started=Date.now();
+   while(status.textContent!=='Ready'){if(Date.now()-started>20000)throw Error('Viewport did not finish loading');await new Promise(resolve=>setTimeout(resolve,50))}
+   document.getElementById('metrics').onclick();const metrics=JSON.parse(document.getElementById('timing').textContent);await document.getElementById('audit').onclick();const audit=JSON.parse(results.textContent);
+   const fits=!metrics.card||(metrics.card.top>=0&&metrics.details.bottom<=metrics.card.bottom+1&&metrics.actions.bottom<=height&&metrics.undo.bottom<=(metrics.nav?.height?metrics.nav.top:height));
+   output.push({screen:route,width,height,large,metrics,audit,ui:{overflow:metrics.overflowX,errors:metrics.errors,swipeFits:fits}});
+  }catch(error){output.push({screen:route,width,height,large,error:String(error)})}
+  document.getElementById('viewport-results').textContent=JSON.stringify(output);
+ }
+ progress.textContent='Viewports complete';button.disabled=false;
+};
+
+function reviewContrast(doc,win,incomplete){
+ const rgba=value=>value.match(/[\d.]+/g)?.map(Number)||[];
+ const blend=(fg,bg)=>{const a=fg.length>3?fg[3]:1;return fg.slice(0,3).map((v,i)=>v*a+bg[i]*(1-a))};
+ const lum=rgb=>rgb.map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4}).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+ return incomplete.filter(r=>r.id==='color-contrast').flatMap(r=>r.nodes.map(n=>{const e=doc.querySelector(n.target[0]);if(!e)return {target:n.target,error:'not found'};const style=win.getComputedStyle(e);let bg=[255,255,255],layers=[];for(let p=e;p;p=p.parentElement){const c=rgba(win.getComputedStyle(p).backgroundColor);if(c.length)layers.unshift(c)}for(const layer of layers)bg=blend(layer,bg);const fg=blend(rgba(style.color),bg),a=lum(fg),b=lum(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05),size=parseFloat(style.fontSize),weight=parseInt(style.fontWeight),large=size>=24||size>=18.66&&weight>=700;const box=e.getBoundingClientRect(),card=e.closest('.ux-swipe-card'),accent=card?win.getComputedStyle(card,'::before'):null,top=card?.getBoundingClientRect().top;return {target:n.target,text:e.textContent.trim().slice(0,70),fg,bg,ratio:+ratio.toFixed(3),required:large?3:4.5,pass:ratio>=(large?3:4.5),pseudoOutsideText:!accent||accent.content==='none'||box.top>top+parseFloat(accent.height),font:size,weight}}));
+}
+
+document.getElementById('evidence-suite').onclick=async()=>{
+ const output=[],button=document.getElementById('evidence-suite'),progress=document.getElementById('suite-status');button.disabled=true;
+ const views=[['editor',320,640,false,false,0],['editor',390,780,false,false,1],['editor',390,780,false,false,2],['editor',1280,780,false,false,2],['editor',390,640,true,false,2],['shared',390,780,false,true,0],['review',390,780,false,false,0],['review',1280,780,false,true,0]];
+ const wait=async condition=>{const start=Date.now();while(!condition()){if(Date.now()-start>20000)throw Error('Evidence UI did not become ready');await new Promise(r=>setTimeout(r,35))}};
+ for(const [view,width,height,large,dark,step] of views){
+  progress.textContent='Evidence '+(output.length+1)+' / '+views.length;
+  try{
+   frame.style.width=width+'px';frame.style.height=height+'px';document.getElementById('large').checked=large;screen.value=view==='review'?'employer/candidates':'candidate/work-examples';navigate();await wait(()=>status.textContent==='Ready');
+   const doc=frame.contentDocument;doc.documentElement.dataset.theme=dark?'dark':'light';
+   if(view==='editor'){
+    const edit=Array.from(doc.querySelectorAll('.ux-work-example button')).find(b=>b.textContent.trim()==='Edit card');if(!edit)throw Error('No editable demo example');edit.click();await wait(()=>doc.querySelector('.project-editor'));
+    for(let i=0;i<step;i++){const next=Array.from(doc.querySelectorAll('.project-editor button')).find(b=>b.textContent.trim()==='Continue');next.click();await wait(()=>doc.querySelector('.project-editor .live-form>small')?.textContent.includes('Step '+(i+2)))}
+   }else if(view==='review'){
+    const person=Array.from(doc.querySelectorAll('.ux-candidate-row')).find(b=>b.textContent.includes('Alex Morgan'));if(!person)throw Error('No Alex demo candidate');person.click();await wait(()=>doc.querySelector('.ux-candidate-detail'));
+    const details=Array.from(doc.querySelectorAll('.ux-candidate-detail summary')).find(b=>b.textContent.includes('Work explicitly shared for this role'));if(!details)throw Error('No shared work disclosure');details.click();await wait(()=>doc.querySelector('.project-checks'));
+    const record=Array.from(doc.querySelectorAll('.project-checks button')).find(b=>b.textContent.trim()==='Record an evidence check');if(!record)throw Error('No evidence check control');record.click();await wait(()=>doc.querySelector('.evidence-check-form'));
+   }else{const record=doc.querySelector('.evidence-check-record summary');if(record)record.click()}
+   await new Promise(resolve=>frame.contentWindow.requestAnimationFrame(()=>frame.contentWindow.requestAnimationFrame(resolve)));
+   document.getElementById('metrics').onclick();const metrics=JSON.parse(document.getElementById('timing').textContent);await document.getElementById('audit').onclick();const audit=JSON.parse(results.textContent);
+   const bounds=Array.from(doc.querySelectorAll('.project-editor input,.project-editor textarea,.project-editor select,.evidence-check-form input,.evidence-check-form textarea,.evidence-check-form select')).filter(e=>e.getClientRects().length).map(e=>({name:e.name||e.closest('label')?.textContent.slice(0,45),left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right}));
+   output.push({view,width,height,large,dark,step,metrics,audit,ui:{overflow:metrics.overflowX,errors:metrics.errors,fieldsWithinViewport:bounds.every(b=>b.left>=0&&b.right<=width),bounds}});
+  }catch(error){output.push({view,width,height,large,dark,step,error:String(error)})}
+  document.getElementById('evidence-results').textContent=JSON.stringify(output);
+ }
+ progress.textContent='Evidence suite complete';button.disabled=false;
+};
+
+navigate();
+</script></body></html>

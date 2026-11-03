@@ -1,0 +1,4693 @@
+[
+  {
+    "screen": "candidate/swipe",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 780,
+      "readyMs": 3026.89999999851,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 20,
+            "start": 79
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 20,
+            "start": 79.29999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 106.39999999850988,
+          "load": 127.10000000149012,
+          "transfer": 46233
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 21.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+          "duration": 20,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+          "duration": 20,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 19.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 19.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793468030467",
+          "duration": 19.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 19.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 19.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 121,
+        "bottom": 535,
+        "height": 414
+      },
+      "fit": {
+        "top": 413.765625,
+        "bottom": 482,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 482,
+        "bottom": 526,
+        "height": 44
+      },
+      "actions": {
+        "top": 593,
+        "bottom": 641,
+        "height": 48
+      },
+      "undo": {
+        "top": 641,
+        "bottom": 695,
+        "height": 54
+      },
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">BL</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Bloom</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-trust"
+              ],
+              "html": "<span class=\"ux-swipe-trust\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Operations</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>Strategy</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>13<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>0 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > .text-link"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"Fit details — see how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-swipe-logo"
+          ],
+          "text": "BL",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            234,
+            242,
+            233
+          ],
+          "ratio": 7.764,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "Bloom",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-trust"
+          ],
+          "text": "Sample company",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Montreal, QC · Hybrid",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-salary > small"
+          ],
+          "text": "/ year",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(1)"
+          ],
+          "text": "Operations",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(2)"
+          ],
+          "text": "Strategy",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "13/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "0 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        },
+        {
+          "target": [
+            ".focus-fit-summary > .text-link"
+          ],
+          "text": "Fit details",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 550
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/applications",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/applications",
+      "width": 390,
+      "height": 780,
+      "readyMs": 3143.2999999970198,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 19,
+            "start": 72.5
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 23.100000001490116,
+            "start": 72.79999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 101,
+          "load": 120.69999999552965,
+          "transfer": 46238
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 28.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 28.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 28.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793468030467",
+          "duration": 27.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 27.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 27.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 27.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 23.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5333,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/applications",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".reached:nth-child(5)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .pipeline-steps > span:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(5) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(6) > .pipeline-steps > .reached:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            ".reached:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(9) > .pipeline-steps > span:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(10) > .pipeline-steps > span:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/inbox",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/inbox",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2742,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 21.100000001490116,
+            "start": 52.80000000447035
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 21.599999994039536,
+            "start": 52.900000005960464
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 85.70000000298023,
+          "load": 99.80000000447035,
+          "transfer": 46220
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 37.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 36.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 36.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 36.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793468030467",
+          "duration": 36.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 34.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 34.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 33,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1310,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/inbox",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/interviews",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/interviews",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2836.2999999970198,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 17,
+            "start": 56.600000001490116
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 18.899999998509884,
+            "start": 56.79999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 84.29999999701977,
+          "load": 97.39999999850988,
+          "transfer": 46068
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 30.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 29.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 29.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 29.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 28.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 28.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793468030467",
+          "duration": 27.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 26.600000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5599,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/interviews",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/profile",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/profile",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2756.3000000044703,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 10.600000001490116,
+            "start": 54.70000000298023
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 15.600000001490116,
+            "start": 54.899999998509884
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 81.20000000298023,
+          "load": 96.89999999850988,
+          "transfer": 46065
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 23.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 23.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 23.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/handoff.ts",
+          "duration": 22.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 21,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 20.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 20.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 20.69999999552965,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1674,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/profile",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/work-examples",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/work-examples",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2878.2999999970198,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 12.599999994039536,
+            "start": 56.20000000298023
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 11.600000001490116,
+            "start": 56.29999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 82.29999999701977,
+          "load": 98.39999999850988,
+          "transfer": 46072
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 18.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 17.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 17.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/fit-evidence.ts",
+          "duration": 16.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 16.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 16.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 15.800000004470348,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 15.5,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5007,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/work-examples",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 44
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/preferences",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/preferences",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2784.89999999851,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 13.800000004470348,
+            "start": 48.79999999701977
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 25.399999998509884,
+            "start": 49
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 77,
+          "load": 92.10000000149012,
+          "transfer": 46237
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 25.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+          "duration": 25.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 19.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 19.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 18.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 18.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 18.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 18.30000000447035,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 2023,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/preferences",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/notifications",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/notifications",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2852.1999999955297,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 12,
+            "start": 56.899999998509884
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 14.100000001490116,
+            "start": 57.19999999552965
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 99.19999999552965,
+          "load": 117.29999999701977,
+          "transfer": 46071
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 38.79999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 38.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 37.70000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793468030467",
+          "duration": 37.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 37.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 37.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 36.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 36.79999999701977,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1113,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/notifications",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/verification",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/verification",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2899.10000000149,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 22.200000002980232,
+            "start": 88.69999999552965
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 22.100000001490116,
+            "start": 88.89999999850988
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 130.10000000149012,
+          "load": 143.39999999850988,
+          "transfer": 46240
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 26.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 25.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793468030467",
+          "duration": 23.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 23.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 23.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 23.30000000447035,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/verification",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2885.10000000149,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 15.699999995529652,
+            "start": 55.600000001490116
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 15.699999995529652,
+            "start": 55.70000000298023
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 82.70000000298023,
+          "load": 94.20000000298023,
+          "transfer": 46232
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 27,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 26.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 26.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 25.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 25.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 24.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 24.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 191.046875,
+        "bottom": 587,
+        "height": 395.953125
+      },
+      "fit": {
+        "top": 465.765625,
+        "bottom": 534,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 534,
+        "bottom": 578,
+        "height": 44
+      },
+      "actions": {
+        "top": 593,
+        "bottom": 641,
+        "height": 48
+      },
+      "undo": {
+        "top": 641,
+        "bottom": 695,
+        "height": 54
+      },
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">OPEN TO CONNECT</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > h3"
+              ],
+              "html": "<h3>Jordan Chen</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Program management</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>JavaScript</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "span[aria-hidden=\"true\"]"
+          ],
+          "text": "JC",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            213,
+            224,
+            207
+          ],
+          "ratio": 6.456,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "OPEN TO CONNECT",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > h3"
+          ],
+          "text": "Jordan Chen",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Toronto, ON",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(1) > b"
+          ],
+          "text": "4 years",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(2) > b"
+          ],
+          "text": "Nov 7",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(1)"
+          ],
+          "text": "Program management",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(2)"
+          ],
+          "text": "JavaScript",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            247,
+            248,
+            244
+          ],
+          "ratio": 5.972,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            40,
+            82,
+            62
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.873,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            83,
+            99,
+            89
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.37,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "4 of 5 required skills shown",
+          "fg": [
+            37,
+            46,
+            41
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 13.986,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/jobs",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/jobs",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2903.10000000149,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 19,
+            "start": 56.80000000447035
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 19.5,
+            "start": 56.899999998509884
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 83.20000000298023,
+          "load": 93.39999999850988,
+          "transfer": 46063
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 25.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 25.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 25.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 24.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 24.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 22.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 22.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 3014,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/jobs",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/candidates",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/candidates",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2853.39999999851,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 8.700000002980232,
+            "start": 63.29999999701977
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 9.5,
+            "start": 63.5
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 93.5,
+          "load": 105.69999999552965,
+          "transfer": 46235
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 20.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 20,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 19.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 19.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 18.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 18.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 17.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 17.5,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4758,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/candidates",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-candidate-list"
+              ],
+              "html": "<div class=\"ux-candidate-list\" aria-label=\"Ranked candidates\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        }
+      ],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/pipeline",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/pipeline",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2680.7999999970198,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 16.600000001490116,
+            "start": 56.100000001490116
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 14,
+            "start": 56.29999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 85.79999999701977,
+          "load": 133.29999999701977,
+          "transfer": 46054
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/@react-refresh",
+          "duration": 41,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@vite/client",
+          "duration": 40.79999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 24.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 21.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 21.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 6446,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/pipeline",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".reached:nth-child(5)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(5) > .pipeline-steps > .reached:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(6) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            ".reached:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(9) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(10) > .pipeline-steps > .reached:nth-child(2)"
+          ],
+          "text": "Matched",
+          "fg": [
+            46,
+            82,
+            58
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 8.808,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 500
+        },
+        {
+          "target": [
+            "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+          ],
+          "text": "Interview",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        },
+        {
+          "target": [
+            "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+          ],
+          "text": "Offer",
+          "fg": [
+            82,
+            100,
+            80
+          ],
+          "bg": [
+            255,
+            255,
+            255
+          ],
+          "ratio": 6.369,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 8,
+          "weight": 400
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/inbox",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/inbox",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2747.6999999955297,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 18.5,
+            "start": 73.19999999552965
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 18.700000002980232,
+            "start": 73.29999999701977
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 104.59999999403954,
+          "load": 119.29999999701977,
+          "transfer": 46062
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 25.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/workspace-navigation.ts",
+          "duration": 22.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 22.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/workspace-nav.tsx",
+          "duration": 22.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 22.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 22.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 21.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/interest-outbox.tsx",
+          "duration": 21.799999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1728,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/inbox",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/interviews",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/interviews",
+      "width": 390,
+      "height": 780,
+      "readyMs": 1948.0999999940395,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 12.700000002980232,
+            "start": 56.79999999701977
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 15.899999998509884,
+            "start": 57
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 83.69999999552965,
+          "load": 95.29999999701977,
+          "transfer": 46067
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 22.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 22.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 22.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 22.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 22.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 21.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 20.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 20,
+          "bytes": 300
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 1940
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 1940
+        }
+      ],
+      "events": [],
+      "longTasks": [
+        {
+          "start": 201.69999999552965,
+          "duration": 50
+        }
+      ],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4083,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/interviews",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/company",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/company",
+      "width": 390,
+      "height": 780,
+      "readyMs": 3129.5,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 14.799999997019768,
+            "start": 50.899999998509884
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 18.299999997019768,
+            "start": 51
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 75.89999999850988,
+          "load": 90.60000000149012,
+          "transfer": 46232
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 21.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 21.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 21.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 21.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 20.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 19.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1708,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/company",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/notifications",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/notifications",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2874.5,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 10.299999997019768,
+            "start": 53.100000001490116
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 10.200000002980232,
+            "start": 53.399999998509884
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 82.89999999850988,
+          "load": 97,
+          "transfer": 46225
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 26.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 26.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 26.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 25.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 23.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 23.5,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1170,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/notifications",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/review-slots",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/review-slots",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2898.3000000044703,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 16.899999998509884,
+            "start": 60.900000005960464
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 19.700000002980232,
+            "start": 61.20000000298023
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 96.80000000447035,
+          "load": 109.60000000149012,
+          "transfer": 46069
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 20.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+          "duration": 19.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 18.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 18.599999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 18.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 18,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 17.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 17.799999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1315,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/review-slots",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/hiring-criteria",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/hiring-criteria",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2860.39999999851,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 17.599999994039536,
+            "start": 55.5
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 18.19999999552965,
+            "start": 55.899999998509884
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 93.19999999552965,
+          "load": 106.39999999850988,
+          "transfer": 46240
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 28.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 28.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 28,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 26.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 24.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 24.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 24.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 24,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1905,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/hiring-criteria",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 43
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/verification",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/verification",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2889.3000000044703,
+      "fonts": {
+        "status": "loaded",
+        "dm": true,
+        "manrope": true,
+        "resources": [
+          {
+            "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+            "duration": 8.799999997019768,
+            "start": 68.80000000447035
+          },
+          {
+            "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+            "duration": 13.299999997019768,
+            "start": 68.90000000596046
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "dom": 105.70000000298023,
+          "load": 137.60000000149012,
+          "transfer": 46239
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 39.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 39.20000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 39.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 39,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx?t=1793468030457",
+          "duration": 38.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 38.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 38.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793468030447",
+          "duration": 38.20000000298023,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 865,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/verification",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  }
+]

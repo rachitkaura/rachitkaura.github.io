@@ -1,0 +1,3248 @@
+[
+  {
+    "screen": "candidate/swipe",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 780,
+      "readyMs": 3273.7999999970198,
+      "navigation": [
+        {
+          "dom": 211.29999999701977,
+          "load": 243.39999999850988,
+          "transfer": 44649
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 89.39999999850988,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/docx.ts",
+          "duration": 34.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/fit-details.tsx",
+          "duration": 34.79999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/career.ts",
+          "duration": 33.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-preferences.ts",
+          "duration": 28.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 28.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/fit-evidence.ts",
+          "duration": 28.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 28.5,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 121,
+        "bottom": 535,
+        "height": 414
+      },
+      "fit": {
+        "top": 413.765625,
+        "bottom": 482,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 482,
+        "bottom": 526,
+        "height": 44
+      },
+      "actions": {
+        "top": 593,
+        "bottom": 641,
+        "height": 48
+      },
+      "undo": {
+        "top": 641,
+        "bottom": 695,
+        "height": 54
+      },
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "button[aria-label=\"See how you match\"]"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"See how you match\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-actions"
+              ],
+              "html": "<div class=\"ux-swipe-actions\" aria-label=\"Choose your next step\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">BL</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Bloom</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-trust"
+              ],
+              "html": "<span class=\"ux-swipe-trust\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Operations</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>Strategy</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>13<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>0 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "button[aria-label=\"See how you match\"]"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"See how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/applications",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/applications",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2693,
+      "navigation": [
+        {
+          "dom": 118.5,
+          "load": 136.39999999850988,
+          "transfer": 44499
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.20000000298023,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 27.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 26.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 26.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 26.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 26.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 26.600000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5333,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/applications",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary[aria-label=\"Account and settings\"]"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".reached:nth-child(5)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(2)"
+              ],
+              "html": "<span class=\"\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/inbox",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/inbox",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2655.2000000029802,
+      "navigation": [
+        {
+          "dom": 129.20000000298023,
+          "load": 145,
+          "transfer": 44660
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.600000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 33.20000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 32.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 32.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 32.29999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 31.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 30.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 30.399999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1310,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/inbox",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(1)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Forma about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(2)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Northstar about Engineering Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(3)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Orbit about Senior Product Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(4)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Forma about Senior Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(5)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Lumen Labs about AI Product Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(6)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Harbour Works about Delivery Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(7)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Cedar Systems about Cloud Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/interviews",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/interviews",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2763.10000000149,
+      "navigation": [
+        {
+          "dom": 133.5,
+          "load": 152.10000000149012,
+          "transfer": 44497
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 45.899999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 34,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 33.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 33.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 33,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 33,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 32.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 32.79999999701977,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5599,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/interviews",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/profile",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/profile",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2636.7000000029802,
+      "navigation": [
+        {
+          "dom": 142.10000000149012,
+          "load": 160.30000000447035,
+          "transfer": 44483
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.30000000447035,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/workspace-navigation.ts",
+          "duration": 26.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 26.099999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/live-hiring.tsx?t=1793465851911",
+          "duration": 25.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 25.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 25.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 22.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 21.700000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1674,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/profile",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary[aria-label=\"Account and settings\"]"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/work-examples",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/work-examples",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2807.60000000149,
+      "navigation": [
+        {
+          "dom": 133.39999999850988,
+          "load": 151.20000000298023,
+          "transfer": 44655
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 40.69999999552965,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 31,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 28.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 28.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 28.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 28.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 28.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 27.80000000447035,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 5007,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/work-examples",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-workspace > .sr-only"
+              ],
+              "html": "<h3 class=\"sr-only\">Work proof</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary[aria-label=\"Account and settings\"]"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 44
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/preferences",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/preferences",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2752.7000000029802,
+      "navigation": [
+        {
+          "dom": 122.5,
+          "load": 138.20000000298023,
+          "transfer": 44666
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 43.5,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 33.20000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 33.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 33.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 33,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 32.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 31.100000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 30.799999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 2023,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/preferences",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/notifications",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/notifications",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2826.6999999955297,
+      "navigation": [
+        {
+          "dom": 118.19999999552965,
+          "load": 133.29999999701977,
+          "transfer": 44655
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 41.399999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 33.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 33.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 33.79999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 33.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 33.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 33.29999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 33.099999994039536,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1113,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/notifications",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "candidate/verification",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "candidate/verification",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2877.5,
+      "navigation": [
+        {
+          "dom": 136.70000000298023,
+          "load": 159.89999999850988,
+          "transfer": 44501
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 45.900000005960464,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 37.70000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 37,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 35.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 35.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 35.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 34.29999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 33.70000000298023,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "candidate/verification",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                "summary"
+              ],
+              "html": "<summary aria-label=\"Account and settings\"><span class=\"avatar small-avatar\">AM</span></summary>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/swipe",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2807,
+      "navigation": [
+        {
+          "dom": 143.20000000298023,
+          "load": 177.40000000596046,
+          "transfer": 44493
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.5,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 28.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 27.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 27.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/verification.tsx",
+          "duration": 27.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 27,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 26.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26.899999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 780,
+      "card": {
+        "top": 191.046875,
+        "bottom": 587,
+        "height": 395.953125
+      },
+      "fit": {
+        "top": 465.765625,
+        "bottom": 534,
+        "height": 68.234375
+      },
+      "details": {
+        "top": 534,
+        "bottom": 578,
+        "height": 44
+      },
+      "actions": {
+        "top": 593,
+        "bottom": 641,
+        "height": 48
+      },
+      "undo": {
+        "top": 641,
+        "bottom": 695,
+        "height": 54
+      },
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-actions"
+              ],
+              "html": "<div class=\"ux-swipe-actions\" aria-label=\"Choose your next step\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">OPEN TO CONNECT</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > h3"
+              ],
+              "html": "<h3>Jordan Chen</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Program management</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>JavaScript</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/jobs",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/jobs",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2783,
+      "navigation": [
+        {
+          "dom": 164,
+          "load": 186.60000000149012,
+          "transfer": 44660
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 62.100000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 39.70000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/align-app.tsx?t=1793465851911",
+          "duration": 32,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 30.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 30.400000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 30.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 30.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/remove-duplicate-server-css",
+          "duration": 30.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 3001,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/jobs",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(4) > .live-between > div > h3"
+              ],
+              "html": "<h3>Technical Program Manager</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/candidates",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/candidates",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2786,
+      "navigation": [
+        {
+          "dom": 138.5,
+          "load": 157.30000000447035,
+          "transfer": 44497
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 30.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 30.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 30.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 30.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 29.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 26,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 25.200000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4758,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/candidates",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".selected"
+              ],
+              "html": "<button class=\"ux-candidate-row selected\" aria-pressed=\"true\" aria-label=\"Review Priya Shah, 100 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(2)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Jordan Chen, 82 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(3)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Alex Morgan, 72 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(4)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Emma Wilson, 72 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(5)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Sofia Martin, 72 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(6)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Sam Rivera, 58 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(7)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Ethan Wong, 58 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(8)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Grace Mensah, 58 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(9)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Lucas Bernard, 54 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(10)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Nathan Clarke, 54 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(11)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Noah Kim, 48 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(12)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Maya Torres, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(13)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Avery Patel, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(14)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Liam Reed, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(15)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Aisha Rahman, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(16)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Arjun Desai, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(17)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Chloe Nguyen, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(18)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Isabella Silva, 44 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(19)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Zoe Laurent, 34 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(20)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Owen Carter, 32 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(21)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Robin Lee, 20 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(22)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Marcus Bennett, 20 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(23)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Daniel Okafor, 30 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-candidate-row:nth-child(24)"
+              ],
+              "html": "<button class=\"ux-candidate-row \" aria-pressed=\"false\" aria-label=\"Review Olivia Brooks, 30 out of 100 fit\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            {
+              "target": [
+                ".ux-candidate-list"
+              ],
+              "html": "<div class=\"ux-candidate-list\" aria-label=\"Ranked candidates\">",
+              "summary": "Fix all of the following:\n  aria-label attribute is not well supported on \"div\" elements with no valid role attribute."
+            }
+          ]
+        }
+      ],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/pipeline",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/pipeline",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2660.2999999970198,
+      "navigation": [
+        {
+          "dom": 132.5,
+          "load": 147.39999999850988,
+          "transfer": 44662
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 41.69999999552965,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 25.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 25.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 24.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 23.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 23.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 23.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/swipe-deck.tsx?t=1793465851911",
+          "duration": 22.399999998509884,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 6446,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/pipeline",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(1) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(2) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(3) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(5) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(6) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(7) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(8) > .pipeline-steps > .reached:nth-child(4)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".reached:nth-child(5)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(9) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > .reached:nth-child(2)"
+              ],
+              "html": "<span class=\"reached\"><i></i>Matched</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(4)"
+              ],
+              "html": "<span class=\"\"><i></i>Interview</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "article:nth-child(10) > .pipeline-steps > span:nth-child(5)"
+              ],
+              "html": "<span class=\"\"><i></i>Offer</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/inbox",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/inbox",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2728.60000000149,
+      "navigation": [
+        {
+          "dom": 150.39999999850988,
+          "load": 165.30000000447035,
+          "transfer": 44493
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 45.100000001490116,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 22.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 21.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 21.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 20.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 20.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 20.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 20,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1728,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/inbox",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(1)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Alex Morgan about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(2)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Sam Rivera about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(3)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Priya Shah about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(4)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Alex Morgan about Senior Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(5)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Emma Wilson about Senior Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(6)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Sofia Martin about Data Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(7)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Liam Reed about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(8)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Ethan Wong about Security Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(9)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Grace Mensah about Platform Delivery Lead\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "target": [
+                ".ux-inbox-row:nth-child(10)"
+              ],
+              "html": "<button class=\"ux-inbox-row\" aria-label=\"Open conversation with Olivia Brooks about Technical Program Manager\">",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/interviews",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/interviews",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2734.89999999851,
+      "navigation": [
+        {
+          "dom": 177.80000000447035,
+          "load": 203.5,
+          "transfer": 44653
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 51.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 51,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 51,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 48.70000000298023,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 48.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 48.29999999701977,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 48.19999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 48.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [
+        {
+          "start": 392.8999999985099,
+          "duration": 61
+        }
+      ],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 4083,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/interviews",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/company",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/company",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2729.10000000149,
+      "navigation": [
+        {
+          "dom": 189,
+          "load": 208,
+          "transfer": 44663
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 50.899999998509884,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 22.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 22.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/remote-outbox.ts",
+          "duration": 21.80000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 21.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 20.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/work-preferences.tsx",
+          "duration": 20.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focus-dialog.tsx",
+          "duration": 20.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1706,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/company",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-between > h3"
+              ],
+              "html": "<h3>Forma</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/notifications",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/notifications",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2816.39999999851,
+      "navigation": [
+        {
+          "dom": 138.30000000447035,
+          "load": 154.10000000149012,
+          "transfer": 44656
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 42.20000000298023,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 40.599999994039536,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 39.29999999701977,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 38.600000001490116,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 38,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 36.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/hiring-workflows.tsx?t=1793465851911",
+          "duration": 30.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 30.30000000447035,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1170,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/notifications",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/review-slots",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/review-slots",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2798.89999999851,
+      "navigation": [
+        {
+          "dom": 151.39999999850988,
+          "load": 173.39999999850988,
+          "transfer": 44653
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 48,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 27.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 27.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 27.299999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 27,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 26.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 26.200000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/interest-outbox.ts",
+          "duration": 26.200000002980232,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1315,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/review-slots",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-workspace > h3"
+              ],
+              "html": "<h3 class=\"sr-only\">Review batches</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 41
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/hiring-criteria",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/hiring-criteria",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2806,
+      "navigation": [
+        {
+          "dom": 160.30000000447035,
+          "load": 176.10000000149012,
+          "transfer": 44503
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 43.099999994039536,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-seed.ts?t=1793465851911",
+          "duration": 28,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe.ts",
+          "duration": 26.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/@id/__x00__virtual:vite-rsc/entry-browser",
+          "duration": 26.799999997019768,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/work-proof.ts",
+          "duration": 25.69999999552965,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 25.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/ranking.ts",
+          "duration": 24.899999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/swipe-screen.css",
+          "duration": 24.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 1905,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/hiring-criteria",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "heading-order",
+          "impact": "moderate",
+          "description": "Ensure the order of headings is semantically correct",
+          "help": "Heading levels should only increase by one",
+          "nodes": [
+            {
+              "target": [
+                ".live-workspace > .sr-only"
+              ],
+              "html": "<h3 class=\"sr-only\">Calibration room</h3>",
+              "summary": "Fix any of the following:\n  Heading order invalid"
+            }
+          ]
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 42
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  },
+  {
+    "screen": "employer/verification",
+    "width": 390,
+    "height": 780,
+    "metrics": {
+      "screen": "employer/verification",
+      "width": 390,
+      "height": 780,
+      "readyMs": 2802.10000000149,
+      "navigation": [
+        {
+          "dom": 140.20000000298023,
+          "load": 153.39999999850988,
+          "transfer": 44500
+        }
+      ],
+      "resources": [
+        {
+          "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap",
+          "duration": 46.30000000447035,
+          "bytes": 1250
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/swipe-feedback.ts",
+          "duration": 28.399999998509884,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/lib/demo-guide.ts",
+          "duration": 28,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/inbox.tsx",
+          "duration": 27.900000005960464,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/role-editor.tsx",
+          "duration": 27.700000002980232,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/profile-editor.tsx",
+          "duration": 27.5,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/focused-hiring.tsx?t=1793465851911",
+          "duration": 27.30000000447035,
+          "bytes": 300
+        },
+        {
+          "name": "http://terminal.local:4173/app/components/application-workflow.tsx",
+          "duration": 27.299999997019768,
+          "bytes": 300
+        }
+      ],
+      "paint": [],
+      "events": [],
+      "longTasks": [],
+      "errors": [],
+      "overflowX": false,
+      "pageHeight": 865,
+      "card": null,
+      "fit": null,
+      "details": null,
+      "actions": null,
+      "undo": null,
+      "nav": {
+        "top": 709,
+        "bottom": 780,
+        "height": 71
+      }
+    },
+    "audit": {
+      "screen": "employer/verification",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "nodes": [
+            {
+              "target": [
+                ".ux-demo-brand"
+              ],
+              "html": "<button class=\"ux-demo-brand\" aria-label=\"Open demo tools\"><span class=\"brand \"><span class=\"brand-icon\"><i></i><i></i></span>align<span class=\"brand-dot\">.</span></span><small class=\"ux-demo-badge\">Demo</small></button>",
+              "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passedRules": 40
+    },
+    "ui": {
+      "overflow": false,
+      "errors": [],
+      "swipeFits": true
+    }
+  }
+]

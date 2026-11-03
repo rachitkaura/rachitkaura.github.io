@@ -1,0 +1,234 @@
+{
+  "audits": [
+    {
+      "case": "390px populated profile materials editor",
+      "audit": {
+        "screen": "candidate/profile",
+        "width": 390,
+        "height": 780,
+        "axe": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "contrastReview": [],
+        "passedRules": 43
+      }
+    },
+    {
+      "case": "390px swipe material selection",
+      "audit": {
+        "screen": "candidate/swipe",
+        "width": 390,
+        "height": 780,
+        "axe": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "contrastReview": [],
+        "passedRules": 22
+      }
+    },
+    {
+      "case": "390px employer conversation with materials",
+      "audit": {
+        "screen": "employer/swipe",
+        "width": 390,
+        "height": 780,
+        "axe": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "contrastReview": [],
+        "passedRules": 38
+      }
+    },
+    {
+      "case": "390px matched employer materials packet",
+      "audit": {
+        "screen": "employer/swipe",
+        "width": 390,
+        "height": 780,
+        "axe": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "contrastReview": [],
+        "passedRules": 44
+      }
+    },
+    {
+      "case": "390px populated editor in dark mode",
+      "audit": {
+        "screen": "candidate/profile",
+        "width": 390,
+        "height": 780,
+        "axe": "4.14.0",
+        "violations": [],
+        "incomplete": [],
+        "contrastReview": [],
+        "passedRules": 43
+      }
+    }
+  ],
+  "swipeMetrics": {
+    "screen": "candidate/swipe",
+    "width": 390,
+    "height": 780,
+    "readyMs": 3936.60000000149,
+    "fonts": {
+      "status": "loaded",
+      "dm": true,
+      "manrope": true,
+      "resources": [
+        {
+          "name": "http://terminal.local:4173/fonts/dm-sans-latin-variable.woff2",
+          "duration": 8.200000002980232,
+          "start": 558
+        },
+        {
+          "name": "http://terminal.local:4173/fonts/manrope-latin-variable.woff2",
+          "duration": 8.199999995529652,
+          "start": 558.1000000014901
+        }
+      ]
+    },
+    "navigation": [
+      {
+        "dom": 596.7999999970198,
+        "load": 613.5,
+        "transfer": 47165
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://terminal.local:4173/node_modules/.vite/deps/react-dom_client.js?v=23f6f373",
+        "duration": 53.400000005960464,
+        "bytes": 0
+      },
+      {
+        "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/navigation.js?v=23f6f373",
+        "duration": 48.900000005960464,
+        "bytes": 0
+      },
+      {
+        "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/server/navigation-planner.js?v=23f6f373",
+        "duration": 47.099999994039536,
+        "bytes": 0
+      },
+      {
+        "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/server/app-browser-state.js?v=23f6f373",
+        "duration": 46.600000001490116,
+        "bytes": 0
+      },
+      {
+        "name": "http://terminal.local:4173/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=23f6f373",
+        "duration": 46.600000001490116,
+        "bytes": 0
+      },
+      {
+        "name": "http://terminal.local:4173/@id/__x00__virtual:vinext-app-capabilities",
+        "duration": 45.30000000447035,
+        "bytes": 300
+      },
+      {
+        "name": "http://terminal.local:4173/node_modules/.vite/deps/react-dom.js?v=23f6f373",
+        "duration": 45.100000001490116,
+        "bytes": 0
+      },
+      {
+        "name": "http://terminal.local:4173/node_modules/.pnpm/@vitejs+plugin-rsc@0.5.26_react-dom@19.2.6_react@19.2.6__react-server-dom-webpack@19.2._e947b86850a1967ce571b3244ccf3e2c/node_modules/@vitejs/plugin-rsc/dist/browser.js?v=23f6f373",
+        "duration": 45.100000001490116,
+        "bytes": 0
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 608
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 608
+      }
+    ],
+    "events": [
+      {
+        "name": "Pass",
+        "ms": 2026.1000000014901
+      },
+      {
+        "name": "Pass",
+        "ms": 1164
+      },
+      {
+        "name": "Review sharing",
+        "ms": 156.70000000298023
+      },
+      {
+        "name": "Use this selection",
+        "ms": 1132.7000000029802
+      },
+      {
+        "name": "Interested",
+        "ms": 126.5
+      },
+      {
+        "name": "Confirm swipe",
+        "ms": 2026.6999999955297
+      },
+      {
+        "name": "Undo10s",
+        "ms": 2026
+      },
+      {
+        "name": "Interested",
+        "ms": 2026
+      }
+    ],
+    "longTasks": [],
+    "errors": [],
+    "overflowX": false,
+    "pageHeight": 780,
+    "card": {
+      "top": 121,
+      "bottom": 535,
+      "height": 414
+    },
+    "fit": {
+      "top": 413.765625,
+      "bottom": 482,
+      "height": 68.234375
+    },
+    "details": {
+      "top": 482,
+      "bottom": 526,
+      "height": 44
+    },
+    "actions": {
+      "top": 593,
+      "bottom": 641,
+      "height": 48
+    },
+    "undo": {
+      "top": 641,
+      "bottom": 695,
+      "height": 54
+    },
+    "nav": {
+      "top": 709,
+      "bottom": 780,
+      "height": 71
+    }
+  },
+  "flow": {
+    "mobileUploads": true,
+    "persistedAcrossReload": true,
+    "perRoleSelection": [
+      "GitHub",
+      "Résumé"
+    ],
+    "unselectedCoverLetterHidden": true,
+    "anonymousBeforeMatch": true,
+    "undoRestoredCard": true,
+    "employerReceivedOnlySelected": true,
+    "candidateRevocation": true,
+    "savedAlignPackLinked": true,
+    "githubInGeneratedDocuments": true
+  }
+}

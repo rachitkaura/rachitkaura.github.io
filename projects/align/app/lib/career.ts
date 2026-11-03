@@ -8,7 +8,7 @@ export function splitSkills(value:string){return value.split(/[,;\n]/).map(x=>x.
 function uniqueSkills(values:string[]){const seen=new Set<string>();return values.filter(s=>{const k=normalizeSkill(s);if(!k||seen.has(k))return false;seen.add(k);return true})}
 export function skillFit(profile:Pick<Profile,'skills'>,role:Item){const requirements=uniqueSkills(role.requiredSkills??role.tags);const skills=uniqueSkills(splitSkills(profile.skills));const matched=requirements.flatMap(required=>{const skill=skills.find(s=>normalizeSkill(s)===normalizeSkill(required));return skill?[{required,skill}]:[]});const missing=requirements.filter(r=>!matched.some(m=>normalizeSkill(m.required)===normalizeSkill(r)));return {score:requirements.length?Math.round(matched.length/requirements.length*100):null,requirements,matched,missing,skills};}
 export type ApplicationDraft={id:string;profileId:string;role:Item;resume:string;coverLetter:string;createdAt:string;updatedAt:string;source:Profile;};
-export function createDraft(profile:Profile,role:Item){const fit=skillFit(profile,role);const matchedKeys=new Set(fit.matched.map(m=>normalizeSkill(m.skill)));const skills=[...fit.skills.filter(s=>matchedKeys.has(normalizeSkill(s))),...fit.skills.filter(s=>!matchedKeys.has(normalizeSkill(s)))];const contact=[profile.location,profile.email,profile.links].filter(Boolean).join(' | ');const experience=(profile.experience||'').trim();const sections=[profile.name,contact,`TARGET ROLE\n${role.title} | ${role.name}`,`PROFILE\n${profile.bio.trim()||'[Add your professional summary before submitting.]'}`,skills.length?`SKILLS\n${skills.join(' • ')}`:'',`EXPERIENCE\n${experience||'[Add verified job titles, employers, dates, and achievements before submitting.]'}`,profile.education?.trim()?`EDUCATION\n${profile.education.trim()}`:''];
+export function createDraft(profile:Profile,role:Item){const fit=skillFit(profile,role);const matchedKeys=new Set(fit.matched.map(m=>normalizeSkill(m.skill)));const skills=[...fit.skills.filter(s=>matchedKeys.has(normalizeSkill(s))),...fit.skills.filter(s=>!matchedKeys.has(normalizeSkill(s)))];const contact=[profile.location,profile.email,profile.links,profile.materials?.githubUrl].filter(Boolean).join(' | ');const experience=(profile.experience||'').trim();const sections=[profile.name,contact,`TARGET ROLE\n${role.title} | ${role.name}`,`PROFILE\n${profile.bio.trim()||'[Add your professional summary before submitting.]'}`,skills.length?`SKILLS\n${skills.join(' • ')}`:'',`EXPERIENCE\n${experience||'[Add verified job titles, employers, dates, and achievements before submitting.]'}`,profile.education?.trim()?`EDUCATION\n${profile.education.trim()}`:''];
  const allLines=experience.split(/\n+/).map(s=>s.trim()).filter(Boolean);
  const bulletLines=allLines.filter(line=>/^[•*-]\s+/.test(line));
  const narrativeLines=allLines.filter(line=>!line.includes('|')&&!/^\d{4}(?:\s*[–-]\s*(?:\d{4}|present))?$/i.test(line));
@@ -20,3 +20,14 @@ export function createDraft(profile:Profile,role:Item){const fit=skillFit(profil
  return {resume:sections.filter(Boolean).join('\n\n'),coverLetter:letter};}
 export const hasPlaceholders=(text:string)=>/\[(?:Add|Verify|Insert)\b[^\]]*\]/i.test(text);
 export function safeFilename(value:string){return value.normalize('NFKD').replace(/[^a-zA-Z0-9_-]+/g,'-').replace(/^-|-$/g,'').slice(0,100)||'application';}
+
+export type ApplicationSourceIssue={field:'name'|'skills'|'experience';message:string};
+export function applicationSourceIssue(source:Pick<Profile,'name'|'skills'|'experience'>):ApplicationSourceIssue|null {
+ if(!source.name.trim())return {field:'name',message:'Enter your name before generating drafts.'};
+ if(source.name.length>70)return {field:'name',message:'Keep your name to 70 characters or fewer.'};
+ if(!splitSkills(source.skills).length)return {field:'skills',message:'Add at least one skill before generating drafts.'};
+ if(source.skills.length>1000)return {field:'skills',message:'Keep the skills field to 1,000 characters or fewer.'};
+ if(!source.experience?.trim())return {field:'experience',message:'Add your work experience before generating drafts.'};
+ if(source.experience.length>20000)return {field:'experience',message:'Keep your source experience to 20,000 characters or fewer.'};
+ return null;
+}

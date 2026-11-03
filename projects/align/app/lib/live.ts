@@ -3,8 +3,8 @@ import {skillFit} from './career';
 
 export type Preferences={salaryMin:number;workModes:string[];location:string;travelMax:number;availableFrom:string;hideConflicts:boolean;verifiedOnly:boolean};
 export const defaultPreferences:Preferences={salaryMin:0,workModes:[],location:'',travelMax:100,availableFrom:'',hideConflicts:false,verifiedOnly:false};
-export type Privacy={discoverable:boolean;hiddenCompanies:string[];hiddenDomains:string[];contactVisibility:'never'|'matched'|'interested'};
-export const defaultPrivacy:Privacy={discoverable:false,hiddenCompanies:[],hiddenDomains:[],contactVisibility:'matched'};
+export type Privacy={discoverable:boolean;hiddenCompanies:string[];hiddenDomains:string[];contactVisibility:'never'|'matched'|'interested';allowHandoffExport?:boolean};
+export const defaultPrivacy:Privacy={discoverable:false,hiddenCompanies:[],hiddenDomains:[],contactVisibility:'matched',allowHandoffExport:false};
 export function preferenceFit(p:Preferences,job:any){
   const conflicts:string[]=[],unknown:string[]=[];
   if(p.salaryMin&&job.max*1000<p.salaryMin)conflicts.push('Salary ceiling is below your minimum');
@@ -19,7 +19,7 @@ export function preferenceFit(p:Preferences,job:any){
 export function blocked(privacy:Privacy,company:{id:string;domain:string}){
   return privacy.hiddenCompanies.includes(company.id)||privacy.hiddenDomains.map(x=>x.toLowerCase()).includes(company.domain.toLowerCase());
 }
-export function asItem(job:any):Item{return {id:job.id,name:job.companyName||job.name||'Company',title:job.title,location:job.location||'',mode:job.mode||'Remote',salary:job.salary||0,max:job.max||0,tags:job.skills||[],requiredSkills:job.skills||[],about:job.about||'',perks:[],color:'#d5ddd3',symbol:'◒',interested:false};}
+export function asItem(job:any):Item{return {id:job.id,name:job.companyName||job.name||'Company',title:job.title,location:job.location||'',mode:job.mode||'Remote',salary:job.salary||0,max:job.max||0,tags:job.skills||[],requiredSkills:job.skills||[],about:job.about||'',criteria:job.criteria,startBy:job.startBy,first90Days:job.first90Days,reportsTo:job.reportsTo,hiringContact:job.hiringContact,interviewProcess:job.interviewProcess,timeCommitment:job.timeCommitment,confirmedAt:job.confirmedAt,perks:[],color:'#d5ddd3',symbol:'◒',interested:false};}
 export function coachQuestions(profile:Profile,role:Item){const fit=skillFit(profile,role);return [
   {id:'intro',title:`Why this ${role.title} role?`,prompt:`Connect your experience to the work at ${role.name}. What would you bring, and what do you want to learn?`,kind:'motivation'},
   {id:'evidence',title:`Show your ${fit.matched[0]?.required||role.tags[0]||'relevant'} experience.`,prompt:'Describe a specific situation, your responsibility, the actions you personally took, and the outcome.',kind:'star'},

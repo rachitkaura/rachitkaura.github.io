@@ -1,0 +1,60 @@
+/* A single inline Undo surface follows the swipe controls at every screen width. */
+.ux-shell {--ux-undo-row-height:max(54px,3.375rem);}
+.ux-mobile-swipe-feedback.is-global {display:none;}
+.ux-shell .ux-interest-outbox.is-docked {display:none;}
+ .ux-shell .ux-swipe-controls>.ux-swipe-actions {position:static;bottom:auto;z-index:auto;padding:0;background:transparent;border-radius:0;box-shadow:none;}
+ .ux-swipe-undo-slot {display:block;block-size:var(--ux-undo-row-height);min-block-size:var(--ux-undo-row-height);}
+ .ux-mobile-swipe-feedback {position:relative;display:block;container-type:inline-size;block-size:var(--ux-undo-row-height);min-inline-size:0;padding:4px 0 5px;background:var(--paper);}
+ .ux-mobile-swipe-inner {display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:6px;height:100%;min-width:0;}
+ .ux-mobile-swipe-status {min-inline-size:0;overflow:hidden;}
+ .ux-mobile-swipe-status>b,.ux-mobile-swipe-status>small {display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.4;}
+ .ux-mobile-swipe-status>b {font-size:.8125rem;font-weight:600;color:var(--ink);}
+ .ux-mobile-swipe-status>small {font-size:.6875rem;color:var(--muted);margin-top:2px;}
+ .ux-mobile-swipe-inner>button {display:flex;align-items:center;justify-content:center;gap:5px;min-block-size:44px;min-inline-size:44px;padding:6px 7px;background:transparent;border-radius:6px;font-size:.8125rem;font-weight:600;line-height:1.4;color:var(--green);white-space:nowrap;}
+ .ux-mobile-swipe-inner>button:disabled {opacity:.5;}
+ .ux-mobile-swipe-queue.has-issues {color:var(--warning-text);}
+ .ux-mobile-swipe-queue>span {font-size:.75rem;}
+ .ux-mobile-swipe-progress {position:absolute;inset:auto 0 0;height:2px;background:var(--line);overflow:hidden;}
+ .ux-mobile-swipe-progress>span {display:block;height:100%;background:var(--green);transition:width .25s linear;}
+ .ux-mobile-swipe-feedback.is-global {position:fixed;left:max(18px,env(safe-area-inset-left));right:max(18px,env(safe-area-inset-right));bottom:calc(var(--ux-mobile-height,78px) + 2px);z-index:45;padding-inline:10px;border:1px solid var(--line);border-radius:9px;background:var(--white);box-shadow:0 3px 12px #0001;}
+ @media(max-width:900px){
+ .ux-shell .ux-interest-outbox {display:none;}
+ .ux-mobile-swipe-feedback.is-global {display:block;}
+ .has-swipe-feedback:not(.ux-swipe-page) main {padding-bottom:calc(var(--ux-mobile-height,78px) + var(--ux-undo-row-height) + 30px + env(safe-area-inset-bottom));}
+ }
+ .ux-undo-sheet-backdrop {position:fixed;inset:var(--ux-viewport-top,0px) 0 auto;height:var(--ux-viewport-height,100dvh);z-index:115;display:flex;align-items:flex-end;background:#10201866;overscroll-behavior:contain;}
+ .ux-undo-sheet {width:100%;max-width:640px;max-height:calc(var(--ux-viewport-height,100dvh) - 24px);min-height:0;display:flex;flex-direction:column;margin-inline:auto;padding:20px 20px max(16px,env(safe-area-inset-bottom));border:1px solid var(--line);border-bottom:0;border-radius:16px 16px 0 0;background:var(--white);box-shadow:0 -8px 32px #0002;}
+ .ux-undo-sheet>header {display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-shrink:0;padding-bottom:12px;}
+ .ux-undo-sheet>header>div {min-width:0;}
+ .ux-shell .ux-undo-sheet h2 {font-size:1.25rem;line-height:1.4;margin:0;}
+ .ux-shell .ux-undo-sheet header p {font-size:.8125rem;line-height:1.6;color:var(--muted);margin-top:6px;}
+ .ux-undo-sheet header>.icon-btn {min-width:44px;min-height:44px;flex-shrink:0;}
+ .ux-undo-sheet-list {min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-padding-block:12px;}
+ .ux-undo-sheet-list .ux-outbox-item {align-items:flex-start;}
+ .ux-undo-sheet-list .ux-outbox-item b {display:block;overflow:visible;-webkit-line-clamp:unset;}
+ .ux-undo-sheet-list .ux-outbox-recovery {flex-wrap:wrap;justify-content:flex-end;max-width:110px;}
+ .ux-undo-sheet-done {flex-shrink:0;align-self:stretch;margin-top:12px;min-height:44px;}
+ [data-keyboard-open=true] .ux-mobile-swipe-feedback.is-global {bottom:max(0px,calc(100dvh - var(--ux-viewport-top,0px) - var(--ux-viewport-height,100dvh)));}
+ [data-keyboard-open=true] .ux-shell .ux-swipe-controls {bottom:0;}
+@media(max-width:360px){
+ .ux-mobile-swipe-inner {gap:3px;}
+ .ux-mobile-swipe-inner>button {padding-inline:4px;font-size:.75rem;gap:3px;}
+ .ux-mobile-swipe-queue>span {font-size:.6875rem;}
+ .ux-undo-sheet {padding-inline:16px;}
+}
+@media(max-height:520px) and (max-width:900px){
+ .ux-undo-sheet {padding-top:12px;max-height:calc(var(--ux-viewport-height,100dvh) - 8px);}
+ .ux-undo-sheet>header {padding-bottom:6px;}
+ .ux-shell .ux-undo-sheet header p {display:none;}
+}
+@container(max-width:12rem){
+ .ux-mobile-swipe-inner {grid-template-columns:minmax(0,1fr) auto;gap:3px;}
+ .ux-mobile-swipe-status {grid-column:1/-1;}
+ .ux-mobile-swipe-status>small {display:none;}
+ .ux-mobile-swipe-undo {justify-self:start;}
+ .ux-mobile-swipe-queue {justify-self:end;}
+}
+@media(prefers-reduced-motion:reduce){.ux-mobile-swipe-progress>span {transition:none;}}
+
+.ux-mobile-swipe-feedback.is-docked .ux-pending-word {display:none;}
+.ux-swipe-remaining {font-variant-numeric:tabular-nums;}

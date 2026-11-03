@@ -1,0 +1,1122 @@
+[
+  {
+    "test": "Mobile thread search, back navigation and isolated drafts",
+    "pass": true,
+    "details": "Lumen search retained; Harbour began empty; returning to Lumen restored its draft."
+  },
+  {
+    "test": "Open mobile chat axe",
+    "audit": {
+      "screen": "candidate/inbox",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 38
+    }
+  },
+  {
+    "test": "Application dialog keyboard focus",
+    "pass": true,
+    "details": "Enter opened details, Shift+Tab wrapped from Close to the final action, Tab returned to Close, Escape closed and returned focus to View application details."
+  },
+  {
+    "test": "Role details dialog",
+    "pass": true,
+    "details": "Enter opens the native modal; Escape returns focus to Role details. Axe scanned while the modal remained open.",
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [],
+      "contrastReview": [],
+      "passedRules": 22
+    }
+  },
+  {
+    "test": "Interest Undo",
+    "pass": true,
+    "details": "Undo restored the same Product Operations Lead card; announcement confirmed nothing was sent and pending count returned to zero."
+  },
+  {
+    "test": "Pass recovery and pending bar",
+    "pass": true,
+    "details": "Undo pass restores the same card. Pending interest/Undo stayed at y=641–695, above mobile navigation at y=709, in a 390×780 viewport."
+  },
+  {
+    "test": "Keyboard scrolling in a clipped card summary",
+    "pass": true,
+    "details": "Candidate summary is focusable (tabIndex 0); its 156px content fits a 126px scroll region. End key reaches the bottom."
+  },
+  {
+    "test": "Dark candidate swipe",
+    "pass": true,
+    "audit": {
+      "screen": "candidate/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".ux-swipe-logo"
+              ],
+              "html": "<span class=\"ux-swipe-logo\" aria-hidden=\"true\">BL</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">Bloom</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-trust"
+              ],
+              "html": "<span class=\"ux-swipe-trust\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-salary > small"
+              ],
+              "html": "<small>/ year</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Operations</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>Strategy</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>13<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>0 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > .text-link"
+              ],
+              "html": "<button class=\"text-link\" aria-label=\"Fit details — see how you match\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            ".ux-swipe-logo"
+          ],
+          "text": "BL",
+          "fg": [
+            178,
+            196,
+            158
+          ],
+          "bg": [
+            43,
+            65,
+            48
+          ],
+          "ratio": 5.934,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "Bloom",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-trust"
+          ],
+          "text": "Sample company",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Montreal, QC · Hybrid",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".ux-swipe-salary > small"
+          ],
+          "text": "/ year",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(1)"
+          ],
+          "text": "Operations",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            20,
+            26,
+            22
+          ],
+          "ratio": 7.818,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(2)"
+          ],
+          "text": "Strategy",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            20,
+            26,
+            22
+          ],
+          "ratio": 7.818,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "13/100",
+          "fg": [
+            178,
+            196,
+            158
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 8.129,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "0 of 5 required skills shown",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        },
+        {
+          "target": [
+            ".focus-fit-summary > .text-link"
+          ],
+          "text": "Fit details",
+          "fg": [
+            178,
+            196,
+            158
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 8.129,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 550
+        }
+      ],
+      "passedRules": 40
+    }
+  },
+  {
+    "test": "Dark hiring swipe immediately after theme changes",
+    "stage": "after fix",
+    "pass": true,
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 390,
+      "height": 780,
+      "axe": "4.14.0",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > .ux-kicker"
+              ],
+              "html": "<span class=\"ux-kicker\">OPEN TO CONNECT</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > h3"
+              ],
+              "html": "<h3>Jordan Chen</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(1)"
+              ],
+              "html": "<span>Program management</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".skill-tags > span:nth-child(2)"
+              ],
+              "html": "<span>JavaScript</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "span[aria-hidden=\"true\"]"
+          ],
+          "text": "JC",
+          "fg": [
+            213,
+            231,
+            206
+          ],
+          "bg": [
+            62,
+            85,
+            64
+          ],
+          "ratio": 6.264,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > .ux-kicker"
+          ],
+          "text": "OPEN TO CONNECT",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > h3"
+          ],
+          "text": "Jordan Chen",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Toronto, ON",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(1) > b"
+          ],
+          "text": "4 years",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(2) > b"
+          ],
+          "text": "Nov 7",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(1)"
+          ],
+          "text": "Program management",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            20,
+            26,
+            22
+          ],
+          "ratio": 7.818,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".skill-tags > span:nth-child(2)"
+          ],
+          "text": "JavaScript",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            20,
+            26,
+            22
+          ],
+          "ratio": 7.818,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            178,
+            196,
+            158
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 8.129,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "4 of 5 required skills shown",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        }
+      ],
+      "passedRules": 40
+    }
+  },
+  {
+    "test": "Theme transition contrast",
+    "stage": "before fix",
+    "pass": false,
+    "audit": {
+      "screen": "employer/swipe",
+      "width": 320,
+      "height": 640,
+      "axe": "4.14.0",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".outline-btn > span"
+              ],
+              "html": "<span>Pass</span>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #e6ebe1, background color: #717672, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "span[aria-hidden=\"true\"]"
+              ],
+              "html": "<span aria-hidden=\"true\">JC</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-identity > div > h3"
+              ],
+              "html": "<h3>Jordan Chen</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-title"
+              ],
+              "html": "<h3 class=\"ux-swipe-title\">Senior Product Manager</h3>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-location"
+              ],
+              "html": "<p class=\"ux-swipe-location\">",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "span:nth-child(1) > b"
+              ],
+              "html": "<b>4 years</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".ux-swipe-facts > span:nth-child(2) > b"
+              ],
+              "html": "<b>Nov 7</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > strong"
+              ],
+              "html": "<strong>82<span>/100</span></strong>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                "strong > span"
+              ],
+              "html": "<span>/100</span>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-score > small"
+              ],
+              "html": "<small>Profile fit</small>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".focus-fit-summary > b"
+              ],
+              "html": "<b>4 of 5 required skills shown</b>",
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            }
+          ]
+        }
+      ],
+      "contrastReview": [
+        {
+          "target": [
+            "span[aria-hidden=\"true\"]"
+          ],
+          "text": "JC",
+          "fg": [
+            213,
+            231,
+            206
+          ],
+          "bg": [
+            62,
+            85,
+            64
+          ],
+          "ratio": 6.264,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": false,
+          "font": 13,
+          "weight": 600
+        },
+        {
+          "target": [
+            ".ux-swipe-identity > div > h3"
+          ],
+          "text": "Jordan Chen",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": false,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-title"
+          ],
+          "text": "Senior Product Manager",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 18,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".ux-swipe-location"
+          ],
+          "text": "Toronto, ON",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 13,
+          "weight": 400
+        },
+        {
+          "target": [
+            "span:nth-child(1) > b"
+          ],
+          "text": "4 years",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".ux-swipe-facts > span:nth-child(2) > b"
+          ],
+          "text": "Nov 7",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 14,
+          "weight": 550
+        },
+        {
+          "target": [
+            ".focus-fit-score > strong"
+          ],
+          "text": "82/100",
+          "fg": [
+            178,
+            196,
+            158
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 8.129,
+          "required": 3,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 24,
+          "weight": 650
+        },
+        {
+          "target": [
+            "strong > span"
+          ],
+          "text": "/100",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 12,
+          "weight": 650
+        },
+        {
+          "target": [
+            ".focus-fit-score > small"
+          ],
+          "text": "Profile fit",
+          "fg": [
+            165,
+            176,
+            157
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 6.698,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 400
+        },
+        {
+          "target": [
+            ".focus-fit-summary > b"
+          ],
+          "text": "4 of 5 required skills shown",
+          "fg": [
+            230,
+            235,
+            225
+          ],
+          "bg": [
+            32,
+            40,
+            34
+          ],
+          "ratio": 12.489,
+          "required": 4.5,
+          "pass": true,
+          "pseudoOutsideText": true,
+          "font": 11,
+          "weight": 700
+        }
+      ],
+      "passedRules": 41
+    }
+  }
+]

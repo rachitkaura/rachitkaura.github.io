@@ -29,7 +29,7 @@ export function stripJpegMetadata(bytes:Uint8Array){
   const output=new Uint8Array(chunks.reduce((n,c)=>n+c.length,0));let offset=0;for(const chunk of chunks){output.set(chunk,offset);offset+=chunk.length}return output;
 }
 
-export function createVerification(db:D1Database,bucket:R2Bucket,adminEmails=''){
+export function createVerification(db:D1Database,bucket:R2Bucket,adminEmails='',allowProfilePhotos=false){
   const q=(sql:string,...args:any[])=>db.prepare(sql).bind(...args);
   const one=(sql:string,...args:any[])=>q(sql,...args).first<Row>();
   const all=async(sql:string,...args:any[])=>(await q(sql,...args).all<Row>()).results||[];
@@ -93,7 +93,7 @@ export function createVerification(db:D1Database,bucket:R2Bucket,adminEmails='')
   }
   async function POST(req:Request){try{
     const u=user(req);if(req.headers.get('origin')!==new URL(req.url).origin)throw new Fault('Invalid origin.',403);await cleanup();
-    if(req.headers.get('content-type')?.startsWith('multipart/form-data'))return await upload(req,u);
+    if(req.headers.get('content-type')?.startsWith('multipart/form-data')){if(!allowProfilePhotos)return json({error:'Portrait and photo-ID submissions are paused. Profiles use initials.'},410);return await upload(req,u);}
     const raw=await req.text();if(raw.length>12000)throw new Fault('Request too large.',413);const b=parse(raw,null);if(!b)throw new Fault('Invalid request.');
     if(b.action==='withdraw'||b.action==='removePhoto'){
       const row=await one('SELECT * FROM profile_verifications WHERE user_id=?',u.id);

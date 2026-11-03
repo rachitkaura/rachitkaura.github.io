@@ -1,0 +1,91 @@
+{
+  "round": 1,
+  "generatedAt": "2026-10-31T17:07:44.704Z",
+  "engine": "Node v24.22.1",
+  "fixture": {
+    "roles": 20,
+    "profiles": 24
+  },
+  "metrics": [
+    {
+      "name": "Fresh fixture creation",
+      "median_ms": 0.951,
+      "p95_ms": 1.401,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Saved-session load",
+      "median_ms": 1.343,
+      "p95_ms": 1.965,
+      "budget_ms": 75,
+      "pass": true
+    },
+    {
+      "name": "Candidate workspace",
+      "median_ms": 2.399,
+      "p95_ms": 3.29,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Review workflows",
+      "median_ms": 0.347,
+      "p95_ms": 0.505,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "AI hiring workspace",
+      "median_ms": 1.663,
+      "p95_ms": 2.583,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Rank 24 profiles",
+      "median_ms": 1.098,
+      "p95_ms": 1.35,
+      "budget_ms": 75,
+      "pass": true
+    },
+    {
+      "name": "Persist a chat reply",
+      "median_ms": 0.636,
+      "p95_ms": 0.986,
+      "budget_ms": 50,
+      "pass": true
+    },
+    {
+      "name": "Saved demo",
+      "bytes": 148923,
+      "budget_bytes": 500000,
+      "pass": true
+    },
+    {
+      "name": "Workspace JSON",
+      "bytes": 154353,
+      "budget_bytes": 250000,
+      "pass": true
+    },
+    {
+      "name": "All client JS (gzip)",
+      "bytes": 209836,
+      "budget_bytes": 350000,
+      "pass": true
+    },
+    {
+      "name": "Largest JS chunk (gzip)",
+      "bytes": 68458,
+      "budget_bytes": 200000,
+      "pass": true
+    },
+    {
+      "name": "All CSS (gzip)",
+      "bytes": 52082,
+      "budget_bytes": 70000,
+      "pass": true
+    }
+  ],
+  "failures": []
+}

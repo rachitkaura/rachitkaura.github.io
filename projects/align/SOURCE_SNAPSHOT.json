@@ -1,0 +1,49 @@
+{
+  "product": "Align",
+  "source_commit": "a4fa28777847c9aa30ebfe0e78a8739e679936dc",
+  "hosted_version": 46,
+  "exported_on": "2026-11-02",
+  "demo_url": "https://align-career-match-rk.rkaura94.chatgpt.site/demo",
+  "source_tracked_files": 298,
+  "omitted_media_files": [
+    "public/media/align-product-demo-v5-captions.srt",
+    "public/media/align-product-demo-v5-mobile.jpg",
+    "public/media/align-product-demo-v5-mobile.mp4",
+    "public/media/align-product-demo-v5-videos.zip",
+    "public/media/align-product-demo-v5-wide.jpg",
+    "public/media/align-product-demo-v5-wide.mp4",
+    "public/media/align-product-demo-v6-mobile-captions.zip",
+    "public/media/align-product-demo-v6-mobile.jpg",
+    "public/media/align-product-demo-v6-mobile.mp4",
+    "public/media/align-product-demo-v6-wide-captions.zip",
+    "public/media/align-product-demo-v6-wide.jpg",
+    "public/media/align-product-demo-v6-wide.mp4",
+    "public/media/align-product-demo-v7-mobile-captions.zip",
+    "public/media/align-product-demo-v7-mobile.jpg",
+    "public/media/align-product-demo-v7-mobile.mp4",
+    "public/media/align-product-demo-v7-wide-captions.zip",
+    "public/media/align-product-demo-v7-wide.jpg",
+    "public/media/align-product-demo-v7-wide.mp4",
+    "public/media/align-product-demo-v8-mobile-captions.zip",
+    "public/media/align-product-demo-v8-mobile.jpg",
+    "public/media/align-product-demo-v8-mobile.mp4",
+    "public/media/align-product-demo-v8-wide-captions.zip",
+    "public/media/align-product-demo-v8-wide.jpg",
+    "public/media/align-product-demo-v8-wide.mp4"
+  ],
+  "adaptations": [
+    "Hosted Site project identifier removed; DB and BUCKET binding names retained.",
+    "Package renamed and typecheck/test/db:local convenience scripts added.",
+    "GitHub-oriented project documentation and local database initializer included.",
+    "Historical film binaries remain on the hosted Site; public/watch.html references hosted media.",
+    "API check loader resolves the current route imports through Node modules while mocking Cloudflare bindings; application logic is unchanged."
+  ],
+  "excluded": [
+    "Production database contents",
+    "Uploads",
+    "Runtime secrets",
+    "Git metadata",
+    "Dependencies",
+    "Generated builds"
+  ]
+}

@@ -1,0 +1,202 @@
+/* One page scroll per workspace; bounded surfaces only for dialogs and message history. */
+html {scrollbar-gutter:stable;scroll-padding-block:20px calc(var(--ux-mobile-height,0px) + 24px);}
+.ux-shell :where(main,.main-shell,.live-workspace,.profile-grid,.application-library,.live-settings-grid,.live-schedule-grid,.workflow-grid,.ux-candidate-list,.ux-candidate-layout,.ux-profile-tools,.live-messages,.live-chat) {min-inline-size:0;}
+.ux-shell :where(.page-heading,.ux-page-heading,.live-between,.live-slot,.live-chat-heading,.ux-comparison-heading,.ux-workflow-intro,.live-inline-form,.ux-profile-tools a)>:where(div,label,form,span) {min-inline-size:0;}
+.ux-shell :where(fieldset,form,label,select,textarea,input) {min-inline-size:0;}
+.ux-shell fieldset {max-inline-size:100%;}
+.ux-shell :where(img,video,canvas) {max-inline-size:100%;}
+.ux-shell :where(button,a,summary) {overflow-wrap:anywhere;}
+.ux-shell :where(.live-note,.live-upcoming,.schedule-card,.resume-line,.ux-profile-source,.ux-review-status,.shared-contact,.schedule-notes,.workflow-quote,.ranking-quotes blockquote) {overflow-wrap:anywhere;}
+.ux-shell .ux-sidebar {overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin;}
+.ux-sidebar>* {flex-shrink:0;}
+.ux-shell :where(input,select,textarea,button,a,summary,[tabindex]) {scroll-margin-block:20px calc(var(--ux-mobile-height,0px) + 24px);}
+.ux-shell .live-description {max-height:none;overflow:visible;}
+.ux-shell .live-conversations {overscroll-behavior-y:auto;}
+.ux-shell .live-chat-body {overscroll-behavior-y:auto;overflow-x:hidden;scrollbar-gutter:stable;}
+.ux-shell .live-chat-body:focus-visible {outline-offset:-4px;}
+.ux-shell .live-chat-intro {flex-shrink:0;}
+.ux-shell .live-bubble {flex-shrink:0;}
+.ux-shell .ux-swipe-stage {overflow:clip;margin-inline:-8px;padding:8px 8px 18px;margin-block-start:-8px;margin-block-end:3px;}
+.ux-swipe-stage>.ux-swipe-stack {inset:18px 18px 10px;}
+.ux-shell .modal-backdrop,.ux-shell .ux-drawer-backdrop {top:var(--ux-viewport-top,0px);bottom:auto;height:var(--ux-viewport-height,100dvh);overflow:hidden;overscroll-behavior:contain;}
+.ux-shell .modal {max-block-size:100%;min-block-size:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scroll-padding-block:60px 24px;}
+.ux-shell .modal>.modal-close {position:sticky;float:right;top:0;right:auto;margin:-8px -8px 8px 12px;z-index:10;box-shadow:0 2px 8px #0001;}
+.ux-shell .modal :where(h2,h3) {overflow-wrap:anywhere;}
+.ux-shell .ux-criteria-drawer {block-size:100%;min-block-size:0;scrollbar-gutter:stable;scroll-padding-block:120px 120px;padding-bottom:max(24px,env(safe-area-inset-bottom));}
+.ux-criteria-drawer .ux-drawer-heading {position:sticky;top:-26px;z-index:5;background:var(--white);padding-block:12px;border-bottom:1px solid var(--line);}
+.ux-criteria-drawer .ux-drawer-footer {position:sticky;bottom:-25px;background:var(--white);z-index:5;padding-block:16px max(16px,env(safe-area-inset-bottom));margin-bottom:0;}
+.ux-shell .modal textarea.draft-editor {block-size:clamp(14rem,45dvh,30rem);min-block-size:12rem;scroll-margin-block:70px 24px;}
+.ux-shell .live-form .live-checkbox,.ux-shell .modal .live-checkbox {display:flex;flex-direction:row;align-items:flex-start;}
+.ux-shell .live-checkbox>input[type=checkbox] {width:20px;min-width:20px;max-width:20px;margin:3px 0 0;padding:0;min-height:20px;}
+.ux-shell .ux-interest-outbox {overscroll-behavior:contain;scrollbar-width:thin;scroll-padding-block:12px;}
+.ux-shell .ux-outbox-heading {flex-wrap:wrap;gap:4px 12px;}
+@media(max-width:1100px) {
+ .ux-shell .live-settings-grid,.ux-shell .live-schedule-grid {grid-template-columns:minmax(0,1fr);}
+ .ux-shell .workflow-grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));}
+ .ux-shell .live-messages {grid-template-columns:210px minmax(0,1fr);}
+ .ux-shell .live-chat-heading {flex-wrap:wrap;gap:12px;}
+}
+/* Only phone widths use bottom navigation and fixed swipe controls. */
+@media(max-width:600px) {
+ html {scrollbar-gutter:auto;}
+ .ux-shell .ux-sidebar {display:none!important;}
+ .ux-shell .main-shell {margin-inline-start:0;}
+ .ux-shell .ux-topbar {position:relative;height:auto;min-height:74px;padding:max(12px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) 12px max(20px,env(safe-area-inset-left));gap:12px;}
+ .ux-topbar-location {min-width:0;gap:0;}
+ .ux-mobile-brand {display:block;}
+ .ux-mobile-brand .brand {font-size:25px;}
+ .ux-mobile-brand .brand-icon {width:24px;height:25px;transform:scale(.85);transform-origin:left center;margin-right:-3px;}
+ .ux-breadcrumb {display:none;}
+ .ux-topbar-actions {gap:6px;min-width:0;}
+ .ux-shell .ux-workspace-picker select {width:136px;max-width:100%;padding:8px 7px!important;}
+ .ux-shell .theme-toggle {border:0;background:transparent;width:40px;min-width:40px;}
+ .ux-account-menu>summary {min-width:40px;}
+ .ux-shell main {padding:18px max(24px,env(safe-area-inset-right)) calc(var(--ux-mobile-height,80px) + 28px + env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left));}
+ .ux-mobile-nav {position:fixed;inset:auto 0 0;z-index:50;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--white);border-top:1px solid var(--line);padding:7px max(10px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));}
+ .ux-mobile-nav>a {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:56px;border-radius:8px;padding:5px 1px;font-size:.75rem;line-height:1.35;text-align:center;min-width:0;color:var(--muted);}
+ .ux-mobile-nav>a[aria-current=page] {background:var(--ux-selected);color:var(--green);font-weight:650;}
+ .ux-mobile-nav>a>svg {width:21px;height:21px;}
+ .ux-mobile-nav>a>span {width:100%;overflow-wrap:anywhere;}
+}
+/* Content and dialogs reflow independently of the workspace navigation. */
+@media(max-width:900px) {
+ .ux-shell :is(input,select,textarea):not([type=checkbox]):not([type=radio]):not([type=range]) {font-size:1rem!important;}
+ .ux-shell .profile-grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));}
+ .ux-shell .live-messages {grid-template-columns:minmax(0,1fr);min-height:0;overflow:visible;}
+ .ux-shell .live-conversations {display:flex;overflow-x:auto;overflow-y:hidden;max-height:none;border:0;border-bottom:1px solid var(--line);padding:8px;gap:8px;scroll-snap-type:x proximity;scroll-padding-inline:8px;}
+ .ux-shell .live-conversations>button {flex:0 0 min(80%,260px);min-width:0;min-height:76px;padding:12px;border:1px solid var(--line);border-radius:8px;scroll-snap-align:start;}
+ .ux-shell .live-conversations .live-empty {min-width:min(100%,260px);}
+ .ux-shell .live-chat-heading {padding:16px;align-items:flex-start;}
+ .ux-shell .live-chat-heading>div {flex:1;min-width:0;}
+ .ux-shell .live-chat-body {height:clamp(220px,52svh,500px);max-height:none;padding:16px;}
+ .ux-shell .live-chat-form {padding:12px;}
+ .ux-shell .live-chat-form .primary-btn {width:46px;min-width:46px;padding:10px;}
+ .ux-shell .modal-backdrop {padding:12px max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));align-items:center;}
+ .ux-shell .modal {width:min(100%,660px);max-height:100%;padding:20px;}
+ .ux-shell .modal>.modal-close {margin:0 0 6px 10px;top:0;}
+ .ux-shell .modal .form-row {flex-direction:column;gap:0;}
+ .ux-shell .modal .form-row>label {flex:auto;}
+ .ux-shell .modal-actions {flex-wrap:wrap;}
+ .ux-shell .modal :is(.studio-save-row,.draft-downloads,.studio-draft-top) {flex-wrap:wrap;gap:12px;}
+ .ux-shell .modal .studio-save-row>.primary-btn {width:100%;}
+ .ux-shell .ux-criteria-drawer {width:min(100%,600px);padding:20px;}
+ .ux-criteria-drawer .ux-drawer-heading {top:-20px;}
+ .ux-criteria-drawer .ux-drawer-footer {bottom:-20px;}
+ .ux-shell .toast {bottom:calc(var(--ux-mobile-height,80px) + 12px);}
+ .ux-shell :where(.live-note,.live-success,.live-upcoming) {flex-wrap:wrap;}
+ .ux-shell .live-note>p {flex:1;min-width:min(100%,170px);}
+ [data-keyboard-open=true] .ux-mobile-nav {display:none;}
+ [data-keyboard-open=true] .ux-shell main {padding-bottom:24px;}
+ [data-keyboard-open=true] .ux-shell .toast {bottom:12px;}
+}
+/* Unfolded phones and tablets keep all workspace destinations beside the content. */
+@media(min-width:601px) and (max-width:1023px) {
+ .ux-shell .ux-sidebar {width:104px;padding:22px 8px 16px;}
+ .ux-shell .main-shell {margin-left:104px;}
+ .ux-sidebar .brand-link {padding:0;margin:0 auto 24px;}
+ .ux-sidebar .brand {font-size:22px;}
+ .ux-sidebar .brand-icon {width:23px;margin-right:4px;transform:scale(.8);transform-origin:center;}
+ .ux-shell .ux-sidebar .workspace-label,.ux-sidebar-note {display:none;}
+ .ux-sidebar nav {grid-template-columns:minmax(0,1fr);gap:8px;height:auto;justify-content:stretch;}
+ .ux-sidebar nav a {flex-direction:column;justify-content:center;gap:6px;min-height:70px;min-width:0;max-width:100%;padding:10px 4px;font-size:.75rem;line-height:1.4;text-align:center;}
+ .ux-sidebar nav a>span {max-width:100%;overflow-wrap:anywhere;}
+ .ux-sidebar nav a>svg {flex-shrink:0;}
+ .ux-sidebar-bottom {display:block;padding-top:24px;}
+ .ux-sidebar-bottom .help-button {flex-direction:column;align-items:center;gap:6px;width:100%;padding:10px 3px;font-size:.6875rem;text-align:center;}
+ .ux-sidebar-bottom .help-button>svg {flex-shrink:0;margin:0;}
+ .ux-shell .ux-topbar {height:auto;min-height:80px;padding:12px 20px;flex-wrap:wrap;gap:12px;}
+ .ux-topbar-location {min-width:0;}
+ .ux-breadcrumb {font-size:.9375rem;}
+ .ux-breadcrumb>.ux-workspace-name,.ux-breadcrumb>svg {display:none;}
+ .ux-topbar-actions {gap:8px;}
+ .ux-shell .ux-topbar .ux-workspace-picker select {width:clamp(144px,9rem,280px);padding:8px 28px 8px 12px!important;}
+ .ux-account-menu>summary {height:auto;min-width:2.75rem;min-height:2.75rem;}
+ .ux-account-menu .avatar {width:2.25rem;height:2.25rem;white-space:nowrap;}
+ .ux-shell main {padding:20px 20px 28px;}
+ .ux-page-heading {flex-direction:row;flex-wrap:wrap;gap:16px;}
+ .ux-page-heading>div {flex:1 1 260px;}
+ .ux-page-heading>.outline-btn {margin:0;}
+}
+@media(max-width:600px) {
+ .ux-shell main {padding-inline:max(18px,env(safe-area-inset-left)) max(18px,env(safe-area-inset-right));}
+ .ux-shell .live-panel {padding:18px;}
+ .ux-shell .ux-topbar {padding-inline:max(14px,env(safe-area-inset-left)) max(14px,env(safe-area-inset-right));gap:8px;}
+ .ux-shell .ux-workspace-picker select {width:132px;}
+ .ux-shell .ux-page-heading,.ux-shell .page-heading {gap:14px;}
+ .ux-shell .page-heading {flex-wrap:wrap;}
+ .ux-shell .page-heading>div {flex:1 1 100%;}
+ .ux-shell .page-heading>.primary-btn {width:auto;height:auto;min-height:46px;padding:10px 16px;margin:0;font-size:.9375rem;gap:8px;}
+ .ux-shell .ux-employer-heading {flex-direction:column;align-items:stretch;}
+ .ux-shell .ux-employer-heading .ux-company-context {width:100%;max-width:none;}
+ .ux-shell .ux-company-context .company-selector {font-size:.875rem;gap:7px;}
+ .ux-shell .ux-workflow-intro {flex-wrap:wrap;gap:8px;}
+ .ux-shell .ux-scope-chip {align-items:flex-start;}
+ .ux-shell .ux-swipe-actions {bottom:calc(var(--ux-mobile-height,78px) + 2px);}
+ .ux-shell .ux-swipe-hiring-context {grid-template-columns:minmax(0,1fr);gap:10px;}
+ .ux-shell .ux-candidate-toolbar label {width:100%;}
+ .ux-shell .ux-match-reasons p {display:block;}
+ .ux-shell .ux-score-banner>div {min-width:0;flex-wrap:wrap;}
+ .ux-shell .ux-candidate-person>div {min-width:0;}
+ .ux-shell .live-inline-form {flex-wrap:wrap;}
+ .ux-shell .live-inline-form>input {flex-basis:100%;}
+ .ux-shell .live-inline-form>.primary-btn {width:100%;}
+ .ux-shell .workflow-batch>p {flex-wrap:wrap;}
+ .ux-shell .workflow-batch>p>svg {align-self:flex-start;margin-top:5px;}
+ .ux-shell .live-form .ranking-values .live-checkbox {align-items:flex-start;}
+ .ux-shell .ux-interest-outbox {max-height:min(42svh,calc(var(--ux-viewport-height,100dvh) - var(--ux-mobile-height,78px) - 104px));}
+}
+@media(max-width:360px) {
+ .ux-shell .ux-topbar {padding-inline:max(12px,env(safe-area-inset-left)) max(12px,env(safe-area-inset-right));}
+ .ux-shell main {padding-inline:max(14px,env(safe-area-inset-left)) max(14px,env(safe-area-inset-right));}
+ .ux-mobile-brand .brand {font-size:22px;}
+ .ux-mobile-brand .brand-icon {display:none;}
+ .ux-topbar-actions {gap:2px;}
+ .ux-shell .ux-workspace-picker select {width:130px;}
+ .ux-shell .ux-swipe-fit {flex-wrap:wrap;}
+ .ux-shell .ux-swipe-hint>span {margin-inline:0;}
+ .ux-shell .modal {padding:16px;}
+}
+@media(max-height:520px) and (max-width:900px) {
+ .ux-shell .modal-backdrop {padding:8px;}
+ .ux-shell .modal {max-height:100%;padding:16px 20px;}
+ .ux-shell .ux-interest-outbox {top:10px;max-height:calc(var(--ux-viewport-height,100dvh) - var(--ux-mobile-height,78px) - 24px);}
+ .ux-shell .ux-outbox-help {display:none;}
+ .ux-shell .ux-outbox-item {padding-block:8px;}
+ .ux-shell .live-chat-body {height:210px;}
+ .ux-shell .modal textarea.draft-editor {block-size:12rem;min-block-size:10rem;}
+}
+@media(prefers-reduced-motion:reduce) {.ux-shell * {scroll-behavior:auto!important;}}
+/* Let larger system text wrap the header instead of clipping the workspace picker. */
+@media(max-width:900px){
+ .ux-shell .ux-topbar {flex-wrap:wrap;}
+ .ux-topbar-location {flex:1 0 auto;}
+ .ux-topbar-actions {flex:0 1 auto;max-width:100%;}
+ .ux-workspace-picker {flex:1;min-width:0;}
+ .ux-shell .ux-workspace-picker select {width:clamp(124px,8rem,260px);max-width:100%;}
+}
+@media(max-width:900px){
+ [data-keyboard-open=true] .ux-shell .ux-criteria-drawer .ux-drawer-heading {position:static;}
+ [data-keyboard-open=true] .ux-shell .ux-criteria-drawer .ux-drawer-heading>.icon-btn {position:fixed;top:calc(var(--ux-viewport-top,0px) + 8px);right:10px;z-index:10;background:var(--white);border:1px solid var(--line);}
+ [data-keyboard-open=true] .ux-shell .ux-criteria-drawer .ux-drawer-footer {position:static;flex-direction:row;flex-wrap:wrap;}
+ [data-keyboard-open=true] .ux-shell .ux-drawer-footer>button {flex:1;min-width:min(100%,140px);}
+}
+/* Badges and evidence labels must reflow when the user enlarges text. */
+.ux-shell :is(.live-pill,.live-status,.verification-badge,.company-verification,.pill,.pack-tags>span,.skill-tags>span) {white-space:normal;max-inline-size:100%;overflow-wrap:anywhere;}
+.ux-shell :is(.workflow-stats>span,.pipeline-steps>span,.match-score-banner>div,.fit-summary>span) {min-inline-size:0;overflow-wrap:anywhere;}
+.ux-shell .workflow-stats {grid-template-columns:repeat(4,minmax(0,1fr));}
+.ux-shell .pipeline-steps {flex-wrap:wrap;}
+.ux-shell .dns-record code {white-space:pre-wrap;overflow-wrap:anywhere;}
+.ux-shell .review-images,.ux-shell .verification-layout {grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));}
+.ux-shell .ux-outbox-item {align-items:flex-start;}
+@media(max-width:900px){
+ .ux-shell .workflow-stats {grid-template-columns:repeat(2,minmax(0,1fr));}
+ .ux-shell .ux-interest-outbox {left:auto;right:12px;top:82px;bottom:auto;width:min(410px,calc(100% - 24px));max-width:none;max-height:min(42svh,calc(var(--ux-viewport-height,100dvh) - var(--ux-mobile-height,78px) - 104px));}
+ .ux-shell .ux-outbox-help {display:none;}
+ .ux-outbox-item b {display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+ [data-keyboard-open=true] .ux-shell .ux-criteria-drawer {scroll-padding-block:64px 20px;}
+ [data-keyboard-open=true] .ux-shell .ux-interest-outbox {top:8px;max-height:calc(var(--ux-viewport-height,100dvh) - 16px);}
+}
+@media(max-height:520px) and (max-width:900px){
+ .ux-shell .ux-interest-outbox {top:8px;max-height:calc(var(--ux-viewport-height,100dvh) - var(--ux-mobile-height,78px) - 16px);}
+ .ux-shell .ux-outbox-heading small {display:none;}
+}

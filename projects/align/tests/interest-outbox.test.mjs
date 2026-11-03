@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {mkdtempSync,readFileSync,writeFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {createRequire} from 'node:module';
+import ts from 'typescript';
+const out=mkdtempSync(join(tmpdir(),'align-outbox-test-'));
+try{
+ const file=join(out,'outbox.cjs');writeFileSync(file,ts.transpileModule(readFileSync('app/lib/interest-outbox.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText);
+ const {createInterestOutbox,SWIPE_UNDO_MS}=createRequire(import.meta.url)(file);
+ let now=0,actor='user-a',failure=false;const values=new Map(),writes=[],sent=[],reads=[];
+ const storage={getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v)};
+ const options={key:'test-swipes',storage,now:()=>now,setTimer:()=>1,clearTimer:()=>{},request:async(path,init)=>{if(!init?.method){reads.push(path);return Response.json({signedIn:true,user:{id:actor}})}writes.push(JSON.parse(init.body));return failure?Response.json({error:'Connection test failed.'},{status:503}):Response.json({ok:true})},onSent:entry=>sent.push(entry)};
+ const payload={action:'interest',side:'candidate',jobId:'job-a',answers:{'Why?':'A relevant example.'}},input={actorId:'user-a',label:'Role at Example',companyId:'company-a',payload};
+ let box=createInterestOutbox(options);box.start();assert.equal(SWIPE_UNDO_MS,10000);
+ const first=box.enqueue(input);assert.equal(box.enqueue(input),first,'Duplicate taps must keep one pending submission.');
+ now=9999;await box.flush();assert.equal(writes.length,0);assert.equal(reads.length,0,'An undoable swipe must not contact the API.');assert.equal(box.undo(first),true);
+ now=20000;await box.flush();assert.equal(writes.length,0,'Undo must prevent submission after the former deadline.');assert.equal(sent.length,0);
+ const second=box.enqueue(input);now=29999;await box.flush();assert.equal(writes.length,0);
+ now=30000;assert.equal(box.undo(second),false,'The undo window ends at ten seconds.');await box.flush();assert.equal(writes.length,1);assert.deepEqual(writes[0],payload);assert.equal(sent[0].id,second);assert.equal(box.snapshot().length,0);
+ const third=box.enqueue({...input,payload:{action:'interest',side:'employer',jobId:'job-b',candidateId:'candidate-b'}});now=35000;const fourth=box.enqueue({...input,payload:{...payload,jobId:'job-c'}});
+ now=40000;await box.flush();assert.equal(writes.length,2);assert.equal(writes[1].side,'employer');assert.equal(writes[1].candidateId,'candidate-b');assert.equal(box.undo(third),false);assert.equal(box.undo(fourth),true,'Each pending swipe must retain its own undo window.');
+ const persisted=box.enqueue({...input,payload:{...payload,jobId:'job-d'}});now=45000;box.stop();box=createInterestOutbox(options);box.start();assert.equal(box.snapshot()[0].id,persisted);assert.equal(box.snapshot()[0].dueAt,50000,'Reload must preserve the original deadline.');
+ now=49999;assert.equal(box.undo(persisted),true);await box.flush();assert.equal(writes.length,2);
+ const wrongAccount=box.enqueue(input);actor='user-b';now=60000;await box.flush();assert.equal(writes.length,2,'Changing accounts must never send a pending swipe as another user.');assert.equal(box.snapshot()[0].state,'failed');assert.equal(box.dismiss(wrongAccount),true);
+ actor='user-a';failure=true;const failed=box.enqueue(input);now=70000;await box.flush();assert.equal(box.snapshot()[0].state,'failed');assert.equal(box.snapshot()[0].error,'Connection test failed.');assert.equal(box.undo(failed),false,'An attempted submission must not pretend it can be unsent.');
+ failure=false;assert.equal(box.retry(failed),true);now=79999;await box.flush();assert.equal(writes.length,3);assert.equal(box.undo(failed),true,'Retry creates a fresh ten-second undo window.');
+ box.enqueue(input);box.clearQueued();now=100000;await box.flush();assert.equal(writes.length,3,'Reset must cancel queued demo swipes.');box.stop();
+ box=createInterestOutbox(options);box.start();const shared=box.enqueue(input),other=createInterestOutbox(options);other.start();assert.equal(other.snapshot()[0].id,shared);assert.equal(box.undo(shared),true);now=110000;await other.flush();assert.equal(writes.length,3,'Undo in one tab must cancel the restored copy in another tab.');assert.equal(other.snapshot().length,0);
+ const fromOther=other.enqueue({...input,payload:{...payload,jobId:'other-tab'}}),fromFirst=box.enqueue(input);assert.equal(box.snapshot().length,2,'Enqueue must preserve another tab’s pending swipe.');other.sync();assert.equal(other.snapshot().length,2);assert.equal(other.undo(fromFirst),true);assert.equal(box.undo(fromOther),true);box.stop();other.stop();
+ const memoryOnly=createInterestOutbox({...options,storage:{getItem:()=>null,setItem:()=>{throw Error('Storage unavailable')}}});memoryOnly.start();const memoryId=memoryOnly.enqueue(input);assert.equal(memoryOnly.undo(memoryId),true,'Undo must still work when browser storage is unavailable.');memoryOnly.stop();
+ failure=true;box=createInterestOutbox(options);box.start();const oldConsent=box.enqueue(input);now+=10000;await box.flush();assert.equal(box.snapshot()[0].state,'failed');failure=false;const beforeReconfirm=writes.length,updatedPayload={...payload,answers:{'Why?':'Updated evidence.'},review:{batchId:'batch-a',consent:true,allowWaitlist:true}};assert.equal(box.enqueue({...input,payload:updatedPayload}),oldConsent);assert.equal(box.snapshot()[0].state,'queued');now+=9999;await box.flush();assert.equal(writes.length,beforeReconfirm);now+=1;await box.flush();assert.deepEqual(writes.at(-1),updatedPayload,'Reconfirming a failed card must use updated answers and explicit waitlist consent.');box.stop();
+ console.log('Outbox checks passed: ten-second boundaries, no writes after undo, duplicate taps, independent timers, reload recovery, account isolation, retries, reset, cross-tab cancellation, and unavailable storage.');
+}finally{rmSync(out,{recursive:true,force:true})}

@@ -1,24 +1,44 @@
 # Developing Align
 
-Use Node.js 24 and pnpm 11.25.0, which is pinned in `package.json`. The declared minimum Node version is 22.13.0; the checks use Node's built-in SQLite module. The publication snapshot was verified on Node 24.22.1.
+This is the November 2, 2026 source export of hosted Align version 46. Use Node.js 24 and pnpm 11.25.0, pinned in `package.json`. The minimum declared Node version is 22.13.0; integration checks use Node's SQLite module.
 
-## Install and check
+## Install, build and check
 
 From the repository root:
 
 ```bash
 cd projects/align
 pnpm install --frozen-lockfile
+pnpm build
 pnpm typecheck
 pnpm test
-pnpm build
 ```
 
-If pnpm is unavailable, install the pinned version with `npm install --global pnpm@11.25.0`, or use Corepack to run that version. Dependency versions and the pnpm build-script policy are retained from the live app. The Linux Sites helper `npm run install:ci` is also retained for its original managed environment.
+Build before running the full test runner: the demo-performance test measures `dist/client` production assets. `pnpm test` runs seven service-check suites and fourteen test files in order, stopping on the first failure. It uses synthetic identities, in-memory SQLite and local fixtures.
+
+For focused work:
+
+```bash
+node tests/focused-hiring.test.cjs
+node tests/profile-materials.test.cjs
+node tests/project-evidence.test.cjs
+node scripts/check-application-flows.cjs
+node scripts/check-ranking.cjs
+node scripts/check-workflows.cjs
+node tests/demo-performance.test.mjs
+```
+
+The existing QA reports under `qa/` describe their recorded runs. They are not a substitute for rerunning the relevant checks after changes.
 
 ## Local preview
 
-For a fresh local database, build first, then initialize the local schema and start the built Worker:
+```bash
+pnpm dev
+```
+
+Use the URL printed by the server, normally `http://localhost:5173`. Open `/demo` for the fictional experience without production resources. The demo adapter blocks live API requests and persists fictional state in the browser.
+
+For a fresh local database and the built Worker:
 
 ```bash
 pnpm build
@@ -26,29 +46,14 @@ pnpm db:local
 pnpm start
 ```
 
-The local migration script runs the four SQL files in order with `--local` and `.wrangler/state`. Run it once for a new local database; rerunning it against an initialized schema can report existing tables. It never targets a remote database. Use the URL printed by Wrangler.
+The initializer applies all eight ordered SQL files to local `.wrangler/state`. Run it once for a fresh database. It uses `--local`; it never targets production. Existing local databases need an appropriate migration plan rather than rerunning the fresh initializer.
 
-For hot reload, run `pnpm dev` and use the local URL it prints, normally `http://localhost:5173`. The portable development server offers a loopback-only synthetic sign-in; it is not real ChatGPT authentication. Production authentication is supplied by Sites. The isolated test suites exercise multiple identities without needing a production account or production data.
+The portable development profile supplies a loopback-only synthetic sign-in. Production identity is supplied by Sites; deployments elsewhere require a trusted identity gateway that strips untrusted identity headers and supplies verified identities.
 
-## Test coverage
+## Hosting and configuration
 
-| Command | Existing scenarios exercised |
-| --- | --- |
-| `node scripts/check-api.cjs` | Workspace ownership, origin checks, upload validation and resume-file isolation |
-| `node scripts/check-career.cjs` | Listed-skill coverage, aliases, false-positive avoidance, grounded drafting and Word XML escaping |
-| `node scripts/check-live.cjs` | SQL migrations, reciprocal interest, screening, team membership, contact privacy, blocks, booking conflicts, DNS proof, expiry and bounded queries |
-| `node scripts/check-verification.cjs` | Admin boundaries, private image access, metadata stripping, review decisions, stale approvals, expiry, deletion retries and company posting gates |
+GitHub Pages hosts the portfolio only. The full application needs a Worker runtime, D1 binding `DB`, R2 binding `BUCKET`, trusted identity and server-only reviewer configuration. The exported `.openai/hosting.json` retains binding names and omits the original Site identifier.
 
-`pnpm test` runs all four suites. These tests use in-memory SQLite, synthetic identities and a tiny synthetic image fixture. They are not evidence of real customer adoption, production load testing or an independent security audit.
+[Open the current interactive demo](https://align-career-match-rk.rkaura94.chatgpt.site/demo). Publishing this source to GitHub does not redeploy that app, copy its records or activate email. For production notification setup and periodic recovery, read [NOTIFICATIONS_SETUP.md](../NOTIFICATIONS_SETUP.md).
 
-## Hosting
-
-GitHub Pages serves the portfolio page only. Align's full application needs a Worker runtime, D1 binding `DB`, R2 binding `BUCKET`, trusted authentication and server-only `ALIGN_ADMIN_EMAILS` configuration for reviewers.
-
-The committed `.openai/hosting.json` contains the storage binding names but omits the original Site's project identifier. [Open the current interactive demo](https://align-career-match-rk.rkaura94.chatgpt.site/demo). This public source is the October 29, 2026 snapshot; the hosted demo includes later updates. Publishing this source to GitHub does not redeploy that pilot or copy its data.
-
-For a new Sites deployment, register the clone as its own Site and configure its own identity and bindings with the Sites workflow. For another Cloudflare deployment, supply your own resources and trusted identity gateway; the current source is not a standalone GitHub Pages app.
-
-## Files to keep local
-
-The project ignores environment files, keys, dependencies, build output and `.wrangler`/`.sites-runtime` state. Use synthetic data when extending tests. Keep live uploads and database exports outside source control.
+Do not commit credentials, production records, uploaded files, dependencies, build output or local runtime state. Use synthetic fixtures when extending tests. The export's film-watch page links to hosted media rather than bundling historical film renders.
